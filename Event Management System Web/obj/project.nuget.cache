@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "FL3GM9JgK+UnBEWufYEqp4ftd7q+3y0CMaCr1RR74cRBM4NuZ0eCWFGYlj7X0Oik4wKHUhPE3hi63N0zU8GLXg==",
+  "dgSpecHash": "wGANrrr2oM6jDqUOYdSS5pLcdIG8eIwySg51GKPEwrYk9weGWe6LLr9vWOFnG/ILtzmTnTIeaqokThJ9EOWUpg==",
   "success": true,
   "projectFilePath": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\Event Management System Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdul\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\abdul\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
-    "C:\\Users\\abdul\\.nuget\\packages\\dapper\\2.0.143\\dapper.2.0.143.nupkg.sha512",
+    "C:\\Users\\abdul\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512",
     "C:\\Users\\abdul\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\abdul\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\abdul\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
