@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>EMS - Events</title>
+</head>
+<body class="md:flex relative">
+    
+
+        <div class="time-and-date my-4">
+            <h1 id="today" class="text-2xl font-bold">الاربعاء, 05 يوليو 2023</h1>
+        </div>
+
+        <h2 class="header text-3xl font-bold my-8">
+            الحضور
+        </h2>
+
+        <div id="checked-number" class="checked-number w-full text-right text-3xl">
+            <span>0</span>
+            <span>عضو مختار</span>
+        </div>
+        <div id="events-attendees">
+            <div class="event-attendess-table my-6">
+                <div class="event-attendess-table-header flex justify-between pl-4 py-6">
+                    <h2 class="text-2xl">الحدث الفلاني</h2>
+                    <button class="bi-chevron-down"></button>
+                </div>
+                <table class="full-attendees-table w-full">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>#ID</td>
+                            <td>الاسم</td>
+                            <td>المنصب</td>
+                            <td>البريد الإلكتروني</td>
+                            <td>رقم الهاتف</td>
+                            <td>حالة الحضور</td>
+                            <td>إدارة</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="select-box w-6 h-6 p-0 m-0 flex items-center justify-center" name="" id="">
+                            </td>
+                            <td>123456</td>
+                            <td>حسن محمد الكمالي</td>
+                            <td>منظم</td>
+                            <td>hasan213@gmail.com</td>
+                            <td>0566588198</td>
+                            <td>وصل من 5 دقائق</td>
+                            <td class="relative">
+                                <button class="bi-three-dots manage-attendee-button py-2 pl-4"></button>
+                                <div class="manage-attendee m-0 p-2 h-fit w-24 top-10 left-10 z-10 bg-white border drop-shadow rounded-lg absolute" hidden>
+                                    <ul class="w-full h-full">
+                                        <li class="py-1 text-black">تذكير</li>
+                                        <hr class="my-1 w-16 bg-black">
+                                        <li class="py-1 text-black">السماح</li>
+                                        <hr class="my-1 w-16 bg-black">
+                                        <li class="py-1 text-black">طرد</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    <script src="./assets/js/manageAttendeesTable.js"></script>
+    <script src="./assets/js/loadAttendees.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+
+</body>
+</html>

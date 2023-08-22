@@ -1,0 +1,80 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Event_Management_System_Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\analyticsIncreament.js" />
+    <Content Remove="wwwroot\js\attendeesList.js" />
+    <Content Remove="wwwroot\js\editEventButton.js" />
+    <Content Remove="wwwroot\js\eventsPages.js" />
+    <Content Remove="wwwroot\js\expandNavbar.js" />
+    <Content Remove="wwwroot\js\handleMutations.js" />
+    <Content Remove="wwwroot\js\lastThreeEvents.js" />
+    <Content Remove="wwwroot\js\loadAttendees.js" />
+    <Content Remove="wwwroot\js\loadCards.js" />
+    <Content Remove="wwwroot\js\loadNews.js" />
+    <Content Remove="wwwroot\js\manageAttendeesTable.js" />
+    <Content Remove="wwwroot\js\manageNew.js" />
+    <Content Remove="wwwroot\js\map.js" />
+    <Content Remove="wwwroot\js\newEvent.js" />
+    <Content Remove="wwwroot\js\newEventOutScope.js" />
+    <Content Remove="wwwroot\js\newNew.js" />
+    <Content Remove="wwwroot\js\script.js" />
+    <Content Remove="wwwroot\js\scrollsBtns.js" />
+    <Content Remove="wwwroot\js\showEventButton.js" />
+    <Content Remove="wwwroot\js\uploadImage.js" />
+    <Content Remove="wwwroot\js\uploadNewImage.js" />
+    <Content Remove="wwwroot\js\userOptions.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\analyticsIncreament.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\attendeesList.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\editEventButton.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\eventsPages.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\analyticsIncreament.js" />
+    <None Include="wwwroot\js\attendeesList.js" />
+    <None Include="wwwroot\js\editEventButton.js" />
+    <None Include="wwwroot\js\eventsPages.js" />
+    <None Include="wwwroot\js\expandNavbar.js" />
+    <None Include="wwwroot\js\handleMutations.js" />
+    <None Include="wwwroot\js\lastThreeEvents.js" />
+    <None Include="wwwroot\js\loadAttendees.js" />
+    <None Include="wwwroot\js\loadCards.js" />
+    <None Include="wwwroot\js\loadNews.js" />
+    <None Include="wwwroot\js\manageAttendeesTable.js" />
+    <None Include="wwwroot\js\manageNew.js" />
+    <None Include="wwwroot\js\map.js" />
+    <None Include="wwwroot\js\newEvent.js" />
+    <None Include="wwwroot\js\newEventOutScope.js" />
+    <None Include="wwwroot\js\newNew.js" />
+    <None Include="wwwroot\js\script.js" />
+    <None Include="wwwroot\js\scrollsBtns.js" />
+    <None Include="wwwroot\js\showEventButton.js" />
+    <None Include="wwwroot\js\uploadImage.js" />
+    <None Include="wwwroot\js\uploadNewImage.js" />
+    <None Include="wwwroot\js\userOptions.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<UpToDateCheckBuilt Include="wwwroot/css/site.css" Set="Css" />
+	<UpToDateCheckBuilt Include="tailwind.config.js" Set="Css" />
+  </ItemGroup>
+
+  <Target Name="Tailwind" BeforeTargets="Build">
+    <Exec Command="npm run css:build" />
+  </Target>
+
+</Project>
