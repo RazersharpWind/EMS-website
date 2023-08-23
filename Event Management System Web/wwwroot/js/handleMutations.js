@@ -1,17 +1,12 @@
 function handleMutations(mutationsList, observer) {
     // Handle the mutations here, react to changes
     // console.log("Something changed in the document!");
-    editEventButtons = document.querySelectorAll('.edit-button');
-    showButtons = document.querySelectorAll('.show-button');
     const attendeesTable = document.getElementById("attendees-table")
 
 
     // console.log(editEventButtons);
-    openEdit()
-    openShow()
     manageAttendee()
     kickAttendee()
-    loadNews()
     // You can perform any actions here based on the changes, for example, updating or reloading specific elements.
   }
 

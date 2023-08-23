@@ -41,3 +41,16 @@ document.querySelectorAll('.cancel-button').forEach((cButton) => {
 })
 
 
+function handleEditEventsMutation(mutationsList, observer){
+    openShow()
+}
+
+  // Configuration for the observer
+const config = { childList: true, subtree: true };
+
+  // Create a new MutationObserver instance
+const observer = new MutationObserver(handleEditEventsMutation);
+
+  // Start observing the document with the specified configuration
+observer.observe(document, config);
+

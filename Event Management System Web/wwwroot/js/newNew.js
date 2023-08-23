@@ -20,13 +20,13 @@ publishNewButton.addEventListener("click", ()=>{
                 <h2 class="text-2xl font-bold my-1">${newHeaderInputs.value}</h2>
                 <div class="manage-button bi-three-dots w-fit cursor-pointer"></div>
                 <div class="new-manage">
-                    <div class="edit-new">تعديل </div>
-                    <hr class=" w-5/6 my-1 bg-yellow-500 h-[2px]">
-                    <div class="edit-new">إزالة</div>
+                    <div class="manage-new text-md w-full edit-new">Edit</div>
+                    <hr class="w-5/6 bg-yellow-500 h-[2px]">
+                    <div class="manage-new text-md w-full remove-new">Remove</div>
                 </div>
             </div>
             <div class="new-date">
-                <span>نزل بتاريخ</span>
+                <span>Posted in</span>
                 <span class="new-date-written">${newWrittenDate[0] +" "+ newWrittenDate[1] +" "+ newWrittenDate[2] +" "+ newWrittenDate[3]+" "+ newWrittenDate[4]}</span>
             </div>
         </div>

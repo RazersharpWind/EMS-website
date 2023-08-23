@@ -1,5 +1,3 @@
-const loadNews = () => {
-
 fetch("../../news.json")
     .then(data => data.json())
     .then(nnew => {
@@ -15,13 +13,13 @@ fetch("../../news.json")
                             <h2 class="text-2xl font-bold my-1">${n["new-header"]}</h2>
                             <div class="manage-button bi-three-dots w-fit cursor-pointer"></div>
                             <div class="new-manage">
-                                <div class="manage-new edit-new">تعديل </div>
+                                <div class="manage-new text-md w-full edit-new">Modify</div>
                                 <hr class=" w-5/6 bg-yellow-500 h-[2px]">
-                                <div class="manage-new remove-new">إزالة</div>
+                                <div class="manage-new text-md w-full remove-new">Remove</div>
                             </div>
                         </div>
                         <div class="new-date">
-                            <span>نزل بتاريخ</span>
+                            <span>Posted on </span>
                             <span class="new-date-written">${n["new-data-time"]}</span>
                         </div>
                     </div>
@@ -40,20 +38,35 @@ fetch("../../news.json")
 
 
     })
+const loadNews = () => {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    window.addEventListener("click", (e)=>{
+        const manageButtons = document.querySelectorAll(".manage-button");
+            if(e.target.classList.contains("manage-button")){
+                e.target.nextElementSibling.setAttribute("clicked", "")
+            }
+            else{
+                manageButtons.forEach((manageButton)=>{manageButton.nextElementSibling.removeAttribute("clicked");})
+            }
+    })
 }
 
 loadNews()
+
+
+
+function handleLoadNewsMutations(mutationsList, observer) {
+
+    loadNews()
+    }
+
+  // Configuration for the observer
+    const loadNewsConfig = { childList: true, subtree: true };
+
+  // Create a new MutationObserver instance
+    const loadNewsObserver = new MutationObserver(handleLoadNewsMutations);
+
+  // Start observing the document with the specified configuration
+    loadNewsObserver.observe(document.getElementById("news-container"), loadNewsConfig);

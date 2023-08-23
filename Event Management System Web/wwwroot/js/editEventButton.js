@@ -21,9 +21,7 @@ window.addEventListener("click", (e)=>{
     }
 })
 
-// const editEventAttendees = e.target.parentElement.parentElement.parentElement.getAttribute("attendees-list");
 
-// console.log(editEventButtons);
 
 let editedCardHeader, editedCardDesc, editedCardDate, editedCardImage, editedCardTime;
 
@@ -48,33 +46,10 @@ const openEdit = () => {
 
             editEventDate.value = `${String(e.target.parentElement.parentElement.parentElement.getAttribute("data-event-date")).split("-")[2]}-${String(e.target.parentElement.parentElement.parentElement.getAttribute("data-event-date")).split("-")[1]}-${String(e.target.parentElement.parentElement.parentElement.getAttribute("data-event-date")).split("-")[0]}`
 
-            // if(parseInt(monthes.indexOf(e.target.parentElement.parentElement.parentElement.children[1].firstElementChild.lastElementChild.innerText))+1 < 10){
-            //     // editEventDate.value = `2023-0${parseInt(monthes.indexOf(e.target.parentElement.parentElement.parentElement.children[1].firstElementChild.lastElementChild.innerText))+1}-${e.target.parentElement.parentElement.parentElement.children[1].firstElementChild.firstElementChild.innerText}`
-                
-            // }
-            // else{
-            //     // editEventDate.value = `2023-${parseInt(monthes.indexOf(e.target.parentElement.parentElement.parentElement.children[1].firstElementChild.lastElementChild.innerText))+1}-${e.target.parentElement.parentElement.parentElement.children[1].firstElementChild.firstElementChild.innerText}`
-            // }
-
-
 
             document.querySelectorAll(".attendee-event-id").forEach((attedee)=>{
                 attedee.firstElementChild.innerText = eventId.textContent
             })
-
-
-            // console.log(e.target.parentElement.parentElement.parentElement.getAttribute("attendees-list"));---------------------------------------
-
-            
-            // console.log("---");
-
-
-            // console.log([e.target.parentElement.parentElement.parentElement.getAttribute("attendees-list").split(",")])
-
-
-
-
-
 
 
             editDialog.showModal();
@@ -85,12 +60,6 @@ const openEdit = () => {
 }
 //wrap then in order to not repeat the whole code in anotgher file
 openEdit()
-
-
-
-
-
-
 
 
 confirmEditButton.addEventListener("click", ()=>{
@@ -113,26 +82,14 @@ confirmEditButton.addEventListener("click", ()=>{
     // editEventDescribtion.value
 })
 
-
-// editEventAttendees.forEach((editDialogAttendeesList)=>{
-    // editDialogAttendeesList.addEventListener()
-    // editDialogAttendeesList.appendChild(cardAttendees[Object.keys(cardAttendees)])
-// })
-
-
-// editEventButtons.forEach((editEventButton)=>{
-//     editEventButton.addEventListener("click",(e)=>{
-//         console.log(cardAttendees );
-//     })
-// })
-
-
 const attendeesTables = document.querySelectorAll(".attendees-table");
 
 
 
 window.addEventListener("click", (e)=>{
+    let editButton = ""
     if(e.target.classList.contains("edit-button")){
+        editButton = e.target;
         attendeesTables.forEach((attedeesTable)=>{
             attedeesTable.innerHTML = ""
         })
@@ -150,12 +107,12 @@ window.addEventListener("click", (e)=>{
                         `<td>${Object.keys(cardData['event-attendees'])[i]}</td>
                             <td id="attendee-event-id"> <span></span> <span>${eventId.textContent}${cardData['event-attendees'][cardAttribute[i]]['attendee-id']}</span></td>
                             <td>${cardData['event-attendees'][cardAttribute[i]]['attendee-email']}</td>
-                            <td>مؤكد</td>
+                            <td>Confirmed</td>
                             <td class="end">
-                                <div class="attedees-management bi-chevron-up w-fit py-3 pl-3 py-3">
-                                    <ul id="attedees-management-display">
-                                        <li>إعلام</li><hr class="w-5/6 bg-yellow-500 h-[2px]">
-                                        <li class="kick-button text-red-600 font-bold">طرد</li>
+                                <div class="attedees-management bi-chevron-up w-fit py-3 pl-3">
+                                    <ul id="attedees-management-display" class="attedees-management-display bg-red-500">
+                                        <li>Notify</li><hr class="w-5/6 bg-yellow-500 h-[2px]">
+                                        <li class="kick-button text-red-600 font-bold">Kick</li>
                                     </ul>
                                 </div>
                         </td>`
@@ -186,3 +143,25 @@ window.addEventListener("click", (e)=>{
         })
     }
 })
+
+
+
+function handleEditMutations(mutationsList, observer) {
+    // Handle the mutations here, react to changes
+    // console.log("Something changed in the document!");
+    editEventButtons = document.querySelectorAll('.edit-button');
+    showButtons = document.querySelectorAll('.show-button');
+    const attendeesTable = document.getElementById("attendees-table")
+    openEdit()
+}
+
+  // Configuration for the observer
+    const editEventsConfig = { childList: true, subtree: true };
+
+  // Create a new MutationObserver instance
+    const editEventsObserver = new MutationObserver(handleEditMutations);
+
+  // Start observing the document with the specified configuration
+    editEventsObserver.observe(document, editEventsConfig);
+
+

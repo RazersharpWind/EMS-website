@@ -12,7 +12,6 @@ const editButton = document.getElementById("edit-button")
 
 const eventId = document.getElementById("new-event-id").lastElementChild;
 
-const monthes = ["JAN", 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
 
 //to create a shorter list by turning the list into an object
 let cardAttendees = {};
@@ -20,6 +19,8 @@ let cardAttendees = {};
 let eventName, eventTime, eventDate, eventDescribtion, eventImage;
 
 let getData = (eventName, eventDate, eventTime, eventDescribtion, eventImage) => {
+    const monthes = ["JAN", 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+
     let newCard = document.createElement('div')
     //clone the card
     for(let i =0; i < orginalChildren.length; i++){

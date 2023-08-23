@@ -33,8 +33,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\collapseButton.js",
+      "PackagePath": "staticwebassets\\js\\collapseButton.js"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\handleAttendessMutations.js",
+      "PackagePath": "staticwebassets\\js\\handleAttendessMutations.js"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
       "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\todayDate.js",
+      "PackagePath": "staticwebassets\\js\\todayDate.js"
     },
     {
       "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\LICENSE",

@@ -29,7 +29,7 @@ public class EventData : IEventData
     }
 
     public Task<IEnumerable<Event>> GetLastThreeEvents() =>
-        _db.LoadData<Event, dynamic>(storedProcedure: "dbo.GetLastThreeEvents", new { });
+        _db.LoadData<Event, dynamic>(storedProcedure: "dbo.GetLastSixEvents", new { });
 
     public Task CreateEvent(Event singleEvent) =>
         _db.SaveData(storedProcedure: "dbo.CreateEvent",

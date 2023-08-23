@@ -24,7 +24,6 @@
     <Content Remove="wwwroot\js\newEvent.js" />
     <Content Remove="wwwroot\js\newEventOutScope.js" />
     <Content Remove="wwwroot\js\newNew.js" />
-    <Content Remove="wwwroot\js\script.js" />
     <Content Remove="wwwroot\js\scrollsBtns.js" />
     <Content Remove="wwwroot\js\showEventButton.js" />
     <Content Remove="wwwroot\js\uploadImage.js" />
@@ -56,7 +55,6 @@
     <None Include="wwwroot\js\newEvent.js" />
     <None Include="wwwroot\js\newEventOutScope.js" />
     <None Include="wwwroot\js\newNew.js" />
-    <None Include="wwwroot\js\script.js" />
     <None Include="wwwroot\js\scrollsBtns.js" />
     <None Include="wwwroot\js\showEventButton.js" />
     <None Include="wwwroot\js\uploadImage.js" />

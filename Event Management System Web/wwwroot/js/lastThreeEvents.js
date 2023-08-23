@@ -1,6 +1,6 @@
 const breifEventsSection = document.querySelector(".last-events");
 const lastThreeEvents = []
-const monthes = ["JAN", 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+// const monthes = ["JAN", 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
 
 
 fetch("edata.json").then(response => response.json()).then(data => {
@@ -9,7 +9,7 @@ fetch("edata.json").then(response => response.json()).then(data => {
         lastThreeEvents.push(data[i]);
         const eventTemplate =
             `<div class="event-card mr-8 bg-white border border-yellow-700 rounded-3xl w-[16rem] h-[22rem] relative overflow-hidden" event-id=${lastThreeEvents[i]['event-id']} attendees-list="${Object.keys(lastThreeEvents[i]["event-attendees"])}">
-                <div class="card-img w-full rounded-t-3xl bg-gray-500 overflow-hidden h-[40%] bg-gray-300">
+                <div class="card-img w-full rounded-t-3xl overflow-hidden h-[40%] bg-gray-300">
                     <img class="" src=${lastThreeEvents[i]["event-image"]} alt="">
                 </div>
                 <div class="card-date w-14 h-14 bg-yellow-600 flex rounded-lg absolute inset-x-[65%] inset-y-[25%]  text-white text-center">

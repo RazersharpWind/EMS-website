@@ -1,6 +1,4 @@
 ﻿@model Event_Management_System_Web.Models.ViewModels.ViewEvents
-@{
-}
 
 <!DOCTYPE html>
 <html>
@@ -8,78 +6,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./css/output.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="~/css/output.css">
+    <link rel="stylesheet" href="~/css/style.css">
     <title>EMS</title>
 </head>
 <body class="md:flex relative scroll-smooth ease-in-out duration-300 transition-all">
-
-    <div class="time-and-date my-4">
-        <h1 id="today" class="text-2xl font-bold">الاربعاء, 05 يوليو 2023</h1>
-    </div>
-
-
-    <div id="timer" class="md:timer md:flex border bg-white rounded-3xl drop-shadow-lg hidden md:justify-between md:pr-8 overflow-hidden">
-        <div class="w-fit timer-image h-full">
-            <img class="h-56 w-96" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <div class="time-and-date my-4">    
+            <h1 id="today" class="text-2xl font-bold">الاربعاء, 05 يوليو 2023</h1>
         </div>
 
-        <div class="event-info py-4 px-4 my-auto -mr-10 z-10 h-fit">
-            <h2 class="text-3xl font-bold">Clear Sky, How could we get that?</h2>
-            <p>Follow up to discover more..</p>
-            <div class="flex remaining-time my-4">
-                <p class="w-16 mr-5">Remaining time</p>
-                <div class="flex r-time font-effra">
-                    <div id="days" class=" w-fit text-center">
-                        <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
-                        <p class="text-2xl leading-10">Days</p>
-                    </div>
-                    <div id="hrs" class=" w-fit text-center">
-                        <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
-                        <p class="text-2xl leading-10">Hrs</p>
-                    </div>
-                    <div id="mins" class=" w-fit text-center">
-                        <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
-                        <h6 class="text-2xl leading-10">Mins</h6>
+
+        <div id="timer" class="md:timer md:flex border bg-white rounded-3xl drop-shadow-lg hidden md:justify-between md:pr-8 overflow-hidden">
+            <div class="w-fit timer-image h-full">
+                <img class="h-56 w-96" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+
+            <div class="event-info py-4 px-4 my-auto -mr-10 z-10 h-fit">
+                <h2 class="text-3xl font-bold">Clear Sky, How could we get that?</h2>
+                <p>Follow up to discover more..</p>
+                <div class="flex remaining-time my-4">
+                    <p class="w-16 mr-8">Remaining time</p>
+                    <div class="flex r-time font-effra">
+                        <div id="days" class=" w-fit text-center">
+                            <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
+                            <p class="text-2xl leading-10">Days</p>
+                        </div>
+                        <div id="hrs" class=" w-fit text-center">
+                            <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
+                            <p class="text-2xl leading-10">Hrs</p>
+                        </div>
+                        <div id="mins" class=" w-fit text-center">
+                            <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
+                            <h6 class="text-2xl leading-10">Mins</h6>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="expand-timer flex flex-col items-center justify-center w-[10%]">
-            <div class="btn text-center">
-                <i class="bi-arrows-angle-expand"></i>
-                <h2 class="text-2xl">Expand</h2>
+            <div class="expand-timer flex flex-col items-center justify-center w-[10%]">
+                <div class="btn text-center">
+                    <i class="bi-arrows-angle-expand"></i>
+                    <h2 class="text-2xl">Expand</h2>
+                </div>
             </div>
+
         </div>
 
-    </div>
 
-
-    <div id="events" class="main-events-sections my-10 relative">
-        <div class="header-events my-2">
-            <h1 class="text-3xl font-bold">Latest events:</h1>
-            <p class="leading-10">Latest events hosted by GCAA:</p>
-        </div>
+        <div id="events" class="main-events-sections my-10 relative">
+            <div class="header-events my-2">
+                <h1 class="text-3xl font-bold">Latest events:</h1>
+                <p class="leading-10">Latest events hosted by GCAA:</p>
+            </div>
 
         <div id="events-wrapper" class="scroll-smooth overflow-x-auto">
             <div class="last-events inline-flex py-4">
-                @foreach(var singularEvent in Model.EventData)
+                @foreach (var singleEvent in Model.EventData)
                 {
-                    <div class="event-card mr-8 bg-white border border-yellow-700 rounded-3xl w-[16rem] h-[22rem] relative overflow-hidden" event-id=${@singularEvent.Event_id attendees-list="${Object.keys(Model.Attendees)}">
-                        <div class="card-img w-full rounded-t-3xl bg-gray-500 overflow-hidden h-[40%] bg-gray-300">
-                            <img class="" src=${singularEvent.Event_image} alt="">
+                    <div class="event-card mr-8 bg-white border border-yellow-700 rounded-3xl w-[16rem] h-[22rem] relative overflow-hidden" event-id=@singleEvent.Event_id attendees-list="${Object.keys(@Model.Attendees)}">
+                        <div class="card-img w-full rounded-t-3xl overflow-hidden h-[40%] bg-gray-300">
+                            <img class="" src=@singleEvent.Event_image alt="">
                         </div>
                         <div class="card-date w-14 h-14 bg-yellow-600 flex rounded-lg absolute inset-x-[65%] inset-y-[25%]  text-white text-center">
                             <div class="text-2xl leading-none flex flex-col justify-center my-auto font-semibold w-full h-full">
-                                <h3 class="text-2xl h-fit p-0 m-0 leading-none">@singularEvent.Event_date.Day</h3>
-                                <p class="text-[1rem] h-fit p-0">@singularEvent.Event_date.ToString("MMM")</p>
+                                <h3 class="text-2xl h-fit p-0 m-0 leading-none">@singleEvent.Event_date.Day</h3>
+                                <p class="text-[1rem] h-fit p-0">@singleEvent.Event_date.ToString("MMM")</p>
                             </div>
                         </div>
                         <div class="card-info text-yellow-700 h-[60%] px-4 pt-7 pb-4 flex flex-col grow justify-between">
                             <div class="card-text text-left">
-                                <div class="card-header h-fit font-bold text-lg">@singularEvent.Event_name</div>
-                                <div class="card-desc h-1/2 text-xs mt-2">@singularEvent.Event_description</div>
+                                <div class="card-header h-fit font-bold text-lg">@singleEvent.Event_name</div>
+                                <div class="card-desc h-1/2 text-xs mt-2">@singleEvent.Event_description</div>
                             </div>
 
                             <div class="card-buttons flex place-content-between mt-2">
@@ -92,67 +89,71 @@
             </div>
         </div>
 
-        <div class="buttons absolute inset-y-[50%] w-full flex justify-between">
-            <button id="left-btn" class="z-9 flex w-10 h-10 opacity-60 transition-all duration-300 ease-in-out hover:opacity-100 bg-yellow-600 drop-shadow-xl my-auto rounded-full items-center justify-center">
-                <i class="bi bi-arrow-left text-2xl text-white"></i>
-            </button>
-            <button id="right-btn" class="z-10 flex w-10 h-10 opacity-60 transition-all duration-300 ease-in-out hover:opacity-100 bg-yellow-600 drop-shadow-xl my-auto rounded-full items-center justify-center">
-                <i class="bi bi-arrow-right text-2xl text-white"></i>
-            </button>
+            <div class="buttons absolute inset-y-[50%] w-full flex justify-between">
+                <button id="left-btn" class="z-9 flex w-10 h-10 opacity-60 transition-all duration-300 ease-in-out hover:opacity-100 bg-yellow-600 drop-shadow-xl my-auto rounded-full items-center justify-center">
+                    <i class="bi bi-arrow-left text-2xl text-white"></i>
+                </button>
+                <button id="right-btn" class="z-10 flex w-10 h-10 opacity-60 transition-all duration-300 ease-in-out hover:opacity-100 bg-yellow-600 drop-shadow-xl my-auto rounded-full items-center justify-center">
+                    <i class="bi bi-arrow-right text-2xl text-white"></i>
+                </button>
+            </div>
+
+        </div>
+
+
+        <div id="analytics">
+            <div class="analytics-header">
+                <h2 class="text-3xl font-bold my-2">By the Numbers</h2>
+                <p>With hard work and dedication, we've achieved:</p>
+            </div>
+
+            <div class="analytics-cards grid grid-cols-2 md:grid-cols-3 gap-6 py-3">
+                <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
+                    <img src="./assets/img/icons-01.svg" width="50px" alt="">
+                    <h4 class="metropolis text-4xl font-bold " data-value="254">254+</h4>
+                    <p>Workshops and Lectures</p>
+                </div>
+
+                <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
+                    <i class="bi bi-bank text-[2rem]"></i>
+                    <h4 class="metropolis text-4xl font-bold" data-value="13">13+</h4>
+                    <p>Sponsors and Partners</p>
+                </div>
+
+                <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
+                    <i class="bi bi-people-fill text-[2rem]"></i>
+                    <h4 class="metropolis text-4xl font-bold" data-value="584">584+</h4>
+                    <p>Attendees and Viewers</p>
+                </div>
+
+                <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
+                    <img src="./assets/img/icons-01.svg" width="50px" alt="">
+                    <h4 class="metropolis text-4xl font-bold" data-value="101">101+</h4>
+                    <p>Speakers and Influencers</p>
+                </div>
+
+                <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
+                    <i class="bi bi-building text-[2rem]"></i>
+                    <h4 class="metropolis text-4xl font-bold" data-value="5">5+</h4>
+                    <p>Government Entities</p>
+                </div>
+
+                <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
+                    <i class="bi bi-trophy text-[2rem]"></i>
+                    <h4 class="metropolis text-4xl font-bold" data-value="3">3+</h4>
+                    <p>Agreements and Partnerships</p>
+                </div>
+            </div>
         </div>
 
     </div>
 
 
-    <div id="analytics">
-        <div class="analytics-header">
-            <h2 class="text-3xl font-bold my-2">By the Numbers</h2>
-            <p>With hard work and dedication, we've achieved:</p>
-        </div>
 
-        <div class="analytics-cards grid grid-cols-2 md:grid-cols-3 gap-6 py-3">
-            <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
-                <img src="./assets/img/icons-01.svg" width="50px" alt="">
-                <h4 class="metropolis text-4xl font-bold " data-value="254">254+</h4>
-                <p>Workshops and Lectures</p>
-            </div>
-
-            <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
-                <i class="bi bi-bank text-[2rem]"></i>
-                <h4 class="metropolis text-4xl font-bold" data-value="13">13+</h4>
-                <p>Sponsors and Partners</p>
-            </div>
-
-            <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
-                <i class="bi bi-people-fill text-[2rem]"></i>
-                <h4 class="metropolis text-4xl font-bold" data-value="584">584+</h4>
-                <p>Attendees and Viewers</p>
-            </div>
-
-            <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
-                <img src="./assets/img/icons-01.svg" width="50px" alt="">
-                <h4 class="metropolis text-4xl font-bold" data-value="101">101+</h4>
-                <p>Speakers and Influencers</p>
-            </div>
-
-            <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
-                <i class="bi bi-building text-[2rem]"></i>
-                <h4 class="metropolis text-4xl font-bold" data-value="5">5+</h4>
-                <p>Government Entities</p>
-            </div>
-
-            <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
-                <i class="bi bi-trophy text-[2rem]"></i>
-                <h4 class="metropolis text-4xl font-bold" data-value="3">3+</h4>
-                <p>Agreements and Partnerships</p>
-            </div>
-        </div>
-    </div>
-
-
-    <script src="./js/scrollsBtns.js"></script>
-    <script src="./js/newEventOutScope.js"></script>
-    <script src="./js/lastThreeEvents.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="~/js/todayDate.js"></script>
+    <script src="~/js/scrollsBtns.js"></script>
+    <script src="~/js/newEventOutScope.js"></script>
+    <script src="~/js/userOptions.js"></script>
+    <script src="~/js/script.js"></script>
 </body>
 </html>

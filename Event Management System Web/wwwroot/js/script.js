@@ -1,28 +1,16 @@
-let todayElement = document.getElementById("today");
-let date = new Date();
-const days = ["Sunday", "Monsay", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-// const arMonthes = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
-let day = date.getDay();
-let month = monthes[date.getMonth()];
-let dayDate = date.getDate();
-let year = date.getFullYear();
-
-todayElement.textContent =`${days[day]}, ${dayDate} ${month} ${year}. `;
-
-
-let minsTime = document.getElementById('mins')?.firstElementChild;
-let hrsTime  = document.getElementById('hrs')?.firstElementChild;
-let dayTime  = document.getElementById('days')?.firstElementChild;
-
 let b = new Date()
 //WeekDay Month TodayDate Year hh:mm:ss GMT+0400 (Gulf Standard Time)
 
 const eventDay = {
     name: "Clear Sky",
-    date: '2023-08-20',
+    date: '2023-08-28',
     time: "00:00:00",
     attendees: 52,
 }
+
+let minsTime = document.getElementById('mins')?.firstElementChild;
+let hrsTime  = document.getElementById('hrs')?.firstElementChild;
+let dayTime  = document.getElementById('days')?.firstElementChild;
 
 setInterval(()=>{
     let a = new Date(`${eventDay.date}T${eventDay.time}`)
@@ -42,9 +30,9 @@ setInterval(()=>{
     let secs = parseInt((a-b)/1000)-(days*24*60*60)-(hrs*60*60)-mins*60
     
     if(days < 1){
-        dayTime.parentElement.lastElementChild.textContent = "ساعات"
-        hrsTime.parentElement.lastElementChild.textContent = "دقائق"
-        minsTime.parentElement.lastElementChild.textContent= "ثواني"
+        dayTime.parentElement.lastElementChild.textContent = "Hrs"
+        hrsTime.parentElement.lastElementChild.textContent = "Mins"
+        minsTime.parentElement.lastElementChild.textContent= "Secs"
         hrs  >= 10 ? dayTime.textContent  = hrs  : dayTime.textContent  = "0" + hrs
         mins >= 10 ? hrsTime.textContent  = mins : hrsTime.textContent  = "0" + mins
         secs >= 10 ? minsTime.textContent = secs : minsTime.textContent = "0" + secs

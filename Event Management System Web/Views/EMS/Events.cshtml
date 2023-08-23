@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model Event_Management_System_Web.Models.ViewModels.ViewEvents
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -23,36 +25,39 @@
                 <p class="leading-10">All events hosted by GCAA:</p>
             </div>
             <div id="view-btns" class="flex border h-fit w-22 justify-between">
-                <button class="v-btn border border-yellow-600 w-8 h-8 p-1 ease-linear outline-0 active"><img src="./assets/img/icons-02.svg" alt=""></button>
-                <button class="h-btn border border-yellow-600 w-8 h-8 p-1 ease-linear duration-300 outline-0 bg-yellow-600"><img src="./assets/img/icons-03.svg" alt=""></button>
+                <button class="v-btn border border-yellow-600 w-8 h-8 p-1 ease-linear outline-0 active"><img src="~/Views/EMS/assets/img/icons-02.svg" alt=""></button>
+                <button class="h-btn border border-yellow-600 w-8 h-8 p-1 ease-linear duration-300 outline-0 bg-yellow-600"><img src="~/Views/EMS/assets/img/icons-03.svg" alt=""></button>
             </div>
         </div>
         <div class="events grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 2xl:grid-cols-5 py-4">
 
-            <div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-2xl h-[340px] w-full relative overflow-hidden" attendees-list="a, b" event-id="12345">
-                <div class="card-img w-full overflow-hidden h-[40%] bg-gray-300">
-                    <img src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-
-                <div class="card-date w-14 h-14 bg-yellow-600 flex text-center rounded-lg absolute inset-x-[65%] inset-y-[26%] text-xl font-sans leading-tight text-white">
-                    <h3 class="text-2xl leading-none my-auto">
-                        25
-                        <span class="text-lg leading-none">JUL</span>
-                    </h3>
-                </div>
-
-                <div class="card-info text-yellow-700 h-[60%] px-4 pt-7 pb-4 flex flex-col grow justify-between">
-                    <div class="card-text text-justify">
-                        <div class="card-header h-fit font-bold text-xl">مخاطر الدرونز, رقابة و حذر</div>
-                        <div class="card-desc h-1/2 text-sm mt-2">توعية بخصوص مخاطر الدرونر و شروط استخدامها, و المجالات في ذلك</div>
+            @foreach (var singleEvent in Model.EventData)
+            {
+                <div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-2xl h-[340px] w-full relative overflow-hidden" attendees-list=@Model.Attendees event-id=@singleEvent.Event_id>
+                    <div class="card-img w-full overflow-hidden h-[40%] bg-gray-300">
+                        <img src=@singleEvent.Event_image alt="">
                     </div>
 
-                    <div class="card-buttons flex place-content-between mt-2">
-                        <button id="show-button" class="show-button button outline-0 h-10 rounded-full border border-yellow-700" type="">عرض</button>
-                        <button id="edit-button" class="edit-button button outline-0 h-10 rounded-full text-white bg-yellow-600 hover:bg-yellow-500 ease-linear duration-200" type="">تعديل</button>
+                    <div class="card-date w-14 h-14 bg-yellow-600 flex text-center rounded-lg absolute inset-x-[65%] inset-y-[26%] text-xl font-sans leading-tight text-white">
+                        <h3 class="text-2xl leading-none my-auto">
+                            @singleEvent.Event_date.Day
+                            <span class="text-lg leading-none">@singleEvent.Event_date.ToString("MMM")</span>
+                        </h3>
+                    </div>
+
+                    <div class="card-info text-yellow-700 h-[60%] px-4 pt-7 pb-4 flex flex-col grow justify-between">
+                        <div class="card-text text-justify">
+                            <div class="card-header h-fit font-bold text-xl">@singleEvent.Event_name</div>
+                            <div class="card-desc h-1/2 text-sm mt-2">@singleEvent.Event_description</div>
+                        </div>
+
+                        <div class="card-buttons flex place-content-between mt-2">
+                            <button id="show-button" class="show-button button outline-0 h-10 rounded-full border border-yellow-700" type="">عرض</button>
+                            <button id="edit-button" class="edit-button button outline-0 h-10 rounded-full text-white bg-yellow-600 hover:bg-yellow-500 ease-linear duration-200" type="">تعديل</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
 
 
 
@@ -385,16 +390,15 @@
         </dialog>
     </div>
 
-    <script src="./assets/js/editEventButton.js"></script>
-    <script src="./assets/js/loadCards.js"></script>
-    <script src="./assets/js/eventsPages.js"></script>
-    <script src="./assets/js/newEvent.js"></script>
-    <script src="./assets/js/uploadImage.js"></script>
-    <script src="./assets/js/expandNavbar.js"></script>
-    <script src="./assets/js/showEventButton.js"></script>
-    <script src="./assets/js/attendeesList.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/handleMutations.js"></script>
+    <script src="./js/editEventButton.js"></script>
+    <script src="./js/loadCards.js"></script>
+    <script src="./js/eventsPages.js"></script>
+    <script src="./js/newEvent.js"></script>
+    <script src="./js/uploadImage.js"></script>
+    <script src="./js/showEventButton.js"></script>
+    <script src="./js/attendeesList.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/handleMutations.js"></script>
 
 
 </body>

@@ -1,15 +1,3 @@
-const manageButtons = document.querySelectorAll(".manage-button");
-manageButtons.forEach((manageButton)=>{
-    window.addEventListener("click", (e)=>{
-        if(e.target != manageButton){
-            manageButton.nextElementSibling.removeAttribute("clicked")
-        }
-        else{
-            manageButton.nextElementSibling.toggleAttribute("clicked")
-        }
-    })
-})
-
 const boldButton = document.querySelector('.bi-type-bold')
 const italicButton = document.querySelector('.bi-type-italic')
 const underlineButton = document.querySelector('.bi-type-underline')

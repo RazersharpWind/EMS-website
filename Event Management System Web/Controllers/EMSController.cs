@@ -26,7 +26,10 @@ namespace Event_Management_System_Web.Controllers
 
         public IActionResult Events()
         {
-            return View();
+            ViewEvents events = new ViewEvents();
+            events.EventData = _eventData.GetEvents().Result.ToList();
+            events.Attendees = _attendeeData.GetAttendees().Result.ToList();
+            return View(events);
         }
 
         public IActionResult Attendees()

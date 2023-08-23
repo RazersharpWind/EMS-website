@@ -6,8 +6,8 @@ const cards = document.querySelectorAll('.event-card')
 const views =
 [
     {".events"       :['grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 2xl:grid-cols-5', 'py-4']},
-    {'.event-card'   :['flex flex-col col-3 bg-white border border-yellow-700 rounded-3xl h-[22rem] w-full relative overflow-hidden', 'flex w-full bg-white border border-yellow-700 rounded-3xl h-full relative mb-4']},
-    {'.card-img'     :['w-full rounded-t-3xl bg-gray-500 overflow-hidden h-[40%] bg-gray-300', 'h-36 w-[25%] rounded-r-3xl bg-gray-300 overflow-hidden']},
+    {'.event-card'   :['flex flex-col col-3 bg-white border border-yellow-700 rounded-3xl h-[22rem] w-full relative overflow-hidden', 'flex w-full bg-white border border-yellow-700 rounded-3xl h-full relative mb-4 overflow-hidden']},
+    {'.card-img'     :['w-full rounded-t-3xl bg-gray-500 overflow-hidden h-[40%] bg-gray-300', 'h-36 w-[25%] rounded-l-3xl bg-gray-300 ']},
     {'.card-date'    :['w-14 h-14 bg-yellow-600 flex text-center rounded-lg absolute inset-x-[65%] inset-y-[26%] text-xl font-sans leading-tight text-white', 'w-16 h-16 bg-yellow-600 flex text-center rounded-lg absolute inset-x-[22%] inset-y-[28%] text-xl font-sans leading-tight text-white']},
     {'.card-info'    :['text-yellow-700 h-[60%] px-4 pt-7 pb-4 flex flex-col grow justify-between','flex grow justify-between items-center text-yellow-700 py-4 px-12 w-[75%]']},
 

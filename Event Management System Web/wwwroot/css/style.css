@@ -1,4 +1,4 @@
-*{font-family: 'Metropolis';}
+*{font-family: 'Metropolis' , "Times new Roman"; transition: all ease-in-out .3s;}
 /* *{font-family: 'Droid Arabic Kufi Regular';} */
 
 :root{
@@ -136,7 +136,6 @@ td{
 #attedees-management-display[clicked] li{
     width: 100%;
     padding: .5rem;
-    text-align: right;
     cursor: pointer;
 }
 
@@ -187,7 +186,7 @@ td{
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.185);
     border-radius: .5rem;
     position: absolute;
-    left: 0; top: -54px;
+    right: 0; top: -54px;
     z-index: 999;
     overflow: hidden;
 }
@@ -195,12 +194,6 @@ td{
 .manage-new{padding: 5px 0; cursor: pointer;}
 .manage-new:hover{
     background-color: rgb(235, 235, 235);
-}
-
-.edit-new{
-    width: 100%;
-    margin: 2px 0;
-    font-size: .75rem;
 }
 
 
@@ -228,3 +221,18 @@ td{
     transform: translate(-50%, -50%);
 
 } */
+
+
+.collapseable{
+    display: block;
+    transition: .3s all ease-in-out;
+    max-height: 90px;
+    transform: scaleY(10px);
+}
+
+.collapseable[clicked]{
+    scale: 1;
+    display: block;
+    max-height: 400px;
+    height: auto;
+}

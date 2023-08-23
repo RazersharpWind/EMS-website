@@ -16,7 +16,7 @@ const attendeeEmail = document.getElementById("attendee-email")
 const attendeesTable = document.getElementById("attendees-table")
 const noAttendee = document.createElement("tr");
 attendeesTable.appendChild(noAttendee)
-noAttendee.textContent = "لا حضور"
+noAttendee.textContent = "No attendees"
 
 
 
@@ -46,10 +46,10 @@ confirmAttendeeButton.addEventListener("click", (e)=>{
     <td>${attendeeEmail.value}</td>
     <td>مؤكد</td>
     <td class="end">
-        <div class="attedees-management bi-chevron-up w-fit py-3 pl-3 py-3">
+        <div class="attedees-management bi-chevron-up w-fit py-3 pr-3">
             <ul id="attedees-management-display">
-                <li>إعلام</li><hr class="w-5/6 bg-yellow-500 h-[2px]">
-                <li class="kick-button text-red-600 font-bold">طرد</li>
+                <li>Notify</li><hr class="w-5/6 bg-yellow-500 h-[2px]">
+                <li class="kick-button text-red-600 font-bold">Kick</li>
             </ul>
         </div>
     </td>`
@@ -88,11 +88,16 @@ confirmAttendeeButton.addEventListener("click", (e)=>{
 const manageAttendee = () => {
     const attedeesManageButtons = document.querySelectorAll(".attedees-management");
 
+    
+
     attedeesManageButtons.forEach((attedeesManageButton)=>{
-        attedeesManageButton.addEventListener("click", ()=>{
-            //dialog normal way is not used here since we want a dialog inside another
-            //toggle just take one parameter
-            attedeesManageButton.firstElementChild.setAttribute("clicked","")
+        window.addEventListener("click", (e)=>{
+            if(e.target == attedeesManageButton){
+                attedeesManageButton.firstElementChild.setAttribute("clicked","")
+            }
+            else{
+                attedeesManageButton.firstElementChild.removeAttribute("clicked")
+            }
         })
     })
 }
