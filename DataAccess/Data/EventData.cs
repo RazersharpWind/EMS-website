@@ -28,17 +28,18 @@ public class EventData : IEventData
         return result.FirstOrDefault();
     }
 
-    public Task<IEnumerable<Event>> GetLastThreeEvents() =>
+    public Task<IEnumerable<Event>> GetLastSixEvents() =>
         _db.LoadData<Event, dynamic>(storedProcedure: "dbo.GetLastSixEvents", new { });
 
     public Task CreateEvent(Event singleEvent) =>
         _db.SaveData(storedProcedure: "dbo.CreateEvent",
             new
             {
-                singleEvent.Event_name,
-                singleEvent.Event_description,
-                singleEvent.Event_date,
-                singleEvent.Event_image
+                singleEvent.event_name,
+                singleEvent.event_description,
+                singleEvent.event_date,
+                singleEvent.event_time,
+                singleEvent.event_image
             });
 
     public Task UpdateEvent(Event user) =>

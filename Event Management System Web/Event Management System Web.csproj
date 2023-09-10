@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\icons-01.svg" />
+    <Content Remove="wwwroot\images\icons-02.svg" />
+    <Content Remove="wwwroot\images\icons-03.svg" />
+    <Content Remove="wwwroot\images\Social media icons-33.png" />
+    <Content Remove="wwwroot\images\Social media icons-34.png" />
     <Content Remove="wwwroot\js\analyticsIncreament.js" />
     <Content Remove="wwwroot\js\attendeesList.js" />
     <Content Remove="wwwroot\js\editEventButton.js" />
@@ -39,6 +44,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\images\icons-01.svg" />
+    <None Include="wwwroot\images\icons-02.svg" />
+    <None Include="wwwroot\images\icons-03.svg" />
+    <None Include="wwwroot\images\Social media icons-33.png" />
+    <None Include="wwwroot\images\Social media icons-34.png" />
     <None Include="wwwroot\js\analyticsIncreament.js" />
     <None Include="wwwroot\js\attendeesList.js" />
     <None Include="wwwroot\js\editEventButton.js" />

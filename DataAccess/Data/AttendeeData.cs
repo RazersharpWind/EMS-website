@@ -13,4 +13,13 @@ public class AttendeeData : IAttendeeData
 
     public Task<IEnumerable<Attendee>> GetAttendees() =>
         _db.LoadData<Attendee, dynamic>(storedProcedure: "dbo.GetAttendees", new { });
+
+    public async Task<IEnumerable<Attendee?>> GetEventAttendees(int event_id)
+    {
+        var result = await _db.LoadData<Attendee, dynamic>(
+            storedProcedure: "dbo.GetEventAttendees",
+            new { id = event_id });
+
+        return result;
+    }
 }

@@ -9,5 +9,5 @@ newEventButton.addEventListener('click', (e)=>{
         "تواصل معنا": "Index",
     }
     console.log(e.target);
-    window.location.href = `events.html?from${"Index"}=true`;
+    window.location.href = `/EMS/Events?from${"Index"}=true`;
 })

@@ -5,26 +5,27 @@ const viewEventImage = document.querySelector('#view-dialog .new-event-image').f
 const viewEventHeader = document.querySelector('#view-dialog .new-event-subject h4')
 const viewEventDesc = document.querySelector('#view-dialog .new-event-describtion h4')
 const viewEventDate = document.querySelector('.new-event-when h4')
+const viewEventTime = document.querySelector('.displayDateTime').lastElementChild;
 const viewEventId = document.getElementById('event-id-space');
 
 
 
 
-const openShow = () =>{
-    showButtons.forEach((showButton)=>{
-        showButton.addEventListener("click", (e)=>{
-            viewDialog.showModal();
-            viewDialog.removeAttribute("close" )
-            viewEventImage.src = e.target.parentElement.parentElement.parentElement.firstElementChild.firstElementChild.src;
-            viewEventHeader.textContent = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.textContent
-            viewEventDesc.textContent = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.lastElementChild.textContent
-            viewEventDate.textContent = e.target.parentElement.parentElement.parentElement.children[1].firstElementChild.textContent
-            viewEventId.textContent = e.target.parentElement.parentElement.parentElement.getAttribute('event-id');
+//const openShow = () =>{
+//    showButtons.forEach((showButton)=>{
+//        showButton.addEventListener("click", (e)=>{
+//            viewDialog.showModal();
+//            viewDialog.removeAttribute("close" )
+//            viewEventImage.src = e.target.parentElement.parentElement.parentElement.firstElementChild.firstElementChild.src;
+//            viewEventHeader.textContent = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.textContent
+//            viewEventDesc.textContent = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.lastElementChild.textContent
+//            viewEventDate.textContent = e.target.parentElement.parentElement.parentElement.children[1].firstElementChild.textContent
+//            viewEventId.textContent = e.target.parentElement.parentElement.parentElement.getAttribute('event-id');
     
-        })
-    })
-}
-openShow()
+//        })
+//    })
+//}
+//openShow()
 // const closeEvent = () => {
 //     viewDialog.setAttribute("close" ,"")
 //     setTimeout(()=>{viewDialog.close()},300)
@@ -42,7 +43,7 @@ document.querySelectorAll('.cancel-button').forEach((cButton) => {
 
 
 function handleEditEventsMutation(mutationsList, observer){
-    openShow()
+    //openShow()
 }
 
   // Configuration for the observer

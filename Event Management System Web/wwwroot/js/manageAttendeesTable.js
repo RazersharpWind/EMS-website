@@ -1,5 +1,6 @@
-const checkedB = document.getElementById("checked-number").firstElementChild
+const checkedB = document.getElementById("checked-number").firstElementChild.firstElementChild
 let checkedAttendees = 0;
+const selectAllButton = document.getElementById("select-all")
 
 const handleLoading = (mutationsList, observer) => {
     const attendeesSelectBox = document.querySelectorAll(".select-box");
@@ -21,22 +22,39 @@ const handleLoading = (mutationsList, observer) => {
 
 
     attendeesSelectBox.forEach((selectBox)=>{
-        selectBox.addEventListener("click", (e)=>{
-            if(selectBox.checked){
-                console.log("checked");
-                e.target.parentElement.parentElement.style.color = "white"
-                e.target.parentElement.parentElement.style.backgroundColor = "rgb(202,138,4)"
-                checkedAttendees++;
-                checkedB.innerText = checkedAttendees
+        
+        window.addEventListener("click",(e)=>{
+            if(e.target == selectBox){
+                if(checkedAttendees >= 0){
+                    selectAllButton.classList.remove("hidden")
+                }
+
+
+                if(selectBox.checked){
+                    console.log("checked");
+                    e.target.parentElement.parentElement.style.color = "white"
+                    e.target.parentElement.parentElement.style.backgroundColor = "rgb(202,138,4)"
+                    checkedAttendees++;
+                    checkedB.innerText = checkedAttendees
+                }
+                else{
+                    console.log("Gerg");
+                    e.target.parentElement.parentElement.style.color = "black"
+                    e.target.parentElement.parentElement.style.backgroundColor = "white"
+                    checkedAttendees--;
+                    checkedB.innerText = checkedAttendees
+                }
             }
-            else{
-                console.log("Gerg");
-                e.target.parentElement.parentElement.style.color = "black"
-                e.target.parentElement.parentElement.style.backgroundColor = "white"
-                checkedAttendees--;
+            else if(e.target == selectAllButton){
+                selectBox.checked = false;
+                selectBox.parentElement.parentElement.style.color = "black"
+                selectBox.parentElement.parentElement.style.backgroundColor = "white"
                 checkedB.innerText = checkedAttendees
+                checkedAttendees = 0
+                selectAllButton.classList.add("hidden")
             }
         })
+
     })
 
 

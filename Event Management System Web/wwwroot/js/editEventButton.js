@@ -27,31 +27,31 @@ let editedCardHeader, editedCardDesc, editedCardDate, editedCardImage, editedCar
 
 const openEdit = () => {
     editEventButtons.forEach((editEventButton)=>{
-        editEventButton.addEventListener('click',(e)=>{
-            editedCardHeader = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild;
-            editedCardDesc = e.target.parentElement.parentElement.firstElementChild.lastElementChild;
-            editedCardDate = e.target.parentElement.parentElement.parentElement.children[1].firstElementChild;
-            editedCardTime = e.target.parentElement.parentElement.parentElement;
-            editedCardImage = e.target.parentElement.parentElement.parentElement.firstElementChild.firstElementChild;
+        editEventButton.addEventListener('click', (e) => {
             editedEventId.textContent = e.target.parentElement.parentElement.parentElement.getAttribute('event-id');
-
-
-
-            editEventName.value = editedCardHeader.textContent;
-            editEventImage.src = editedCardImage.src
-            editEventDescribtion.value = e.target.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.lastElementChild.textContent
-            editEventTime.value = editedCardTime.getAttribute("event-time")
-
-            console.log(parseInt(monthes.indexOf(e.target.parentElement.parentElement.parentElement.children[1].firstElementChild.lastElementChild.innerText)));
-
-            editEventDate.value = `${String(e.target.parentElement.parentElement.parentElement.getAttribute("data-event-date")).split("-")[2]}-${String(e.target.parentElement.parentElement.parentElement.getAttribute("data-event-date")).split("-")[1]}-${String(e.target.parentElement.parentElement.parentElement.getAttribute("data-event-date")).split("-")[0]}`
-
+            for (let index in editEvent) {
+                if (editEvent[index].event_id.toString() === editedEventId.textContent) {
+                    var year = editEvent[index].event_date.toString().split("T")[0].split("-")[0];
+                    var month = editEvent[index].event_date.toString().split("T")[0].split("-")[1];
+                    var day = editEvent[index].event_date.toString().split("T")[0].split("-")[2];
+                    var hour = editEvent[index].event_date.toString().split("T")[1].split(":")[0];
+                    var minute = editEvent[index].event_date.toString().split("T")[1].split(":")[1];
+                    var second = editEvent[index].event_date.toString().split("T")[1].split(":")[2];
+                    var date = new Date(year, month, day, hour, minute, second);
+                    var time = new Date(editEvent[index].event_time.toString())
+                    editEventName.value = editEvent[index].event_name.toString();
+                    editEventDescribtion.value = editEvent[index].event_description.toString();
+                    editEventDate.value = year + "-" + month + "-" + day;
+                    editEventTime.value = time.getHours() + ":" + time.getMinutes();
+                    editEventImage.src = editEvent[index].event_image.toString();
+                }
+            }
 
             document.querySelectorAll(".attendee-event-id").forEach((attedee)=>{
                 attedee.firstElementChild.innerText = eventId.textContent
             })
 
-
+            //console.log(editedEventId.textContent);
             editDialog.showModal();
             editDialog.removeAttribute("close" ,"");
 
@@ -62,25 +62,25 @@ const openEdit = () => {
 openEdit()
 
 
-confirmEditButton.addEventListener("click", ()=>{
-    editedCardHeader.textContent = editEventName.value;
-    editedCardDesc.textContent = editEventDescribtion.value
-    // editedCardDate.textContent = editEventDate.value
-    editedCardDate.innerHTML = `
-    <h3 class="text-2xl leading-none my-auto">${editEventDate.value.split('-')[2]}
-    <span class="text-lg leading-none">${monthes[editEventDate.value.split('-')[1]-1]}</span>
-    </h3>`;
-    editedCardImage.src = editEventImage.src
+//confirmEditButton.addEventListener("click", ()=>{
+//    editedCardHeader.textContent = editEventName.value;
+//    editedCardDesc.textContent = editEventDescribtion.value
+//    // editedCardDate.textContent = editEventDate.value
+//    editedCardDate.innerHTML = `
+//    <h3 class="text-2xl leading-none my-auto">${editEventDate.value.split('-')[2]}
+//    <span class="text-lg leading-none">${monthes[editEventDate.value.split('-')[1]-1]}</span>
+//    </h3>`;
+//    editedCardImage.src = editEventImage.src
 
 
     
 
-    editDialog.setAttribute('close', '');
-    setTimeout(()=>{editDialog.close()},300)
-    // editEventDate.value
-    // editEventImage.src
-    // editEventDescribtion.value
-})
+//    editDialog.setAttribute('close', '');
+//    setTimeout(()=>{editDialog.close()},300)
+//    // editEventDate.value
+//    // editEventImage.src
+//    // editEventDescribtion.value
+//})
 
 const attendeesTables = document.querySelectorAll(".attendees-table");
 

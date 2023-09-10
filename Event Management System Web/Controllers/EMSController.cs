@@ -18,23 +18,35 @@ namespace Event_Management_System_Web.Controllers
 
         public IActionResult Index()
         {
-            ViewEvents events = new ViewEvents();
-            events.EventData = _eventData.GetLastThreeEvents().Result.ToList();
-            events.Attendees = _attendeeData.GetAttendees().Result.ToList();
+            ViewEvents events = new ViewEvents(_attendeeData);
+            events.EventData = _eventData.GetLastSixEvents().Result.ToList();
             return View(events);
         }
 
         public IActionResult Events()
         {
-            ViewEvents events = new ViewEvents();
+            ViewEvents events = new ViewEvents(_attendeeData);
             events.EventData = _eventData.GetEvents().Result.ToList();
-            events.Attendees = _attendeeData.GetAttendees().Result.ToList();
             return View(events);
+        }
+        [HttpPost]
+        public IActionResult AddEvent(Event eventData)
+        {
+            _eventData.CreateEvent(eventData);
+            return Json(new { url="/EMS/Events"});
+        }
+        [HttpPut]
+        public IActionResult UpdateEvent(Event eventData)
+        {
+            _eventData.UpdateEvent(eventData);
+            return Json(new { url = "/EMS/Events" });
         }
 
         public IActionResult Attendees()
         {
-            return View();
+            ViewEvents events = new ViewEvents(_attendeeData);
+            events.EventData = _eventData.GetEvents().Result.ToList();
+            return View(events);
         }
 
         public IActionResult News()

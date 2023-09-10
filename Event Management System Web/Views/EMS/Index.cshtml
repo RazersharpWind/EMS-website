@@ -1,4 +1,4 @@
-﻿@model Event_Management_System_Web.Models.ViewModels.ViewEvents
+﻿@model ViewEvents
 
 <!DOCTYPE html>
 <html>
@@ -63,20 +63,20 @@
             <div class="last-events inline-flex py-4">
                 @foreach (var singleEvent in Model.EventData)
                 {
-                    <div class="event-card mr-8 bg-white border border-yellow-700 rounded-3xl w-[16rem] h-[22rem] relative overflow-hidden" event-id=@singleEvent.Event_id attendees-list="${Object.keys(@Model.Attendees)}">
+                    <div class="event-card mr-8 bg-white border border-yellow-700 rounded-3xl w-[16rem] h-[22rem] relative overflow-hidden" event-id=@singleEvent.event_id attendees-list="${Object.keys(@Model.GetAttendees(singleEvent.event_id)}">
                         <div class="card-img w-full rounded-t-3xl overflow-hidden h-[40%] bg-gray-300">
-                            <img class="" src=@singleEvent.Event_image alt="">
+                            <img class="" src=@singleEvent.event_image alt="">
                         </div>
                         <div class="card-date w-14 h-14 bg-yellow-600 flex rounded-lg absolute inset-x-[65%] inset-y-[25%]  text-white text-center">
                             <div class="text-2xl leading-none flex flex-col justify-center my-auto font-semibold w-full h-full">
-                                <h3 class="text-2xl h-fit p-0 m-0 leading-none">@singleEvent.Event_date.Day</h3>
-                                <p class="text-[1rem] h-fit p-0">@singleEvent.Event_date.ToString("MMM")</p>
+                                <h3 class="text-2xl h-fit p-0 m-0 leading-none">@singleEvent.event_date.Day</h3>
+                                <p class="text-[1rem] h-fit p-0">@singleEvent.event_date.ToString("MMM")</p>
                             </div>
                         </div>
                         <div class="card-info text-yellow-700 h-[60%] px-4 pt-7 pb-4 flex flex-col grow justify-between">
                             <div class="card-text text-left">
-                                <div class="card-header h-fit font-bold text-lg">@singleEvent.Event_name</div>
-                                <div class="card-desc h-1/2 text-xs mt-2">@singleEvent.Event_description</div>
+                                <div class="card-header h-fit font-bold text-lg">@singleEvent.event_name</div>
+                                <div class="card-desc h-1/2 text-xs mt-2">@singleEvent.event_description</div>
                             </div>
 
                             <div class="card-buttons flex place-content-between mt-2">
@@ -109,7 +109,7 @@
 
             <div class="analytics-cards grid grid-cols-2 md:grid-cols-3 gap-6 py-3">
                 <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
-                    <img src="./assets/img/icons-01.svg" width="50px" alt="">
+                    <img src="~/images/icons-01.svg" width="50px" alt="">
                     <h4 class="metropolis text-4xl font-bold " data-value="254">254+</h4>
                     <p>Workshops and Lectures</p>
                 </div>
@@ -127,7 +127,7 @@
                 </div>
 
                 <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
-                    <img src="./assets/img/icons-01.svg" width="50px" alt="">
+                <img src="~/images/icons-01.svg" width="50px" alt="">
                     <h4 class="metropolis text-4xl font-bold" data-value="101">101+</h4>
                     <p>Speakers and Influencers</p>
                 </div>
@@ -153,7 +153,6 @@
     <script src="~/js/todayDate.js"></script>
     <script src="~/js/scrollsBtns.js"></script>
     <script src="~/js/newEventOutScope.js"></script>
-    <script src="~/js/userOptions.js"></script>
     <script src="~/js/script.js"></script>
 </body>
 </html>

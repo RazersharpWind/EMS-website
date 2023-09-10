@@ -9,9 +9,9 @@ const confirmEventBtn = document.getElementById('confirm-button')
 const canelButton = document.getElementById('cancel-button')
 const createEventButton = document.getElementById('dialog-button')
 const editButton = document.getElementById("edit-button")
-
 const eventId = document.getElementById("new-event-id").lastElementChild;
-
+const confirmUpdateButton = document.getElementById("confirm-edit-button");
+eventId.textContent = eventCount + 1;
 
 //to create a shorter list by turning the list into an object
 let cardAttendees = {};
@@ -69,7 +69,7 @@ createEventButton.addEventListener('click', ()=>{
     dialog.showModal()
     dialog.removeAttribute("close")
     dialog.setAttribute("open" ,"")
-    eventId.textContent = Math.floor(1000+Math.random()*8999);
+    //eventId.textContent = Math.floor(1000+Math.random()*8999);
     document.querySelectorAll(".attendee-event-id").forEach((attendee)=>{
         attendee.firstElementChild.innerText = eventId.textContent
     })
@@ -84,31 +84,47 @@ const resetValues = (eventName, eventDate, eventTime, eventDescribtion, eventIma
     eventDate = document.querySelector('.new-event-date').value = "";
     eventDescribtion = document.querySelector('.new-event-describtion textarea').value = "";
     eventImage.src = "";
+    document.querySelector('.location-address').value = "";
 }
 
-confirmEventBtn.addEventListener('click', ()=> {
-    eventName    = document.querySelector('.new-event-subject input').value;
-    eventTime    = document.querySelector('.new-event-time').value;
-    eventDate    = document.querySelector('.new-event-date').value;
-    eventImage   = document.querySelector('.new-event-image').firstElementChild;
+//confirmEventBtn.addEventListener('click', ()=> {
+//    eventName    = document.querySelector('.new-event-subject input').value;
+//    eventTime    = document.querySelector('.new-event-time').value;
+//    eventDate    = document.querySelector('.new-event-date').value;
+//    eventImage   = document.querySelector('.new-event-image').firstElementChild;
+//    eventDescribtion = document.querySelector('.new-event-describtion textarea').value;
+//    newEvent.Event_name = eventName;
+//    newEvent.Event_description = eventDescribtion;
+//    newEvent.Event_date = eventDate;
+//    newEvent.Event_image = eventImage.value
+//    console.log(newEvent.Event_description);
 
-    console.log(eventImage,"THis is the image that should be in the card");
+//    $.ajax({
+//        type: "POST",
+//        url: "/EMS/AddEvent",
+//        data: { eventData: newEvent },
+//        dataType: "json",
+//        success: function (result) { console.log("Event creation success!") },
+//        error: function (req, status, error) { console.log(status) }
+//    });
+//    dialog.setAttribute("close" ,"")
+//    setTimeout(()=>{dialog.close()},300)
+//    resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage)
 
-    eventDescribtion = document.querySelector('.new-event-describtion textarea').value;
-    if(eventName.length < 1  || eventDate.length < 1  || eventTime.length < 1  || eventDescribtion.length < 1 ){
-        alertMessage.textContent = `قم بتعبئة الخانات الفارغة حتى تؤكد الحدث`;
-        alertMessage.classList.add('text-red-500', 'text-md', 'text-[effra]');
-        setTimeout(() => {alertMessage.textContent = '';},1000)
-    }
-    else{
-        getData(eventName, eventDate, eventTime, eventDescribtion, eventImage)
-        // dialog.removeAttribute("open") //sometimes it causes errors
-        dialog.setAttribute("close" ,"")
-        setTimeout(()=>{dialog.close()},300)
+//    //if(eventName.length < 1  || eventDate.length < 1  || eventTime.length < 1  || eventDescribtion.length < 1 ){
+//    //    alertMessage.textContent = `قم بتعبئة الخانات الفارغة حتى تؤكد الحدث`;
+//    //    alertMessage.classList.add('text-red-500', 'text-md', 'text-[effra]');
+//    //    setTimeout(() => {alertMessage.textContent = '';},1000)
+//    //}
+//    //else{
+//    //    getData(eventName, eventDate, eventTime, eventDescribtion, eventImage)
+//    //    // dialog.removeAttribute("open") //sometimes it causes errors
+//    //    dialog.setAttribute("close" ,"")
+//    //    setTimeout(()=>{dialog.close()},300)
 
-        resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage)
-    }
-})
+//    //    resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage)
+//    //}
+//})
 
 
 
@@ -139,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function performFunction() {
     // Function logic goes here
     dialog.showModal()
-    eventId.textContent = Math.floor(1000+Math.random()*8999);
+    //eventId.textContent = Math.floor(1000+Math.random()*8999);
     document.getElementById("attendee-event-id").firstElementChild.innerText = eventId.textContent
     dialog.removeAttribute("close")
 }

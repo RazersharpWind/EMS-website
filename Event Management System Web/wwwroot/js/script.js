@@ -3,7 +3,7 @@ let b = new Date()
 
 const eventDay = {
     name: "Clear Sky",
-    date: '2023-08-28',
+    date: '2023-09-30',
     time: "00:00:00",
     attendees: 52,
 }
@@ -26,8 +26,8 @@ setInterval(()=>{
 
     let days = parseInt((a-b)/1000/60/60/24)
     let hrs  = parseInt((a-b)/1000/60/60)-(days*24)
-    let mins = (parseInt((a-b)/1000/60))-(days*24*60)-hrs*60
-    let secs = parseInt((a-b)/1000)-(days*24*60*60)-(hrs*60*60)-mins*60
+    let mins = (parseInt((a-b)/1000/60))-(days*24*60)-(hrs*60)
+    let secs = (parseInt((a-b)/1000))-(days*24*60*60)-(hrs*60*60)-(mins*60)
     
     if(days < 1){
         dayTime.parentElement.lastElementChild.textContent = "Hrs"
