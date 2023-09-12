@@ -3,10 +3,10 @@
 public class ViewNews
 {
     public List<News> News { get; set; }
-    public News newArticle {  get; set; }
+    public News NewArticle {  get; set; }
     public ViewNews() 
     {
         this.News = new List<News>();
-        this.newArticle = new News();
+        this.NewArticle = new News();
     }
 }

@@ -14,21 +14,13 @@ public class NewsData : INewsData
     public Task<IEnumerable<News>> GetAllNews() =>
         _db.LoadData<News, dynamic>(storedProcedure: "dbo.GetAllNews", new { });
 
-    public async Task<News?> GetNews(int id)
-    {
-        return null;
-    }
-
     public Task CreateNews(News newNews) =>
         _db.SaveData(storedProcedure: "dbo.CreateNews",
             new
             {
-                newNews.title,
-                newNews.details,
-                newNews.image,
-                newNews.date
+                newNews.article_title,
+                newNews.article_details,
+                newNews.article_image,
+                newNews.article_date
             });
-
-    public Task UpdateNews(News user) =>
-        null;
 }

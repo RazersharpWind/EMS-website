@@ -2,8 +2,8 @@
 public class News
 {
     public int uID { get; set; }
-    public string title { get; set; } = string.Empty;
-    public string details { get; set; } = string.Empty;
-    public string image { get; set; } = string.Empty;
-    public DateTime date { get; set; }
+    public string article_title { get; set; } = string.Empty;
+    public string article_details { get; set; } = string.Empty;
+    public string article_image { get; set; } = string.Empty;
+    public DateTime article_date { get; set; }
 }

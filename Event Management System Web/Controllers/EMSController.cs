@@ -58,7 +58,7 @@ namespace Event_Management_System_Web.Controllers
             return View(news);
         }
         [HttpPost]
-        public IActionResult AddArticle(News newArticle)
+        public IActionResult AddNewsArticle(News newArticle)
         {
             _newsData.CreateNews(newArticle);
             return Json(new { url = "/EMS/News" });
