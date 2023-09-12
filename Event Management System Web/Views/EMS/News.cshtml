@@ -1,110 +1,121 @@
-﻿<!DOCTYPE html>
+﻿@model ViewNews
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css"> -->
-    <link rel="stylesheet" href="./assets/css/style2.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/output.css">
     <title>EMS - Events</title>
 </head>
-<body class="md:flex relative">
-
+<body class="md:flex relative font-droid">
         <div class="time-and-date my-4">
             <h1 id="today" class="text-2xl font-bold">الاربعاء, 05 يوليو 2023</h1>
         </div>
 
         <div id="news-and-studio" class="flex gap-6">
             <div id="news-section" class="w-3/5 py-5">
-                <h2 class="text-2xl font-bold">أضف خبراً</h2>
+                <h2 class="text-2xl font-bold">Add News</h2>
                 <div id="create-new" class="my-5 py-3 px-5 h-fit border border-yellow-600 rounded-xl flex flex-col items-end relative">
 
                     <div class="news-header w-full mb-2">
-                        <h2 class="text-xl font-bold">عنوان الخبر</h2>
-                        <input type="text" class="new-header-input w-full h-12 my-2 drop-shadow-lg " placeholder="عنوان الخبر" />
+                        <h2 class="text-xl font-bold">News Title</h2>
+                        <input type="text" class="new-header-input w-full h-12 my-2 drop-shadow-lg " placeholder="News Title" />
                     </div>
                     <div id="new-details" class="new-details w-full">
-                        <h2 class="text-xl font-bold">تفاصيل الخبر</h2>
-                        <textarea class="new-details-input w-full h-36 bg-white my-2 text-justify drop-shadow-lg" placeholder="اخر الأخبار هنا..."></textarea>
+                        <h2 class="text-xl font-bold">News Details</h2>
+                        <textarea class="new-details-input w-full h-36 bg-white my-2 text-justify drop-shadow-lg" placeholder="Latest news here..."></textarea>
                     </div>
                     <div id="new-image" class="new-image w-full">
                         <div class="img-and-button flex h-12">
                             <div class="button">
                                 <input id="new-image-upload-button" type="file" />
-                                <label for="new-image-upload-button" class="bg-transparent block h-10 w-28 flex items-center cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg px-2 pointer">إرفاق صورة</label>
+                                <label for="new-image-upload-button" class="bg-transparent text-sm h-8 w-30 flex items-center cursor-pointer border border-yellow-600 text-yellow-600 rounded-md px-2 pointer">Attach Image</label>
                             </div>
                             <div class="new-img-wrapper h-full grow mr-10 rounded-xl overflow-hidden">
                                 <img class="w-full" src="" alt="">
                             </div>
-
                         </div>
                     </div>
 
-                    <div id="toolbar" class="absolute bottom-[28%] left-8 flex justify-between w-32 mb-1 py-2 rounded-md">
+                    <div id="toolbar" class="absolute bottom-[28%] right-8 flex justify-between w-32 mb-1 py-2 rounded-md">
                         <button onclick="applyBoldStyle()" class="bi-type-bold rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 bold-tool "></button>
-                        <button onclick="applyitalicStyle()" class="bi-type-italic rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 underline-tool "></button>
+                        <button onclick="applyItalicStyle()" class="bi-type-italic rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 underline-tool "></button>
                         <button onclick="applyUnderlineStyle()" class="bi-type-underline rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 italic-tool "></button>
-                        <!-- <button onclick="applyUnderlineStyle()" class="bi-type-h1 rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 italic-tool "></button>
-                        <button class="bi-type-h2 rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 italic-tool "></button> -->
                     </div>
                     <div id="news-section-buttons">
-                        <button id="publish-new-button" class="bg-yellow-600 text-white bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-lg p-2 w-20">نشر</button>
+                        <button id="publish-new-button" class="bg-yellow-600 shadow-lg text-white bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-lg p-2 w-20">Publish</button>
                     </div>
                 </div>
 
                 <div id="news-container" class="news-container">
-
-                    <div class="new my-5 p-3 h-fit border border-yellow-600 rounded-xl flex flex-col items-end">
-                        <div class="new-img-wrapper h-48 w-full overflow-hidden rounded-xl drop-shadow-xl relative">
-                            <img class="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                        </div>
-                        <div class="new-text p-3">
-                            <div class="new-header my-2">
-                                <div class="new-header-text flex justify-between w-full items-center relative">
-                                    <h2 class="text-2xl font-bold my-1">مستجدات المنتدى الدولي للطيران</h2>
-                                    <div class="manage-button bi-three-dots w-fit cursor-pointer"></div>
-                                    <div class="new-manage">
-                                        <div class="manage-new edit-new">تعديل </div>
-                                        <hr class=" w-5/6 bg-yellow-500 h-[2px]">
-                                        <div class="manage-new remove-new">إزالة</div>
+                    @foreach (var article in Model.News)
+                    {
+                        <div class="new my-5 p-3 h-fit border border-yellow-600 rounded-xl flex flex-col items-end">
+                            <div class="new-img-wrapper h-48 w-full overflow-hidden rounded-xl drop-shadow-xl relative">
+                                <img class="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@article.image alt="">
+                            </div>
+                            <div class="new-text p-3">
+                                <div class="new-header my-2">
+                                    <div class="new-header-text flex justify-between w-full items-center relative">
+                                        <h2 class="text-2xl font-bold my-1">@article.title</h2>
+                                        <div class="manage-button bi-three-dots w-fit cursor-pointer"></div>
+                                        <div class="new-manage hidden justify-around items-center w-20 h-16 absolute overflow-hidden z-50 right-0 top-[-54px] rounded-[.3em] text-sm text-left bg-white">
+                                            <div class="manage-new px-2 py-0 text-md cursor-pointer w-full edit-new hover:bg-[ rgb(235, 235, 235)]">Modify</div>
+                                            <hr class=" w-5/6 bg-yellow-500 h-[2px]">
+                                            <div class="manage-new px-2 py-0 text-md cursor-pointer w-full remove-new hover:bg-[ rgb(235, 235, 235)]">Remove</div>
+                                        </div>
+                                    </div>
+                                    <div class="new-date">
+                                        <span>Posted on</span>
+                                        <span class="new-date-written">@article.date</span>
                                     </div>
                                 </div>
-                                <div class="new-date">
-                                    <span>نزل بتاريخ</span>
-                                    <span class="new-date-written"></span>
+                                <div class="new-details">
+                                    <p>@article.details</p>
                                 </div>
                             </div>
-                            <div class="new-details">
-                                <p>منتدى الطيران هو مجتمع رقمي يجمع بين عشاق ومحترفي الطيران لمناقشة وتبادل المعلومات والخبرات حول هذا المجال المثير. يتميز هذا المنتدى بالتالي:</p>
-                            </div>
                         </div>
-                    </div>
-
-
+                    }
                 </div>
-
-
             </div>
             <div id="studio" class="studio py-5 grow">
-                <h2 class="text-2xl font-bold">الاستوديو</h2>
+                <h2 class="text-2xl font-bold">Studio</h2>
                 <div id="studio-section" class="studio-section my-5 p-3 border border-yellow-600 rounded-xl flex flex-col items-end h-48">
                     sf
                 </div>
             </div>
         </div>
 
+    <script src="~/js/newNew.js"></script>
+    <script type="text/javascript">
+        var article = @Html.Raw(Json.Serialize(Model.newArticle))
+        article.title = newHeaderInputs.value;
+        article.details = newDetailInputs.value;
+        article.image = newImageLink.value;
+        article.date = new Date();
 
-
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/expandNavbar.js"></script>
-    <script src="./assets/js/newEventOutScope.js"></script>
-    <script src="./assets/js/newNew.js"></script>
-    <script src="./assets/js/manageNew.js"></script>
-    <script src="./assets/js/loadNews.js"></script>
-    <script src="./assets/js/uploadNewImage.js"></script>
-    <script src="./assets/js/handleMutations.js"></script>
+        publishNewButton.addEventListener("click", () => {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("AddArticle")",
+                data: { newArticle: article },
+                success: function (result) { console.log("Article creation success!"); window.location = result.url },
+                error: function (req, status, error) { console.log(status) },
+            });
+            newHeaderInputs.value = ""
+            newDetailInputs.value = ""
+            newImageLink.src = ""
+        })
+    </script>
+    <script src="~/js/todayDate.js"></script>
+    <script src="~/js/newEventOutScope.js"></script>
+    <script src="~/js/manageNew.js"></script>
+    <script src="~/js/loadNews.js"></script>
+    <script src="~/js/uploadNewImage.js"></script>
 
 </body>
 </html>
