@@ -8,7 +8,7 @@ builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
 builder.Services.AddSingleton<IUserData, UserData>();
 builder.Services.AddSingleton<IEventData, EventData>();
 builder.Services.AddSingleton<IAttendeeData, AttendeeData>();
-builder.Services.AddSingleton<INewsData, NewsData>();
+builder.Services.AddSingleton<IArticleData, ArticleData>();
 
 var app = builder.Build();
 

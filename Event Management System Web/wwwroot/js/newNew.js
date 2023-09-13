@@ -1,4 +1,4 @@
-const publishNewButton = document.getElementById('publish-new-button');
+let publishNewButton = document.getElementById('publish-new-button');
 let newHeaderInputs =document.querySelector(".new-header-input");
 let newDetailInputs =document.querySelector(".new-details-input");
 let newsContainer = document.getElementById('news-container');

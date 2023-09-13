@@ -9,13 +9,13 @@ namespace Event_Management_System_Web.Controllers
     {
         private readonly IEventData _eventData;
         private readonly IAttendeeData _attendeeData;
-        private readonly INewsData _newsData; 
+        private readonly IArticleData _articleData; 
 
-        public EMSController(IEventData eventData, IAttendeeData attendeeData, INewsData newsData)
+        public EMSController(IEventData eventData, IAttendeeData attendeeData, IArticleData articleData)
         {
             _eventData = eventData;
             _attendeeData = attendeeData;
-            _newsData = newsData;
+            _articleData = articleData;
         }
 
         public IActionResult Index()
@@ -54,13 +54,13 @@ namespace Event_Management_System_Web.Controllers
         public IActionResult News()
         {
             ViewNews news = new ViewNews();
-            news.News = _newsData.GetAllNews().Result.ToList(); 
+            news.News = _articleData.GetArticles().Result.ToList(); 
             return View(news);
         }
         [HttpPost]
-        public IActionResult AddNewsArticle(News newArticle)
+        public IActionResult AddArticle(News newArticle)
         {
-            _newsData.CreateNews(newArticle);
+            _articleData.CreateArticle(newArticle);
             return Json(new { url = "/EMS/News" });
         }
 

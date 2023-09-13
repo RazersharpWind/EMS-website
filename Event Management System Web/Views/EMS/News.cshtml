@@ -7,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css"> -->
-    <link rel="stylesheet" href="~/css/input.css">
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/output.css">
-    <title>EMS - Events</title>
+    <title data-href="news.html">EMS - Events</title>
 </head>
 <body class="md:flex relative">
         <div class="time-and-date my-4">
@@ -18,7 +17,7 @@
         </div>
 
         <div id="news-and-studio" class="flex gap-6">
-            <div id="news-section" class="w-3/5 py-5">
+            <div id="news-section" class="lg:w-3/5 w-[70%] py-5">
                 <h2 class="text-2xl font-bold">Add News</h2>
                 <div id="create-new" class="my-5 py-3 px-5 h-fit border border-yellow-600 rounded-xl flex flex-col items-end relative">
 
@@ -51,18 +50,17 @@
                         <button id="publish-new-button" class="bg-yellow-600 shadow-lg text-white bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-lg p-2 w-20">Publish</button>
                     </div>
                 </div>
-
-                <div id="news-container" class="news-container">
-                    @foreach (var article in Model.News)
-                    {
+                @foreach(var singleArticle in Model.News)
+                {
+                    <div id="news-container" class="news-container">
                         <div class="new my-5 p-3 h-fit border border-yellow-600 rounded-xl flex flex-col items-end">
                             <div class="new-img-wrapper h-48 w-full overflow-hidden rounded-xl drop-shadow-xl relative">
-                                <img class="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@article.article_image alt="">
+                                <img class="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@singleArticle.article_image alt="">
                             </div>
                             <div class="new-text p-3">
                                 <div class="new-header my-2">
                                     <div class="new-header-text flex justify-between w-full items-center relative">
-                                        <h2 class="text-2xl font-bold my-1">@article.article_title</h2>
+                                        <h2 class="text-2xl font-bold my-1">@singleArticle.article_title</h2>
                                         <div class="manage-button bi-three-dots w-fit cursor-pointer"></div>
                                         <div class="new-manage hidden justify-around items-center w-20 h-16 absolute overflow-hidden z-50 right-0 top-[-54px] rounded-[.3em] text-sm text-left bg-white">
                                             <div class="manage-new px-2 py-0 text-md cursor-pointer w-full edit-new hover:bg-[ rgb(235, 235, 235)]">Modify</div>
@@ -72,16 +70,17 @@
                                     </div>
                                     <div class="new-date">
                                         <span>Posted on</span>
-                                        <span class="new-date-written">@article.article_date</span>
+                                        <span class="new-date-written">@singleArticle.article_date</span>
                                     </div>
                                 </div>
                                 <div class="new-details">
-                                    <p>@article.article_details</p>
+                                    <p>@singleArticle.article_details</p>
                                 </div>
                             </div>
                         </div>
-                    }
-                </div>
+                    </div>
+                }
+                
             </div>
             <div id="studio" class="studio py-5 grow">
                 <h2 class="text-2xl font-bold">Studio</h2>
@@ -91,37 +90,34 @@
             </div>
         </div>
 
-        <script type="text/javascript">
-            var newArticle = @Html.Raw(Json.Serialize(new News()))
-        </script>
-        <script src="~/js/newNew.js"></script>
-        <script src="~/js/todayDate.js"></script>
-        <script src="~/js/newEventOutScope.js"></script>
-        <script src="~/js/manageNew.js"></script>
-        <script src="~/js/uploadNewImage.js"></script>
-        <script type="text/jscript">
-            publishNewButton.addEventListener("click", () => {
-            let title = newHeaderInputs.value;
-            let details = newDetailInputs.value;
-            let image = "https://picsum.photos/1200/800";
-            let articleDate = new Date(Date.now());
-            newArticle.Article_title = title;
-            newArticle.Article_details = details;
-            newArticle.Article_image = image;
-            newArticle.Article_date = articleDate;
-                console.log(newArticle.Article_date)
-                $.ajax({
-                    type: "POST",
-                    url: "@Url.Action("AddNewsArticle")",
-                    data: { Article: newArticle },
-                    success: function (result) { console.log("Article creation success!"); /* window.location = result.url */ },
-                    error: function (req, status, error) { console.log(status) },
-                });
-                newHeaderInputs.value = ""
-                newDetailInputs.value = ""
-                newImageLink.src = ""
-            })
-        </script>
+    <script type="text/javascript">
+        var singleArticle = @Html.Raw(Json.Serialize(Model.NewArticle));
+    </script>
+    <script src="~/js/todayDate.js"></script>
+    <script src="~/js/newEventOutScope.js"></script>
+    <script src="~/js/newNew.js"></script>
+    <script src="~/js/manageNew.js"></script>
+    <script src="~/js/uploadNewImage.js"></script>
+    <script type="text/jscript">
+        publishNewButton.addEventListener('click', () => {
+            var date = new Date();
+            var combined = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + (date.getHours() >= 12 ? "PM" : "AM")
+            singleArticle.article_title = newHeaderInputs.value;
+            singleArticle.article_details = newDetailInputs.value;
+            singleArticle.article_image = newImageLink.src;
+            singleArticle.article_date = combined;
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("AddArticle")",
+                data: { newArticle: singleArticle },
+                success: function (result) { console.log("Event creation success!"); window.location = result.url },
+                error: function (req, status, error) { console.log(status) },
+            });
+            newHeaderInputs.value = "";
+            newDetailInputs.value = "";
+            newImageLink.src = "";
+        });
+    </script>
 
 </body>
 </html>
