@@ -63,7 +63,7 @@
                 <div class="dialog-wrapper flex flex-col h-full">
 
                     <div class="new-event-image bg-gray-100 overflow-hidden relative h-[30%]">
-                        <img id="image-container" class="w-full absolute -inset-y-40" src="" alt="">
+                        <img id="new-image-container" class="w-full absolute -inset-y-40" src="" alt="">
 
                         <div class="img-buttons absolute right-5 bottom-5">
                             <input type="file" id="image-upload">
@@ -128,9 +128,9 @@
                                             <input id="attendee-name" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
                                         </div>
 
-                                        <div id="new-attendee-email">
-                                            <label for="attendee-email">Attendee email</label>
-                                            <input id="attendee-email" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
+                                        <div id="new-attendee-ID">
+                                            <label for="attendee-ID">Attendee ID</label>
+                                            <input id="attendee-ID" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
                                         </div>
 
                                         <div id="new-attendee-buttons" class="flex justify-between">
@@ -148,7 +148,6 @@
                                         <td class="font-bold">Email Address</td>
                                         <td class="font-bold">Assigned Role</td>
                                         <td class="font-bold end">...</td>
-
                                     </tr>
                                 </thead>
                                 <tbody id="attendees-table" class="attendees-table">
@@ -360,33 +359,38 @@
         var eventCount = @Model.EventData.Last().event_id + 1;
         var newEvent = @Html.Raw(Json.Serialize(Model.Event));
         var editEvent = @Html.Raw(Json.Serialize(Model.EventData))
+        const eventId = document.getElementById("new-event-id").lastElementChild;
+        eventId.textContent = @Model.EventData.FirstOrDefault().event_id + 1;
     </script>
     <script src="~/js/newEvent.js"></script>
     <script src="~/js/editEventButton.js"></script>
     <script src="~/js/showEventButton.js"></script>
+    <script src="~/js/attendeesList.js"></script>
     @* JS script to add new event *@
     <script type="text/jscript">
         confirmEventBtn.addEventListener('click', () => {
             eventName = document.querySelector('.new-event-subject input').value;
             eventTime    = document.querySelector('.new-event-time').value;
             eventDate    = document.querySelector('.new-event-date').value;
-            eventImage   = document.querySelector('.new-event-image').firstElementChild;
+            eventImage = document.getElementById('new-image-container').src;
             eventDescribtion = document.querySelector('.new-event-describtion textarea').value;
             newEvent.event_name = eventName;
             newEvent.event_description = eventDescribtion;
             newEvent.event_date = eventDate;
             newEvent.event_time = eventTime;
-            newEvent.event_image = eventImage.value
+            newEvent.event_image = eventImage
+            newEvent.event_id = eventId.textContent;
+            console.log(eventAttendees)
             $.ajax({
                 type: "POST",
                 url: "@Url.Action("AddEvent")",
-                data: { eventData: newEvent },
-                success: function (result) { console.log("Event creation success!"); window.location=result.url },
+                data: { eventData: newEvent, attendees: eventAttendees },
+                success: function (result) { console.log("Event creation success!"); /* window.location=result.url */ },
                 error: function (req, status, error) { console.log(status) },
             });
             dialog.setAttribute("close", "")
             setTimeout(() => { dialog.close() }, 300)
-            resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage)
+            resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage);
         })
     </script>
     @* JS script to update event *@
@@ -417,7 +421,6 @@
                 viewDialog.showModal();
                 viewDialog.removeAttribute("close")
                 var events = @Html.Raw(Json.Serialize(Model.EventData));
-                //var displayEvents = events;
                 viewEventId.textContent = e.target.parentElement.parentElement.parentElement.getAttribute('event-id');
                 for (let index in events) {
                     if (events[index].event_id.toString() === viewEventId.textContent) {
@@ -440,7 +443,6 @@
     <script src="~/js/eventsPages.js"></script>
     <script src="~/js/uploadImage.js"></script>
     <script src="~/js/expandNavbar.js"></script>
-    <script src="~/js/attendeesList.js"></script>
     <script src="~/js/handleMutations.js"></script>
 
 

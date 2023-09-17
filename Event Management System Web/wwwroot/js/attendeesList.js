@@ -1,9 +1,4 @@
-
-
 let attendee;
-
-
-
 
 const addAttendeeDialog = document.getElementById("add-attendee-dialog");
 // const addAttendeeButton = document.getElementById("add-attendee-button");
@@ -12,9 +7,10 @@ const addAttendeeButton = document.getElementById("add-attendee-button");
 const cancelAttendeeButton = document.getElementById("cancel-attendee-button")
 const confirmAttendeeButton = document.getElementById("confirm-attendee-button")
 const attendeeName = document.getElementById("attendee-name")
-const attendeeEmail = document.getElementById("attendee-email")
+const attendeeID = document.getElementById("attendee-ID")
 const attendeesTable = document.getElementById("attendees-table")
 const noAttendee = document.createElement("tr");
+var eventAttendees = new Array();
 attendeesTable.appendChild(noAttendee)
 noAttendee.textContent = "No attendees"
 
@@ -38,12 +34,13 @@ let x = 0;
 
 
 
-confirmAttendeeButton.addEventListener("click", (e)=>{
+confirmAttendeeButton.addEventListener("click", (e) => {
+    noAttendee.textContent = ""
     const attendeeId = Math.floor(10+Math.random()*89);
     attendee =
     `<td>${attendeeName.value}</td>
     <td id="attendee-event-id"> <span></span> <span>${eventId.textContent}${attendeeId}</span></td>
-    <td>${attendeeEmail.value}</td>
+    <td>${attendeeID.value}</td>
     <td>مؤكد</td>
     <td class="end">
         <div class="attedees-management bi-chevron-up w-fit py-3 pr-3">
@@ -74,6 +71,10 @@ confirmAttendeeButton.addEventListener("click", (e)=>{
         x++;
     }
 
+    var attendeeData = {};
+    attendeeData.Name = attendeeName.value;
+    attendeeData.Id = parseInt(attendeeID.value);
+    eventAttendees.push(attendeeData);
 
     // attendeesTable.append(newAttendee)
     e.target.parentElement.parentElement.removeAttribute("open")

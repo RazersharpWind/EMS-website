@@ -1,7 +1,9 @@
-﻿using Event_Management_System_Web.Models;
+﻿using DataAccess.Models;
+using Event_Management_System_Web.Models;
 using Event_Management_System_Web.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace Event_Management_System_Web.Controllers
 {
@@ -29,12 +31,23 @@ namespace Event_Management_System_Web.Controllers
         {
             ViewEvents events = new ViewEvents(_attendeeData);
             events.EventData = _eventData.GetEvents().Result.ToList();
+            events.EventData.Reverse();
             return View(events);
         }
         [HttpPost]
-        public IActionResult AddEvent(Event eventData)
+        public IActionResult AddEvent(Event eventData, List<attendeeData> attendees)
         {
             _eventData.CreateEvent(eventData);
+            for (int i = 0; i < attendees.Count; i++)
+            {
+                foreach (var attendee in _attendeeData.GetAttendees().Result)
+                {
+                    if (attendee.Full_name == attendees[i].Name && attendee.Attendee_id == attendees[i].Id)
+                    {
+                        _attendeeData.UpdateAttendee(attendee, eventData.event_id);
+                    }
+                }
+            }
             return Json(new { url="/EMS/Events"});
         }
         [HttpPut]

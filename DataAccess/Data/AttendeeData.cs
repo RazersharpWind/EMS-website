@@ -22,4 +22,7 @@ public class AttendeeData : IAttendeeData
 
         return result;
     }
+    public Task UpdateAttendee(Attendee attendee, int eventId) =>
+        _db.SaveData(storedProcedure: "dbo.UpdateAttendee",
+                     new { attendee_name = attendee.Full_name, attendee_id = attendee.Attendee_id, event_id = eventId });
 }

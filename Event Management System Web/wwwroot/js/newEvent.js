@@ -9,9 +9,7 @@ const confirmEventBtn = document.getElementById('confirm-button')
 const canelButton = document.getElementById('cancel-button')
 const createEventButton = document.getElementById('dialog-button')
 const editButton = document.getElementById("edit-button")
-const eventId = document.getElementById("new-event-id").lastElementChild;
 const confirmUpdateButton = document.getElementById("confirm-edit-button");
-eventId.textContent = eventCount + 1;
 
 //to create a shorter list by turning the list into an object
 let cardAttendees = {};
@@ -73,7 +71,6 @@ createEventButton.addEventListener('click', ()=>{
     document.querySelectorAll(".attendee-event-id").forEach((attendee)=>{
         attendee.firstElementChild.innerText = eventId.textContent
     })
-    
 })
 
 
@@ -83,7 +80,7 @@ const resetValues = (eventName, eventDate, eventTime, eventDescribtion, eventIma
     eventTime = document.querySelector('.new-event-time').value = "";
     eventDate = document.querySelector('.new-event-date').value = "";
     eventDescribtion = document.querySelector('.new-event-describtion textarea').value = "";
-    eventImage.src = "";
+    eventImage = document.getElementById('new-image-container').src = "";
     document.querySelector('.location-address').value = "";
 }
 
@@ -131,9 +128,9 @@ const resetValues = (eventName, eventDate, eventTime, eventDescribtion, eventIma
 canelButton.addEventListener('click', ()=>{
     dialog.setAttribute("close" ,"");
     // dialog.removeAttribute("open")
-    eventId.textContent = "";
     setTimeout(()=>{dialog.close()},300)
     //the dialog.close() method close the dialog immediately therefore we won't be able to apply the transiton unless we wait for the same duration as the transition
+    resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage);
 })
 
 
