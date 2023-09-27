@@ -38,7 +38,7 @@
                             <h2 class="text-sm mr-1 md:text-xl md:mr-3">@singleEvent.event_name</h2>
                             <div class="md:text-lg text-sm">@Model.GetAttendeeCount(singleEvent.event_id)</div>
                         </div>
-                        <div class="${eventClasses}">passed</div>
+                        <div class=`${eventClasses}`>passed</div>
                     </div>
                     <button class="bi-chevron-down collapse-button collapsible"></button>
                 </div>
@@ -56,21 +56,7 @@
                         </tr>
                     </thead>
                     <tbody class="attendees-table">
-                        @if (Model.GetAttendees(singleEvent.event_id).Count() == 0)
-                        {
-                            <tr>
-                                <td>
-                                    No attendees found.
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td class="relative"></td>
-                            </tr>
-                        }
+                        @* <!-- Attendees' cards will be dynamically populated here --> *@
                         @foreach (var attendee in Model.GetAttendees(singleEvent.event_id))
                         {
                             <tr>
