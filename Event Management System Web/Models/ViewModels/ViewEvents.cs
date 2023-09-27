@@ -23,4 +23,9 @@ public class ViewEvents
     {
         return _attendeeData.GetEventAttendees(eventID).Result;
     }
+
+    public IEnumerable<Attendee?> GetAllAttendees()
+    {
+        return _attendeeData.GetAttendees().Result;
+    }
 }

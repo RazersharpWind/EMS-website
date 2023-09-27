@@ -51,9 +51,19 @@ namespace Event_Management_System_Web.Controllers
             return Json(new { url="/EMS/Events"});
         }
         [HttpPut]
-        public IActionResult UpdateEvent(Event eventData)
+        public IActionResult UpdateEvent(Event eventData, List<attendeeData> attendees)
         {
             _eventData.UpdateEvent(eventData);
+            for (int i = 0; i < attendees.Count; i++)
+            {
+                foreach (var attendee in _attendeeData.GetAttendees().Result)
+                {
+                    if (attendee.Full_name == attendees[i].Name && attendee.Attendee_id == attendees[i].Id)
+                    {
+                        _attendeeData.UpdateAttendee(attendee, eventData.event_id);
+                    }
+                }
+            }
             return Json(new { url = "/EMS/Events" });
         }
 
@@ -67,7 +77,8 @@ namespace Event_Management_System_Web.Controllers
         public IActionResult News()
         {
             ViewNews news = new ViewNews();
-            news.News = _articleData.GetArticles().Result.ToList(); 
+            news.News = _articleData.GetArticles().Result.ToList();
+            news.News.Reverse();
             return View(news);
         }
         [HttpPost]

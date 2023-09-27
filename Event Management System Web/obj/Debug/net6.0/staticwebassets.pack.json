@@ -33,6 +33,86 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\ArbFONTS-DroidKufi-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\ArbFONTS-DroidKufi-Bold.ttf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\ArbFONTS-DroidKufi-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\ArbFONTS-DroidKufi-Regular.ttf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Black.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-Black.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-BlackItalic.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-BlackItalic.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Bold.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-Bold.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-BoldItalic.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-BoldItalic.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraBold.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-ExtraBold.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraBoldItalic.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-ExtraBoldItalic.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraLight.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-ExtraLight.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraLightItalic.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-ExtraLightItalic.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Light.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-Light.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-LightItalic.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-LightItalic.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Medium.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-Medium.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-MediumItalic.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-MediumItalic.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Regular.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-Regular.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-RegularItalic.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-RegularItalic.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-SemiBold.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-SemiBold.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-SemiBoldItalic.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-SemiBoldItalic.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Thin.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-Thin.otf"
+    },
+    {
+      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ThinItalic.otf",
+      "PackagePath": "staticwebassets\\fonts\\Metropolis-ThinItalic.otf"
+    },
+    {
       "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\collapseButton.js",
       "PackagePath": "staticwebassets\\js\\collapseButton.js"
     },

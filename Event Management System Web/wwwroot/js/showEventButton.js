@@ -5,7 +5,7 @@ const viewEventImage = document.querySelector('#view-dialog .new-event-image').f
 const viewEventHeader = document.querySelector('#view-dialog .new-event-subject h4')
 const viewEventDesc = document.querySelector('#view-dialog .new-event-describtion h4')
 const viewEventDate = document.querySelector('.new-event-when h4')
-const viewEventTime = document.querySelector('.displayDateTime').lastElementChild;
+const viewEventTime = document.querySelector('.view-event-time');
 const viewEventId = document.getElementById('event-id-space');
 
 

@@ -1,7 +1,7 @@
 //to upload any image we need two fundemantal variables, image contaienr and image loader
 
 
-const imageContainer = document.getElementById('new-image-container')
+const imageContainer = document.getElementById('image-container')
 const imageLoader = document.getElementById('image-upload')
 
 imageLoader.addEventListener('change', (e)=> {
@@ -10,7 +10,7 @@ imageLoader.addEventListener('change', (e)=> {
 
     reader.onload = (e)=> {
         const imageUrl = e.target.result;
-        imageContainer.src = imageUrl
+        imageContainer.src = imageUrl;
     }
     reader.readAsDataURL(file);
     console.log(reader);

@@ -1,5 +1,19 @@
-*{transition: all ease-in-out .3s;}
-/* *{font-family: 'Droid Arabic Kufi Regular';} */
+@font-face {
+    font-family: Droid-bold;
+    src: url("../fonts/ArbFONTS-DroidKufi-Bold.ttf");
+}
+
+@font-face {
+    font-family: Droid;
+    src: url("../fonts/ArbFONTS-DroidKufi-Regular.ttf");
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url("../fonts/Metropolis-SemiBold.otf");
+}
+
+*{transition: all ease-in-out .3s; font-family: Droid, Droid-bold, Metropolis}
 
 :root{
     --primary-color: rgb(202,138,4);
@@ -106,11 +120,12 @@ td{
     /* background-color: forestgreen; */
 }
 
-.full-attendees-table td{
+.full-attendees-table td {
     border-bottom: 1px solid rgba(0, 0, 0, 0.479);
     text-align: left;
     width: fit-content;
     padding: .8rem 1rem;
+    overflow: hidden;
 }
 
 .manage-attendee[hidden]{

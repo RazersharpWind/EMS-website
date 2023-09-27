@@ -4,26 +4,21 @@ const addAttendeeDialog = document.getElementById("add-attendee-dialog");
 // const addAttendeeButton = document.getElementById("add-attendee-button");
 // to apply it in all dialogs
 const addAttendeeButton = document.getElementById("add-attendee-button");
-const cancelAttendeeButton = document.getElementById("cancel-attendee-button")
-const confirmAttendeeButton = document.getElementById("confirm-attendee-button")
-const attendeeName = document.getElementById("attendee-name")
-const attendeeID = document.getElementById("attendee-ID")
-const attendeesTable = document.getElementById("attendees-table")
+const cancelAttendeeButton = document.getElementById("cancel-attendee-button");
+const confirmAttendeeButton = document.getElementById("confirm-attendee-button");
+const attendeeName = document.getElementById("attendee-name");
+const attendeeID = document.getElementById("attendee-email");
+const attendeesTable = document.getElementById("attendees-table");
 const noAttendee = document.createElement("tr");
+noAttendee.textContent = "No attendees";
+attendeesTable.appendChild(noAttendee);
 var eventAttendees = new Array();
-attendeesTable.appendChild(noAttendee)
-noAttendee.textContent = "No attendees"
-
-
 
 let cardAttendeesObject = {} //to store each data about each attendee since attendeeCard will be empty after each rendering (for matter of creation)
 addAttendeeButton.addEventListener("click", ()=>{
     addAttendeeDialog.setAttribute("open", "");
     addAttendeeDialog.removeAttribute("close");
 })
-
-
-
 
 cancelAttendeeButton.addEventListener("click", ()=>{
     addAttendeeDialog.removeAttribute("open");
@@ -32,16 +27,20 @@ cancelAttendeeButton.addEventListener("click", ()=>{
 
 let x = 0;
 
-
-
 confirmAttendeeButton.addEventListener("click", (e) => {
-    noAttendee.textContent = ""
-    const attendeeId = Math.floor(10+Math.random()*89);
+    noAttendee.textContent = "";
+    var attendee_id, attendee_email;
+    for (var i = 0; i < attendeeList.length; i++) {
+        if (attendeeList[i].attendee_id === parseInt(attendeeID.value) && attendeeList[i].full_name === attendeeName.value) {
+            attendee_id = attendeeList[i].attendee_id;
+            attendee_email = attendeeList[i].attendee_email;
+        }
+    }
     attendee =
     `<td>${attendeeName.value}</td>
-    <td id="attendee-event-id"> <span></span> <span>${eventId.textContent}${attendeeId}</span></td>
-    <td>${attendeeID.value}</td>
-    <td>مؤكد</td>
+    <td id="attendee-event-id"> <span></span> <span>${attendee_id}</span></td>
+    <td>${attendee_email}</td>
+    <td>Confirmed</td>
     <td class="end">
         <div class="attedees-management bi-chevron-up w-fit py-3 pr-3">
             <ul id="attedees-management-display">
@@ -50,24 +49,14 @@ confirmAttendeeButton.addEventListener("click", (e) => {
             </ul>
         </div>
     </td>`
-    // cardAttendeesList.push(attendee)
-
-
-    // let updatedAttendees= [];
-    // console.log(clickedCard);
-    // clickedCard.getAttribute("attendees-list").split(",").forEach((t)=>{
-    //     updatedAttendees.push(t)
-    // })
 
     //create an object named by the attendee and push it to the card
     cardAttendees[attendeeName.value] = attendee
     for(let i = x; i < Object.keys(cardAttendees).length; i++){
         let newAttendee = document.createElement("tr")
         newAttendee.classList.add("person")
-        // newAttendee.innerHTML = cardAttendees[Object.keys(cardAttendees)[i]]
         newAttendee.innerHTML = attendee
         attendeesTable.append(newAttendee)
-        // console.log(Object.keys(cardAttendees)[i])
         x++;
     }
 
@@ -76,20 +65,14 @@ confirmAttendeeButton.addEventListener("click", (e) => {
     attendeeData.Id = parseInt(attendeeID.value);
     eventAttendees.push(attendeeData);
 
-    // attendeesTable.append(newAttendee)
     e.target.parentElement.parentElement.removeAttribute("open")
     e.target.parentElement.parentElement.setAttribute("close", "")
-    // addAttendeeDialog.removeAttribute("open");
-    // addAttendeeDialog.setAttribute("close", "");
+    attendeeName.value = "";
+    attendeeID.value = "";
 })
-
-
-
 
 const manageAttendee = () => {
     const attedeesManageButtons = document.querySelectorAll(".attedees-management");
-
-    
 
     attedeesManageButtons.forEach((attedeesManageButton)=>{
         window.addEventListener("click", (e)=>{
@@ -123,11 +106,7 @@ const kickAttendee = () => {
 
             clickedCard.setAttribute("attendees-list", updatedAttendeesList)
             attendeesParent?.removeChild(removedAttendee)
-            // .classList.add("hidden");
-            // console.log(e.target.parentElement.parentElement.parentElement.parentElement);
-            // e.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove(e.target.parentElement.parentElement.parentElement.parentElement)
         })
     })
-    // console.log(kickAttendeeButtons);
 }
 manageAttendee()
