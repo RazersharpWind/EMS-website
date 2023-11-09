@@ -1,12 +1,12 @@
-const cardsSection = document.getElementsByClassName('events')[0];
+const eventsSection = document.querySelector('.events');
 const orginalChildren = document.querySelector('.event-card')?.children;
-let originalClasses = document.querySelector('.event-card').classList
+let originalClasses = document.querySelector('.event-card')?.classList
 
 const dialog = document.getElementById('creation-dialog')
 const alertMessage = document.getElementById('alert')
 
 const confirmEventBtn = document.getElementById('confirm-button')
-const canelButton = document.getElementById('cancel-button')
+const cancelButton = document.getElementById('cancel-button')
 const createEventButton = document.getElementById('dialog-button')
 const editButton = document.getElementById("edit-button")
 const confirmUpdateButton = document.getElementById("confirm-edit-button");
@@ -56,8 +56,8 @@ let getData = (eventName, eventDate, eventTime, eventDescribtion, eventImage) =>
 
 
     //insert the card at the first position
-    // cardsSection.append(newCard)
-    cardsSection.insertBefore(newCard, cardsSection.firstElementChild)
+    // eventsSection.append(newCard)
+    eventsSection.insertBefore(newCard, eventsSection.firstElementChild)
     // newCard = document.createElement('div')
 
 }
@@ -85,11 +85,71 @@ const resetValues = (eventName, eventDate, eventTime, eventDescribtion, eventIma
     cardAttendees = {};
 }
 
+<<<<<<< HEAD
+//confirmEventBtn.addEventListener('click', ()=> {
+//    eventName    = document.querySelector('.new-event-subject input').value;
+//    eventTime    = document.querySelector('.new-event-time').value;
+//    eventDate    = document.querySelector('.new-event-date').value;
+//    eventImage   = document.querySelector('.new-event-image').firstElementChild;
+//    eventDescribtion = document.querySelector('.new-event-describtion textarea').value;
+//    newEvent.Event_name = eventName;
+//    newEvent.Event_description = eventDescribtion;
+//    newEvent.Event_date = eventDate;
+//    newEvent.Event_image = eventImage.value
+//    console.log(newEvent.Event_description);
+
+//    $.ajax({
+//        type: "POST",
+//        url: "/EMS/AddEvent",
+//        data: { eventData: newEvent },
+//        dataType: "json",
+//        success: function (result) { console.log("Event creation success!") },
+//        error: function (req, status, error) { console.log(status) }
+//    });
+//    dialog.setAttribute("close" ,"")
+//    setTimeout(()=>{dialog.close()},300)
+//    resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage)
+
+//    //if(eventName.length < 1  || eventDate.length < 1  || eventTime.length < 1  || eventDescribtion.length < 1 ){
+//    //    alertMessage.textContent = `قم بتعبئة الخانات الفارغة حتى تؤكد الحدث`;
+//    //    alertMessage.classList.add('text-red-500', 'text-md', 'text-[effra]');
+//    //    setTimeout(() => {alertMessage.textContent = '';},1000)
+//    //}
+//    //else{
+//    //    getData(eventName, eventDate, eventTime, eventDescribtion, eventImage)
+//    //    // dialog.removeAttribute("open") //sometimes it causes errors
+//    //    dialog.setAttribute("close" ,"")
+//    //    setTimeout(()=>{dialog.close()},300)
+
+//    //    resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage)
+//    //}
+//})
+
+
+
+
+cancelButton.addEventListener('click', () => {
+    dialog.setAttribute("close", "");
+=======
 canelButton.addEventListener('click', ()=>{
     dialog.setAttribute("close" ,"");
+>>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
     // dialog.removeAttribute("open")
-    setTimeout(()=>{dialog.close()},300)
+    eventId.textContent = "";
+    setTimeout(() => { dialog.close() }, 300)
     //the dialog.close() method close the dialog immediately therefore we won't be able to apply the transiton unless we wait for the same duration as the transition
+<<<<<<< HEAD
+    window.location.href = `Events`;
+})
+
+
+
+
+
+
+if(eventsSection.children?.length == 0){
+    eventsSection.textContent = "ما فيه أحداث حالياً الله يسلمك"
+=======
     resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage);
     window.location.reload();
 })
@@ -97,6 +157,7 @@ canelButton.addEventListener('click', ()=>{
 console.log(cardsSection.children.length);
 if(cardsSection.children.length == 0){
     cardsSection.textContent = "ما فيه أحداث حالياً الله يسلمك"
+>>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
 }
 
 //to create a new button in case if clicked from another page than events.html

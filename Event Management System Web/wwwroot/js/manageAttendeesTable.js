@@ -2,7 +2,11 @@ const checkedB = document.getElementById("checked-number").firstElementChild.fir
 let checkedAttendees = 0;
 const selectAllButton = document.getElementById("select-all")
 
+
 const handleLoading = (mutationsList, observer) => {
+    console.log("Handle loading file")
+
+
     const attendeesSelectBox = document.querySelectorAll(".select-box");
     const attendeeRows = document.querySelectorAll(".manage-attendee");
     const manageAttendeeButtons = document.querySelectorAll(".manage-attendee-button");
@@ -43,6 +47,7 @@ const handleLoading = (mutationsList, observer) => {
                     e.target.parentElement.parentElement.style.backgroundColor = "white"
                     checkedAttendees--;
                     checkedB.innerText = checkedAttendees
+                    if (checkedAttendees == 0) { selectAllButton.classList.add("hidden") }
                 }
             }
             else if(e.target == selectAllButton){
@@ -64,4 +69,4 @@ config = {childList: true, subtree: true}
 
 const observer = new MutationObserver(handleLoading)
 observer.observe(document.getElementById("events-attendees"), config)
-
+handleLoading();

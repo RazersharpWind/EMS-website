@@ -1,4 +1,4 @@
-function handleMutations(mutationsList, observer) {
+function handleEventsMutations(mutationsList, eventsObserver) {
     // Handle the mutations here, react to changes
     // console.log("Something changed in the document!");
     const attendeesTable = document.getElementById("attendees-table")
@@ -10,21 +10,21 @@ function handleMutations(mutationsList, observer) {
     // You can perform any actions here based on the changes, for example, updating or reloading specific elements.
   }
 
-  // Configuration for the observer
-  const config = { childList: true, subtree: true };
+  // eventsConfiguration for the eventsObserver
+  const eventsConfig = { childList: true, subtree: true };
 
-  // Create a new MutationObserver instance
-  const observer = new MutationObserver(handleMutations);
+  // Create a new MutationeventsObserver instance
+  const eventsObserver = new MutationObserver(handleEventsMutations);
 
-  // Start observing the document with the specified configuration
-  observer.observe(document, config);
-
-
+  // Start observing the document with the specified eventsConfiguration
+  eventsObserver.observe(document, eventsConfig);
 
 
-  const attconfig = { childList: true, subtree: true };
 
-function handleAttendeesMutations(mutationsList, observer){
+
+  const atteventsConfig = { childList: true, subtree: true };
+
+function handleAttendeesMutations(mutationsList, eventsObserver){
   let a = attendeesTable.firstElementChild
   if(attendeesTable.children.length != 0){
     noAttendee.textContent = "";
@@ -37,4 +37,4 @@ function handleAttendeesMutations(mutationsList, observer){
 }
 const attendeesObserver = new MutationObserver(handleAttendeesMutations);
 
-attendeesObserver.observe(document.getElementById("attendees-table"), attconfig)
+attendeesObserver.observe(document.getElementById("attendees-table"), atteventsConfig)

@@ -3,7 +3,7 @@ let b = new Date()
 
 const eventDay = {
     name: "Clear Sky",
-    date: '2023-09-30',
+    date: '2023-12-30',
     time: "00:00:00",
     attendees: 52,
 }

@@ -2152,11 +2152,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\Event Management System Web.csproj",
+      "projectUniqueName": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\Event Management System Web.csproj",
       "projectName": "Event Management System Web",
-      "projectPath": "c:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\Event Management System Web.csproj",
+      "projectPath": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\Event Management System Web.csproj",
       "packagesPath": "C:\\Users\\ammar\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\obj\\",
+      "outputPath": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2171,14 +2171,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "c:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -2206,19 +2207,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.24, 6.0.24]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.24, 6.0.24]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.24, 6.0.24]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.24, 6.0.24]"
           }
         ],
         "frameworkReferences": {
@@ -2229,7 +2230,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

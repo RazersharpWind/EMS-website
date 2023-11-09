@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jd4FtzEZ+20GEAKHyE2N4Dn9beoqR2Ndh1Ms4fmM+OY/kh3D1XUyRv7GGYmny9YL37Q4NGv6STC5KnuBtTHcKQ==",
+  "dgSpecHash": "4vqbuduVkRHlcQMc+WEDP2xrWzjUtt9usC/GQGcWie5FgA8HcJghN/0/kbWjvYgXjxR77p6E/HtJjXP0tajpIw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ammar\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ammar\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -47,9 +47,9 @@
     "C:\\Users\\ammar\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\ammar\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\ammar\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\ammar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.22\\microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
-    "C:\\Users\\ammar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.22\\microsoft.windowsdesktop.app.ref.6.0.22.nupkg.sha512",
-    "C:\\Users\\ammar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.22\\microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512"
+    "C:\\Users\\ammar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.24\\microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\ammar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.24\\microsoft.windowsdesktop.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\ammar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.24\\microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512"
   ],
   "logs": []
 }

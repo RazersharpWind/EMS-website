@@ -21,11 +21,11 @@ fetch("edata.json").then(response => response.json()).then(data => {
 
         }
         const eventTemplate =
-        `<div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-2xl h-[22rem] w-full relative overflow-hidden" event-id=${card['event-id']} data-event-date="${card["event-date"]}" event-time="${card["event-time"]}" attendees-list="${Object.keys(card["event-attendees"])}">
-            <div class="card-img overflow-hidden w-full h-[40%] bg-gray-300 relative">
+        `<div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[52rem] w-full relative overflow-hidden" event-id=${card['event-id']} data-event-date="${card["event-date"]}" event-time="${card["event-time"]}" attendees-list="${Object.keys(card["event-attendees"])}">
+            <div class="card-img rounded-xl overflow-hidden w-full h-[40%] bg-gray-300 relative">
                 <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=${card["event-image"]} alt="">
             </div>
-            <div class="card-date w-14 h-14 bg-yellow-600 flex rounded-lg absolute right-[20%] top-[30%]  text-white text-center">
+            <div class="card-date w-14 h-14 bg-yellow-600 flex rounded-lg absolute right-[16%] top-[30%] text-white text-center">
                 <div class="text-2xl leading-none flex flex-col justify-center my-auto font-semibold w-full h-full">
                     <h3 class="text-2xl h-fit p-0 m-0 leading-none">${String(card["event-date"]).split("-")[0]}</h3>
                     <p class="text-[1rem] h-fit p-0">${monthes[parseInt(String(card["event-date"]).split("-")[1])-1]}</p>
