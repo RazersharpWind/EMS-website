@@ -15,6 +15,23 @@
 
 *{transition: all ease-in-out .3s; font-family: Droid, Droid-bold, Metropolis}
 
+/*h1 {font-size: 2em !important;}
+
+h3 {font-size: 1.5em !important;}
+
+h4 {font-size: 1.25em !important;}
+
+h5 {font-size: 1em !important;}
+
+h6 {font-size: .5em !important;}
+    */
+
+
+h2 {
+    font-size: 1.5em !important;
+}
+
+
 :root{
     --primary-color: rgb(202,138,4);
 }
@@ -96,21 +113,27 @@ input[type="file"]{
 }
 
 
-dialog{
+dialog {
     scale: 0;
     display: block;
-    transition: .3s all ease-in-out ;
+    transition: .3s all ease-in-out;
+    position: absolute;
 }
 
-dialog[open]{
-    scale: 1;
-    transition: .3s all ease-in-out ;
-}
+    dialog[open] {
+        scale: 1;
+        transition: .3s all ease-in-out;
+        z-index: -2 !important;
+    }
+    #add-attendee-dialog{
+        z-index: 2 !important;
+    }
 
-dialog[close]{
-    scale: 0;
-    transition: .3s all ease-in-out ;
-}
+        dialog[close] {
+            scale: 0;
+            transition: .3s all ease-in-out;
+        }
+
 
 
 

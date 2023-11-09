@@ -9,14 +9,15 @@
     <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css"> -->
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/output.css">
-    <title data-href="news.html">EMS - Events</title>
+    <title data-href="News">EMS - Events</title>
+    <script src="https://cdn.tiny.cloud/1/l0pb1m0ex7yy22qgfa8o5sd55af14wf4hwigshkmw42znoj7/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body class="md:flex relative font-Droid">
         <div class="time-and-date my-4">
             <h1 id="today" class="text-2xl font-bold">الاربعاء, 05 يوليو 2023</h1>
         </div>
 
-        <div id="news-and-studio" class="flex flex-col md:flex-row gap-6">
+        <div id="news-and-studio" class="flex sm:flex-col md:flex-row gap-6">
             <div id="studio" class="studio py-5 grow lg:w-2/5 md:w-[30%] md:hidden">
                 <h2 class="text-2xl font-bold">Studio</h2>
                 <div id="studio-section" class="studio-section my-5 p-3 border border-yellow-600 rounded-xl flex flex-col items-end h-48">
@@ -33,7 +34,7 @@
                     </div>
                     <div id="new-details" class="new-details w-full">
                         <h2 class="text-xl font-bold">News Details</h2>
-                        <textarea class="new-details-input w-full h-36 bg-white my-2 text-justify drop-shadow-lg" placeholder="Latest news here..."></textarea>
+                        <textarea id="textarea" class="new-details-input w-full h-36 bg-white my-2 text-justify drop-shadow-lg" placeholder="Latest news here..."></textarea>
                     </div>
                     <div id="new-image" class="new-image w-full">
                         <div class="img-and-button flex h-12">
@@ -47,15 +48,48 @@
                         </div>
                     </div>
         
-                    <div id="toolbar" class="absolute bottom-[28%] right-8 flex justify-between w-32 mb-1 py-2 rounded-md">
+
+
+                    <!-- hide it since we are gonna use WYSIWYG text editor -->
+                    <div id="toolbar" class="hidden absolute bottom-[28%] right-8 flex justify-between w-32 mb-1 py-2 rounded-md">
                         <button onclick="applyBoldStyle()" class="bi-type-bold rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 bold-tool "></button>
                         <button onclick="applyItalicStyle()" class="bi-type-italic rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 underline-tool "></button>
                         <button onclick="applyUnderlineStyle()" class="bi-type-underline rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 italic-tool "></button>
                     </div>
+                    
+
+
+                    
+                    
                     <div id="news-section-buttons">
                         <button id="publish-new-button" class="bg-yellow-600 shadow-lg text-white bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-lg p-2 w-20">Publish</button>
+                        <button id="get-content-button">Get Content</button>
                     </div>
                 </div>
+<<<<<<< HEAD
+                
+                <!--for text editor test purposes-->
+                <div id="test"></div>
+
+
+
+
+                <div id="news-container" class="news-container">
+        
+                    <div class="new my-5 p-3 h-fit border border-yellow-600 rounded-xl flex flex-col items-end">
+                        <div class="new-img-wrapper h-48 w-full overflow-hidden rounded-xl drop-shadow-xl relative">
+                            <img class="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        </div>
+                        <div class="new-text p-3">
+                            <div class="new-header my-2">
+                                <div class="new-header-text flex justify-between w-full items-center relative">
+                                    <h2 class="text-2xl font-bold my-1">Updates from the International Aviation Forum</h2>
+                                    <div class="manage-button bi-three-dots w-fit cursor-pointer"></div>
+                                    <div class="new-manage hidden justify-around items-center w-20 h-16 absolute overflow-hidden z-50 right-0 top-[-54px] rounded-[.3em] text-sm text-left bg-white">
+                                        <div class="manage-new px-2 py-0 text-md cursor-pointer w-full edit-new hover:bg-[ rgb(235, 235, 235)]">Modify</div>
+                                        <hr class=" w-5/6 bg-yellow-500 h-[2px]">
+                                        <div class="manage-new px-2 py-0 text-md cursor-pointer w-full remove-new hover:bg-[ rgb(235, 235, 235)]">Remove</div>
+=======
                 @foreach(var singleArticle in Model.News)
                 {
                     <div id="news-container" class="news-container">
@@ -77,6 +111,7 @@
                                     <div class="new-date">
                                         <span>Posted on</span>
                                         <span class="new-date-written">@singleArticle.article_date</span>
+>>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
                                     </div>
                                 </div>
                                 <div class="new-details">
@@ -98,10 +133,62 @@
     <script type="text/javascript">
         var singleArticle = @Html.Raw(Json.Serialize(Model.NewArticle));
     </script>
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            tinymce.init({
+                selector: 'textarea',
+                plugins: [
+                    'a11ychecker', 'advcode', 'advlist', 'anchor', 'autolink', 'codesample', 'fullscreen', 'help',
+                    'image', 'editimage', 'tinydrive', 'lists', 'link', 'media', 'powerpaste', 'preview',
+                    'searchreplace', 'table', 'template', 'tinymcespellchecker', 'visualblocks', 'wordcount'
+                ],
+                toolbar: 'undo redo | bold italic underline strikethrough blocks | forecolor backcolor link |  fontfamily image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+                tinycomments_mode: 'embedded',
+                tinycomments_author: 'Author name',
+                mergetags_list: [
+                    { value: 'First.Name', title: 'First Name' },
+                    { value: 'Email', title: 'Email' },
+                ],
+                ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+            });
+
+            var editor = tinymce.get('textarea');
+            const getButton = document.getElementById("get-content-button");
+             getButton.addEventListener("click", () => {
+                var content = editor.getContent();
+                console.log(editor);
+                console.log(content);
+                document.getElementById("test").innerHTML = content;
+
+            })
+
+        })
+
+
+
+
+
+
+
+    </script>
+
+
+
+
     <script src="~/js/todayDate.js"></script>
     <script src="~/js/newEventOutScope.js"></script>
     <script src="~/js/newNew.js"></script>
+    <!--
+
     <script src="~/js/manageNew.js"></script>
+    -->
     <script src="~/js/uploadNewImage.js"></script>
     <script type="text/jscript">
         publishNewButton.addEventListener('click', () => {

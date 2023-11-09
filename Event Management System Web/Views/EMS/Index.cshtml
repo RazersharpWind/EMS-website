@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="~/css/output.css">
-    <link rel="stylesheet" href="~/css/style.css">
+    @* <link rel="stylesheet" href="~/css/style.css"> *@
     <title>EMS</title>
 </head>
 <body class="md:flex font-Droid relative scroll-smooth ease-in-out duration-300 transition-all">
@@ -21,40 +21,45 @@
 
         <div id="timer" class="md:timer md:flex border bg-white rounded-3xl drop-shadow-lg hidden md:justify-between md:pr-8 overflow-hidden">
             <div class="w-fit timer-image h-full">
-                <img class="h-56 w-96" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img class="h-56 w-[38rem]" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
             </div>
 
-            <div class="event-info py-4 px-4 my-auto -mr-10 z-10 h-fit">
-                <h2 class="text-3xl font-bold">Clear Sky, How could we get that?</h2>
-                <p>Follow up to discover more..</p>
-                <div class="flex remaining-time my-4">
-                    <p class="w-16 mr-8">Remaining time</p>
-                    <div class="flex r-time font-effra">
-                        <div id="days" class=" w-fit text-center">
-                            <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
-                            <p class="text-2xl leading-10">Days</p>
-                        </div>
-                        <div id="hrs" class=" w-fit text-center">
-                            <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
-                            <p class="text-2xl leading-10">Hrs</p>
-                        </div>
-                        <div id="mins" class=" w-fit text-center">
-                            <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
-                            <h6 class="text-2xl leading-10">Mins</h6>
+            <div class="event-info px-4 py-4 w-full my-auto -ml-10 z-10 h-full  overflow-hidden">
+                    <h2 class="text-3xl font-bold">Clear Sky, How could we get that?</h2>
+                    <p>Follow up to discover more..</p>
+                    <div class="flex remaining-time my-4">
+                        <p class="w-16 mr-8">Remaining time</p>
+                        <div class="flex r-time font-effra">
+                            <div id="days" class=" w-fit text-center">
+                                <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
+                                <p class="text-2xl leading-10">Days</p>
+                            </div>
+                            <div id="hrs" class=" w-fit text-center">
+                                <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
+                                <p class="text-2xl leading-10">Hrs</p>
+                            </div>
+                            <div id="mins" class=" w-fit text-center">
+                                <h1 class="h-auto font-bold text-6xl leading-10 pt-3 metropolis">00</h1>
+                                <h6 class="text-2xl leading-10">Mins</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="expand-timer flex flex-col items-center justify-center w-[10%]">
-                <div class="btn text-center">
-                    <i class="bi-arrows-angle-expand"></i>
-                    <h2 class="text-2xl">Expand</h2>
+            <div class="expand-timer hidden flex-col items-center justify-center w-[10%]">
+                    <div class="btn text-center">
+                        <i class="bi-arrows-angle-expand"></i>
+                        <h2 class="text-2xl">Expand</h2>
+                    </div>
                 </div>
-            </div>
 
         </div>
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
         <div id="events" class="main-events-sections my-10 relative">
             <div class="header-events my-2">
                 <h1 class="text-3xl font-bold">Latest events:</h1>
@@ -62,6 +67,33 @@
             </div>
 
 
+<<<<<<< HEAD
+            <div id="events-wrapper" class="scroll-smooth overflow-x-auto">
+                <div class="last-events inline-flex py-4">
+                    @foreach (var singleEvent in Model.EventData)
+                    {
+                        <div class="event-card mr-8 bg-white border border-yellow-700 rounded-3xl w-[16rem] h-[19rem] relative overflow-hidden" event-id=@singleEvent.event_id attendees-list="${Object.keys(@Model.GetAttendees(singleEvent.event_id)}">
+                            <div class="card-img w-full overflow-hidden h-[40%] bg-gray-300">
+                                <img class="" src=@singleEvent.event_image alt="">
+                            </div>
+                            <div class="card-date w-14 h-14 bg-yellow-600 flex rounded-lg absolute inset-x-[65%] inset-y-[25%] text-white text-center">
+                                <div class="text-2xl leading-none flex flex-col justify-center my-auto font-semibold w-full h-full">
+                                    <h3 class="text-2xl h-fit p-0 m-0 leading-none">@singleEvent.event_date.Day</h3>
+                                    <p class="text-[1rem] h-fit p-0">@singleEvent.event_date.ToString("MMM")</p>
+                                </div>
+                            </div>
+                            <div class="card-info text-yellow-700 h-[60%] px-4 pt-7 pb-4 flex flex-col grow justify-between">
+                                <div class="card-text text-left">
+                                    <div class="card-header h-fit font-bold text-lg">@singleEvent.event_name</div>
+                                    <div class="card-desc h-1/2 text-xs mt-2">@singleEvent.event_description</div>
+                                </div>
+                                <!--
+                                <div class="card-buttons flex place-content-between mt-2">
+                                    <button id="show-button" class="show-button button outline-0 h-10 mx-1 my-2 rounded-full border border-yellow-700 w-1/2" type="">View</button>
+                                    <button id="edit-button" class="edit-button button outline-0 text-white bg-yellow-600 hover:bg-yellow-500 ease-linear duration-200 h-10 mx-1 my-2 rounded-full border border-yellow-700 w-1/2" type="">Edit</button>
+                                </div>
+                                -->
+=======
         <div id="events-wrapper" class="scroll-smooth overflow-x-auto">
             <div class="last-events inline-flex py-4">
                 @foreach (var singleEvent in Model.EventData)
@@ -74,23 +106,12 @@
                             <div class="text-2xl leading-none flex flex-col justify-center my-auto font-semibold w-full h-full">
                                 <h3 class="text-2xl h-fit p-0 m-0 leading-none">@singleEvent.event_date.Day.ToString("00")</h3>
                                 <p class="text-[1rem] h-fit p-0">@singleEvent.event_date.ToString("MMM")</p>
+>>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
                             </div>
                         </div>
-                        <div class="card-info text-yellow-700 h-[60%] px-4 pt-7 pb-4 flex flex-col grow justify-between">
-                            <div class="card-text text-left">
-                                <div class="card-header h-fit font-bold text-lg">@singleEvent.event_name</div>
-                                <div class="card-desc h-1/2 text-xs mt-2">@singleEvent.event_description</div>
-                            </div>
-
-                            <div class="card-buttons flex place-content-between mt-2">
-                                <button id="show-button" class="show-button button outline-0 h-10 mx-1 my-2 rounded-full border border-yellow-700 w-1/2" type="">View</button>
-                                <button id="edit-button" class="edit-button button outline-0 text-white bg-yellow-600 hover:bg-yellow-500 ease-linear duration-200 h-10 mx-1 my-2 rounded-full border border-yellow-700 w-1/2" type="">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                }
+                    }
+                </div>
             </div>
-        </div>
 
             <div class="buttons absolute inset-y-[50%] w-full flex justify-between">
                 <button id="left-btn" class="z-9 flex w-10 h-10 opacity-60 transition-all duration-300 ease-in-out hover:opacity-100 bg-yellow-600 drop-shadow-xl my-auto rounded-full items-center justify-center">
@@ -130,7 +151,7 @@
                 </div>
 
                 <div class="analytics-card py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl shadow-gray-300">
-                <img src="~/images/icons-01.svg" width="50px" alt="">
+                    <img src="~/images/icons-01.svg" width="50px" alt="">
                     <h4 class="metropolis text-4xl font-bold" data-value="101">101+</h4>
                     <p>Speakers and Influencers</p>
                 </div>
@@ -148,8 +169,7 @@
                 </div>
             </div>
         </div>
-
-    </div>
+         
 
 
 
