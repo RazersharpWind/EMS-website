@@ -32,6 +32,24 @@
 <<<<<<< HEAD
                 <div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[21rem] w-full relative overflow-hidden" attendees-list=@Model.GetAttendees(singleEvent.event_id) event-id=@singleEvent.event_id>
                     <div class="card-img overflow-hidden w-full h-[40%] bg-gray-300 relative">
+                        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@singleEvent.event_image alt=""/>
+                        </div>
+
+                    <div class="card-date w-14 h-14 bg-yellow-600 flex rounded-xl absolute right-[16%] top-[30%] text-white text-center">
+
+
+                        <div class="text-2xl leading-none flex flex-col justify-center my-auto font-semibold w-full h-full">
+                            <h3 class="text-2xl h-fit p-0 m-0 leading-none">@singleEvent.event_date.Day</h3>
+                            <p class="text-[1rem] h-fit p-0">@singleEvent.event_date.ToString("MMM")</p>
+                        </div>
+
+
+                            @* <h3 class="text-2xl leading-none my-auto">
+                                @singleEvent.event_date.Day
+=======
+<<<<<<< HEAD
+                <div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[21rem] w-full relative overflow-hidden" attendees-list=@Model.GetAttendees(singleEvent.event_id) event-id=@singleEvent.event_id>
+                    <div class="card-img overflow-hidden w-full h-[40%] bg-gray-300 relative">
                         <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@singleEvent.event_image alt="kk"/>
                         </div>
 
@@ -57,6 +75,7 @@
                             <h3 class="text-2xl leading-none my-auto">
                                 @singleEvent.event_date.Day.ToString("00")
 >>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
+>>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
                                 <span class="text-lg leading-none">@singleEvent.event_date.ToString("MMM")</span>
                             </h3> *@
 
@@ -140,6 +159,14 @@
                             </div> -->
                             <div id="pac-container" class="w-full h-12">
                                 <input type="text" name="" id="location-finder" class="w-full h-full">
+<<<<<<< HEAD
+                            </div>
+                        </div>
+
+
+
+
+=======
 =======
                             <div id="infowindow-content">
                                 <span id="place-name" class="title"></span><br />
@@ -153,6 +180,7 @@
 >>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
                             </div>
                         </div>
+>>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
 
                         </div>
                         <div id="new-event-id" class="text-gray-400 p-4 ">
@@ -235,8 +263,12 @@
 <<<<<<< HEAD
                         <div class="new-event-buttons p-4 flex flex-col w-full md:w-full md:flex-row gap-2 justify-end">
 =======
+<<<<<<< HEAD
+                        <div class="new-event-buttons p-4 flex flex-col w-full md:w-full md:flex-row gap-2 justify-end">
+=======
                         <div class="new-event-buttons p-4 flex gap-2 justify-end">
 >>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
+>>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
                             <button id="cancel-button" class="cancel-button w-full md:w-24 h-10 mr-2 p-2 rounded-lg border border-yellow-600">Cancel</button>
                             <button id="confirm-button" class="confirm-button w-full md:w-24 h-10 mr-2 p-2 rounded-lg border border-yellow-600 hover:border-yellow-700 bg-yellow-600 text-white hover:bg-yellow-700">Create</button>
                         </div>
@@ -423,6 +455,12 @@
     
     
     <script src="~/js/newEvent.js"></script>
+
+
+    <script src="~/js/map.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2M642sAwKlN7hWGOECQNK_DeiEN_6ets&libraries=places&callback=initMap"></script>
+    
+    
     <script src="~/js/editEventButton.js"></script>
     <script src="~/js/showEventButton.js"></script>
     <script src="~/js/attendeesList.js"></script>
@@ -506,8 +544,11 @@
     <script src="~/js/todayDate.js"></script>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     @* <script src="~/js/loadCards.js"></script> *@
 >>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
+>>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
     <script src="~/js/eventsPages.js"></script>
     <script src="~/js/uploadImage.js"></script>
     <script src="~/js/expandNavbar.js"></script>
