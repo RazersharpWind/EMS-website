@@ -32,6 +32,23 @@ h2 {
 }
 
 
+/*h1 {font-size: 2em !important;}
+
+h3 {font-size: 1.5em !important;}
+
+h4 {font-size: 1.25em !important;}
+
+h5 {font-size: 1em !important;}
+
+h6 {font-size: .5em !important;}
+    */
+
+
+h2 {
+    font-size: 1.5em !important;
+}
+
+
 :root{
     --primary-color: rgb(202,138,4);
 }
