@@ -30,6 +30,14 @@ undoButton.addEventListener("click", () => {
 })
 
 
+const undoButton = document.getElementById("undo-button");
+
+undoButton.addEventListener("click", () => {
+    editDialog.setAttribute("close", "");
+    setTimeout(() => { editDialog.close() }, 300)
+})
+
+
 let clickedCard;
 
 window.addEventListener("click", (e)=>{

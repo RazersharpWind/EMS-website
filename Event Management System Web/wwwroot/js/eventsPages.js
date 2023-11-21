@@ -9,8 +9,12 @@ const views =
 <<<<<<< HEAD
     {'.event-card'   :['flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[22rem] w-full relative overflow-hidden', 'flex w-full bg-white border border-yellow-700 rounded-3xl h-full relative mb-4 overflow-hidden']},
 =======
+<<<<<<< HEAD
+    {'.event-card'   :['flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[22rem] w-full relative overflow-hidden', 'flex w-full bg-white border border-yellow-700 rounded-3xl h-full relative mb-4 overflow-hidden']},
+=======
     {'.event-card'   :['flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[22rem] w-full relative overflow-hidden', 'flex w-full bg-white border border-yellow-700 rounded-xl h-full relative mb-4 overflow-hidden']},
 >>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
+>>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
     {'.card-img'     :['w-full bg-gray-500 overflow-hidden h-[40%] bg-gray-300', 'h-36 w-[25%] rounded-l-3xl bg-gray-300 ']},
     {'.card-date'    :['w-14 h-14 bg-yellow-600 flex text-center rounded-lg absolute inset-x-[65%] inset-y-[26%] text-xl font-sans leading-tight text-white', 'w-16 h-16 bg-yellow-600 flex text-center rounded-lg absolute inset-x-[22%] inset-y-[28%] text-xl font-sans leading-tight text-white']},
     {'.card-info'    :['text-yellow-700 h-[60%] px-4 pt-7 pb-4 flex flex-col grow justify-between','flex grow justify-between items-center text-yellow-700 py-4 px-12 w-[75%]']},

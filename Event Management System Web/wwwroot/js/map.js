@@ -31,6 +31,50 @@ function initMap() {
         map,
         anchorPoint: new google.maps.Point(0, -29),
     });
+<<<<<<< HEAD
+
+    autocomplete.addListener("place_changed", () => {
+        infowindow.close();
+        marker.setVisible(false);
+
+        const place = autocomplete.getPlace();
+
+        if (!place.geometry || !place.geometry.location) {
+            // User entered the name of a Place that was not suggested and
+            // pressed the Enter key, or the Place Details request failed.
+            window.alert("No details available for input: '" + place.name + "'");
+            return;
+        }
+
+        // If the place has a geometry, then present it on a map.
+        if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);
+        }
+
+        marker.setPosition(place.geometry.location);
+        marker.setVisible(true);
+
+        infowindowContent.children["place-name"].textContent = place.name;
+        infowindowContent.children["place-address"].textContent = place.formatted_address;
+        // document.getElementById("location-address").textContent = place.name;
+        infowindow.open(map, marker);
+    });
+
+    // Sets a listener on a radio button to change the filter type on Places
+    // Autocomplete.
+    function setupClickListener(id, types) {
+        const radioButton = document.getElementById(id);
+
+        radioButton.addEventListener("click", () => {
+            autocomplete.setTypes(types);
+            input.value = "";
+        });
+    }
+
+=======
 
     autocomplete.addListener("place_changed", () => {
         infowindow.close();
@@ -73,6 +117,7 @@ function initMap() {
     //   });
     //}
 
+>>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
     setupClickListener("changetype-all", []);
     setupClickListener("changetype-address", ["address"]);
     setupClickListener("changetype-establishment", ["establishment"]);

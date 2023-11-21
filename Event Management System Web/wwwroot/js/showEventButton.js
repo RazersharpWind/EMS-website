@@ -8,8 +8,12 @@ const viewEventDate = document.querySelector('.new-event-when h4')
 <<<<<<< HEAD
 const viewEventTime = document.querySelector('.displayDateTime')?.lastElementChild;
 =======
+<<<<<<< HEAD
+const viewEventTime = document.querySelector('.displayDateTime')?.lastElementChild;
+=======
 const viewEventTime = document.querySelector('.view-event-time');
 >>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
+>>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
 const viewEventId = document.getElementById('event-id-space');
 
 //const openShow = () =>{

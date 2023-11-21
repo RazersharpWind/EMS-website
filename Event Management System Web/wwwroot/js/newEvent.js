@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+const cardsSection = document.getElementsByClassName('events');
+=======
 const eventsSection = document.querySelector('.events');
+>>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
 const orginalChildren = document.querySelector('.event-card')?.children;
 let originalClasses = document.querySelector('.event-card')?.classList
 
@@ -6,7 +10,11 @@ const dialog = document.getElementById('creation-dialog')
 const alertMessage = document.getElementById('alert')
 
 const confirmEventBtn = document.getElementById('confirm-button')
+<<<<<<< HEAD
+//const cancelButton = document.getElementById('cancel-button')
+=======
 const cancelButton = document.getElementById('cancel-button')
+>>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
 const createEventButton = document.getElementById('dialog-button')
 const editButton = document.getElementById("edit-button")
 const confirmUpdateButton = document.getElementById("confirm-edit-button");
@@ -127,6 +135,18 @@ const resetValues = (eventName, eventDate, eventTime, eventDescribtion, eventIma
 
 
 
+<<<<<<< HEAD
+//cancelButton.addEventListener('click', ()=>{
+//    dialog.setAttribute("close" ,"");
+    // dialog.removeAttribute("open")
+//    setTimeout(()=>{dialog.close()},300)
+    //the dialog.close() method close the dialog immediately therefore we won't be able to apply the transiton unless we wait for the same duration as the transition
+//    resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage);
+//})
+
+
+if(cardsSection.children?.length == 0){
+=======
 
 cancelButton.addEventListener('click', () => {
     dialog.setAttribute("close", "");
@@ -156,6 +176,7 @@ if(eventsSection.children?.length == 0){
 
 console.log(cardsSection.children.length);
 if(cardsSection.children.length == 0){
+>>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
     cardsSection.textContent = "ما فيه أحداث حالياً الله يسلمك"
 >>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
 }
