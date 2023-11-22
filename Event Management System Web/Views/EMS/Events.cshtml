@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="~/css/output.css">
     <link rel="stylesheet" href="~/css/styles.css">
-    <title>EMS - Events</title>
+    <title data-href="Events">EMS - Events</title>
 </head>
-<body class="md:flex relative font-Droid">
+<body class="md:flex relative font-droid">
         <div class="time-and-date my-4">
             <h1 id="today" class="text-2xl font-bold">الاربعاء, 05 يوليو 2023</h1>
         </div>
@@ -29,10 +29,9 @@
             <div class="events grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 3xl:grid-cols-5 py-4">
                 @foreach (var singleEvent in Model.EventData)
                 {
-<<<<<<< HEAD
                 <div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[21rem] w-full relative overflow-hidden" attendees-list=@Model.GetAttendees(singleEvent.event_id) event-id=@singleEvent.event_id>
                     <div class="card-img overflow-hidden w-full h-[40%] bg-gray-300 relative">
-                        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@singleEvent.event_image alt=""/>
+                        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@singleEvent.event_image alt=@singleEvent.event_image />
                         </div>
 
                     <div class="card-date w-14 h-14 bg-yellow-600 flex rounded-xl absolute right-[16%] top-[30%] text-white text-center">
@@ -46,36 +45,6 @@
 
                             @* <h3 class="text-2xl leading-none my-auto">
                                 @singleEvent.event_date.Day
-=======
-<<<<<<< HEAD
-                <div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[21rem] w-full relative overflow-hidden" attendees-list=@Model.GetAttendees(singleEvent.event_id) event-id=@singleEvent.event_id>
-                    <div class="card-img overflow-hidden w-full h-[40%] bg-gray-300 relative">
-                        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@singleEvent.event_image alt="kk"/>
-                        </div>
-
-                    <div class="card-date w-14 h-14 bg-yellow-600 flex rounded-xl absolute right-[16%] top-[30%] text-white text-center">
-
-
-                        <div class="text-2xl leading-none flex flex-col justify-center my-auto font-semibold w-full h-full">
-                            <h3 class="text-2xl h-fit p-0 m-0 leading-none">@singleEvent.event_date.Day</h3>
-                            <p class="text-[1rem] h-fit p-0">@singleEvent.event_date.ToString("MMM")</p>
-                        </div>
-
-
-                            @* <h3 class="text-2xl leading-none my-auto">
-                                @singleEvent.event_date.Day
-=======
-                    <div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[340px] w-full relative overflow-hidden" attendees-list=@Model.GetAttendees(singleEvent.event_id) event-id=@singleEvent.event_id>
-                        <div class="card-img w-full overflow-hidden h-[40%] bg-gray-300">
-                            <img src=@singleEvent.event_image alt="">
-                        </div>
-
-                        <div id="card-date" class="card-date w-14 h-14 bg-yellow-600 flex text-center rounded-lg absolute inset-x-[65%] inset-y-[26%] text-xl font-sans leading-tight text-white">
-
-                            <h3 class="text-2xl leading-none my-auto">
-                                @singleEvent.event_date.Day.ToString("00")
->>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
->>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
                                 <span class="text-lg leading-none">@singleEvent.event_date.ToString("MMM")</span>
                             </h3> *@
 
@@ -92,8 +61,8 @@
                             </div>
 
                             <div class="card-buttons flex place-content-between mt-2">
-                                <button id="show-button" class="show-button button outline-0 h-10 rounded-full border border-yellow-700" type="">View</button>
-                                <button id="edit-button" class="edit-button button outline-0 h-10 rounded-full text-white bg-yellow-600 hover:bg-yellow-500 ease-linear duration-200" type="">Edit</button>
+                                <button id="show-button" class="show-button button outline-0 h-10 rounded-full border border-yellow-700">View</button>
+                                <button id="edit-button" class="edit-button button outline-0 h-10 rounded-full text-white bg-yellow-600 hover:bg-yellow-500 ease-linear duration-200" >Edit</button>
                             </div>
                         </div>
                     </div>
@@ -114,79 +83,63 @@
 
                         <div class="img-buttons absolute right-5 bottom-5">
                             <input type="file" id="image-upload">
-                            <label class="bg-transparent w-fit cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg py-2 px-2 pointer" for="image-upload">Change background</label>
+                            <label class="bg-transparent w-fit cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg py-[0.1rem] px-2 pointer" for="image-upload">Change background</label>
 
                             <input type="file" id="image-link">
-                            <label class="bg-transparent w-fit cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg py-2 px-2 pointer" for="image-link">Image link</label>
+                            <label class="bg-transparent w-fit cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg py-[0.1rem] px-2 pointer" for="image-link">Image link</label>
                         </div>
                     </div>
 
 
                     <div class="new-event p-4 flex flex-col grow justify-between metropolis h-[70%]">
                         <div id="alert"></div>
-                        <div class="new-event-info flex md:flex-row">
-                            <div class="new-event-details w-1/2 flex flex-col p-4">
-                                <div class="new-event-subject">
-                                    <h2>Event subject</h2>
-                                    <input class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4" type="text" name="event-subject" id ="event-subject" placeholder="What the events is about?">
+                        <div class="new-event-info flex flex-col md:flex-row">
+                            <div class="new-event-details w-1/2 flex flex-col px-2 py-2 h-96">
+                                <div class="new-event-subject mb-2">
+                                    <h6 class="text-gray-400 h-fit leading-none mb-2">Event subject</h6>
+                                    <input class="w-full h-12 bg-transparent p-1 border border-yellow-600" type="text" name="event-subject" id ="event-subject" placeholder="What the events is about?">
                                 </div>
-                                <div class="new-event-when">
-                                    <h2>Event time</h2>
+                                <div class="new-event-when mb-2">
+                                    <h6 class="text-gray-400 h-fit leading-none mb-2">Event time</h6>
                                     <div class="inputs grid grid-cols-2 gap-3">
-                                        <input class="new-event-date h-12 bg-transparent m-0 p-0 border border-yellow-600 my-4" type="date" name="event-date" id="event-date">
-                                        <input class="new-event-time h-12 bg-transparent m-0 p-0 border border-yellow-600 my-4" type="time" name="event-time" id="event-time">
+                                        <input class="new-event-date h-12 bg-transparent m-0 p-0 border border-yellow-600" type="date" name="event-date" id="event-date">
+                                        <input class="new-event-time h-12 bg-transparent m-0 p-0 border border-yellow-600" type="time" name="event-time" id="event-time">
                                     </div>
                                 </div>
-                                <div class="new-event-describtion my-1 flex flex-col grow">
-                                    <h2>Event describtion</h2>
-                                    <textarea type="text" class="mt-4 grow" placeholder="Talk more about the event" name="new-event-describtion" id="new-event-describtion"></textarea>
+                                <div class="new-event-describtion mt-2 flex flex-col grow text-gray-400 h-fit leading-none">
+                                    <h6 class="text-gray-400 h-fit leading-none mb-2">Event describtion</h6>
+                                    <textarea type="text" class="grow" placeholder="Talk more about the event" name="new-event-describtion" id="new-event-describtion"></textarea>
                                 </div>
                             </div>
 
-<<<<<<< HEAD
 
 
-                        <div id="infowindow-content" class="">
+                            <div id="infowindow-content" class="">
                             <span id="place-name" class="title"></span><br />
                             <span id="place-address"></span>
                         </div>
-                        <div class="md:w-1/2 flex flex-col justify-between mb-2 py-1 h-9/12">
-                            <div id="map" class="w-full m-1 flex flex-col border rounded-xl h-full"></div>
-                            <!-- <div class="pac-card h-fit" id="pac-card">
-                                <div id="pac-container">
-                                <input id="pac-input" type="text" placeholder="Enter a location" />
+                            <div class="md:w-1/2 flex flex-col justify-between mb-2 py-2 h-9/12 h-96">
+                                <div id="map" class="w-full m-1 flex flex-col border rounded-xl h-full"></div>
+                                <!-- <div class="pac-card h-fit" id="pac-card">
+                                    <div id="pac-container">
+                                    <input id="pac-input" type="text" placeholder="Enter a location" />
+                                    </div>
+                                </div> -->
+                                <div id="pac-container" class="w-full h-12">
+                                    <input type="text" name="" id="location-finder" class="w-full h-full">
                                 </div>
-                            </div> -->
-                            <div id="pac-container" class="w-full h-12">
-                                <input type="text" name="" id="location-finder" class="w-full h-full">
-<<<<<<< HEAD
                             </div>
+
+
                         </div>
 
 
 
-
-=======
-=======
-                            <div id="infowindow-content">
-                                <span id="place-name" class="title"></span><br />
-                                <span id="place-address"></span>
-                            </div>
-
-                            <div class="new-event-location p-4 md:w-1/2 flex flex-col">
-                                <h2 class="text-gray-500 text-sm">Location</h2>
-                                <div class="location flex grow my-4 border border-yellow-600 rounded-[1rem] p-5">Open in Google maps</div>
-                                <div class="location-address border border-yellow-600 rounded-[1rem] p-4">Location XYZ at ABC Place</div>
->>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
-                            </div>
-                        </div>
->>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
-
-                        </div>
                         <div id="new-event-id" class="text-gray-400 p-4 ">
                             <span>Event #id: </span>
                             <span></span>
                         </div>
+
 
                         <div id="attendees" class="table-wrapper p-4 w-full">
                             <table class="table my-2 w-full">
@@ -260,15 +213,7 @@
 
 
 
-<<<<<<< HEAD
                         <div class="new-event-buttons p-4 flex flex-col w-full md:w-full md:flex-row gap-2 justify-end">
-=======
-<<<<<<< HEAD
-                        <div class="new-event-buttons p-4 flex flex-col w-full md:w-full md:flex-row gap-2 justify-end">
-=======
-                        <div class="new-event-buttons p-4 flex gap-2 justify-end">
->>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
->>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
                             <button id="cancel-button" class="cancel-button w-full md:w-24 h-10 mr-2 p-2 rounded-lg border border-yellow-600">Cancel</button>
                             <button id="confirm-button" class="confirm-button w-full md:w-24 h-10 mr-2 p-2 rounded-lg border border-yellow-600 hover:border-yellow-700 bg-yellow-600 text-white hover:bg-yellow-700">Create</button>
                         </div>
@@ -285,37 +230,47 @@
                         <img id="image-container" class="w-full absolute -inset-y-40" src="" alt="">
                     </div>
 
-                    <div class="new-event p-4 flex flex-col grow justify-between metropolis h-[70%]">
+                    <div class="new-event px-4 py-2 flex flex-col grow justify-between metropolis h-[70%]">
                         <div class="new-event-info flex flex-col md:flex-row">
                             <div class="new-event-details md:w-1/2 flex flex-col p-4">
                                 <div class="new-event-subject mb-3">
-                                    <h2 class="text-gray-500 text-sm">Event Subject</h2>
+                                <h6 class="text-gray-400 h-fit leading-none mb-1">Event Subject</h6>
                                     <!-- <input class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4 -->
                                     <!-- " type="text" name="event-subject" id ="event-subject" placeholder="What's the event about?"> -->
-                                    <h4 class="text-lg w-full bg-transparent font-bold p-0 mt-2 rounded-xl flex items-center justify-start h-fit">Drone Risks, Prevention, and Caution</h4>
+                                    <h4 class="text-lg w-full bg-transparent font-bold p-0 rounded-xl flex items-center justify-start h-fit">Drone Risks, Prevention, and Caution</h4>
                                 </div>
                                 <div class="new-event-when mb-3">
-                                    <h2 class="text-gray-500 text-sm">Event Date and Time</h2>
+                                <h6 class="text-gray-400 h-fit leading-none mb-1">Event Date and Time</h6>
                                     <div class="inputs grid grid-cols-2 gap-3">
                                         <!-- <input class="new-event-date h-12 bg-transparent m-0 p-0 border border-yellow-600 my-4" type="date" name="event-date" id="event-date"> -->
 
-                                        <h4 class="new-event-date text-lg w-full bg-transparent font-bold p-0 mt-2 rounded-xl flex items-center justify-start h-fit">21-07-2023</h4>
+                                        <h4 class="new-event-date text-lg w-full bg-transparent font-bold p-0 mt-1 rounded-xl flex items-center justify-start h-fit">21-07-2023</h4>
                                         <!-- <input class="new-event-time h-12 bg-transparent m-0 p-0 border border-yellow-600 my-4" type="time" name="event-time" id="event-time"> -->
-                                        <h4 class="view-event-time text-lg font-bold w-full bg-transparent p-0 mt-2  rounded-xl flex items-center justify-start h-fit" type="time" name="event-time" id="event-time">12:30 PM</h4>
+                                        <h4 class="new-event-time text-lg font-bold w-full bg-transparent p-0 mt-1  rounded-xl flex items-center justify-start h-fit" type="time" name="event-time" id="event-time">12:30 PM</h4>
                                     </div>
                                 </div>
                                 <div class="new-event-describtion my-1 flex flex-col grow ">
-                                    <h2 class="text-gray-500 text-sm">Event Details</h2>
+                                <h6 class="text-gray-400 h-fit leading-none mb-1">Event Details</h6>
                                     <!-- <textarea type="text" class="mt-4 grow" placeholder="Provide more details about the event" name="new-event-description" id="new-event-description"></textarea> -->
-                                    <h4 class="mt-2 grow text-lg text-justify font-bold rounded-xl flex items-center justify-start py-0 overflow-hidden">Drone Risks, Drone Risks, Prevention and Caution. Drone Risks, Prevention and Caution. Drone Risks, Prevention and Caution.</h4>
+                                    <h4 class="grow text-lg text-justify font-bold rounded-xl flex items-center justify-start py-0 overflow-hidden">Drone Risks, Drone Risks, Prevention and Caution. Drone Risks, Prevention and Caution. Drone Risks, Prevention and Caution.</h4>
                                 </div>
                             </div>
 
-                            <div class="new-event-location p-4 md:w-1/2 flex flex-col">
-                                <h2 class="text-gray-500 text-sm">Location</h2>
-                                <div class="location flex grow my-4 border border-yellow-600 rounded-[1rem] p-5">Open in Google maps</div>
-                                <div class="location-address border border-yellow-600 rounded-[1rem] p-4">Location XYZ at ABC Place</div>
+
+
+
+
+
+                            <div class="new-event-location py-4 md:w-1/2 md:h-full flex flex-col">
+                            <h6 class="text-gray-400 h-fit leading-none mb-2">Location</h6>
+                                <div class="location flex grow mb-2 border border-yellow-600 rounded-md py-1 px-2">Open in Google maps</div>
+                                <div class="location-address border border-yellow-600 rounded-md py-2 px-2">Location XYZ at ABC Place</div>
                             </div>
+
+
+
+
+
 
                         </div>
                         <div id="view-event-id" class="text-gray-400 p-4">
@@ -339,27 +294,27 @@
                     <div class="edit-event-image bg-gray-100 overflow-hidden relative h-[30%]">
                         <img id="edited-image-container" class="w-full absolute -inset-y-40" src="" alt="">
 
-                        <div class="img-buttons absolute left-5 bottom-5">
-                            <input type="file" id="edited-image-upload">
-                            <label class="bg-transparent cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg px-2 pointer" for="edited-image-upload">تغيير الخلفية</label>
+                    <div class="img-buttons absolute right-5 bottom-5">
+                        <input type="file" id="edited-image-upload">
+                        <label class="bg-transparent w-fit cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg py-[0.1rem] px-2 pointer" for="edited-image-upload">Change background</label>
 
-                            <input type="file" id="edited-image-upload">
-                            <label class="bg-transparent cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg px-2 pointer" for="edited-image-upload">حط اللينك</label>
-                        </div>
+                        <input type="file" id="edited-image-upload">
+                        <label class="bg-transparent w-fit cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg py-[0.1rem] px-2 pointer" for="image-link" for="edited-image-upload">Image link</label>
+                    </div>
+
                     </div>
 
 
                     <div class="edit-event p-4 flex flex-col grow justify-between metropolis h-[70%]">
                         <div class="edit-event-info flex flex-col md:flex-row">
-                            <div class="edit-event-details md:w-1/2 flex flex-col p-4">
+                            <div class="edit-event-details h-96 md:w-1/2 flex flex-col px-2 py-2">
                                 <div class="edit-event-subject mb-3">
-                                    <h2>Event Subject</h2>
-                                    <input class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4 -->
-                                    <!-- " type="text" name="event-subject" id ="event-subject" placeholder="What is event about?" value="">
+                                <h6 class="text-gray-400 h-fit leading-none mb-2">Event Subject</h6>
+                                    <input class="w-full h-12 bg-transparent p-1 border border-yellow-600" type="text" name="event-subject" id ="event-subject" placeholder="What is event about?" value="">
                                     <!-- <h4 class="text-xl w-full h-12 bg-transparent font-bold p-0 mt-2 rounded-xl flex items-center justify-start h-fit">مخاطر الدرونز, وقاية و حذر</h4> -->
                                 </div>
                                 <div class="edit-event-when mb-3">
-                                    <h2>Event time:</h2>
+                                <h6 class="text-gray-400 h-fit leading-none mb-2">Event time:</h6>
                                     <div class="inputs grid grid-cols-2 gap-3">
                                         <input class="edit-event-date h-12 bg-transparent m-0 p-0 border border-yellow-600 my-4" type="date" name="event-date" id="event-date">
 
@@ -368,22 +323,47 @@
                                         <!-- <h4 class="edit-event-time text-xl font-bold w-full h-12 bg-transparent p-0 mt-2  rounded-xl flex items-center justify-start h-fit" type="time" name="event-time" id="event-time">12:30 PM</h4> -->
                                     </div>
                                 </div>
-                                <div class="edit-event-describtion my-1 flex flex-col grow">
-                                    <h2>Event details</h2>
-                                    <textarea type="text" class="mt-4 h-40 md:h-auto grow" placeholder="Talk more about the event" name="edit-event-describtion" id="edit-event-describtion"></textarea>
+                                <div class="edit-event-describtion flex flex-col grow">
+                                <h2 class="text-gray-400 h-fit leading-none mb-2">Event details</h2>
+                                    <textarea type="text" class="h-40 md:h-auto grow" placeholder="Talk more about the event" name="edit-event-describtion" id="edit-event-describtion"></textarea>
                                     <!-- <h4 class="mt-2 grow text-xl text-justify font-bold rounded-xl flex items-center justify-start py-0">مخاطر الدرونز, مخاطر الدرونز, وقاية و حذر. مخاطر الدرونز, وقاية و حذر. مخاطر الدرونز, وقاية و حذر. </h4> -->
                                 </div>
                             </div>
-                            <div class="edit-event-location p-4 md:w-1/2 flex flex-col">
+
+                            @* <div class="edit-event-location h-96 p-2 md:w-1/2 flex flex-col">
                                 <h2>Location</h2>
                                 <div class="location flex grow my-4 border border-yellow-600 rounded-[1rem] p-5">Open in Google maps</div>
                                 <div class="location-address border border-yellow-600 rounded-[1rem] p-4">Location XYZ</div>
+                            </div> *@
+
+                            <div id="infowindow-content" class="">
+                            <span id="place-name" class="title"></span><br />
+                            <span id="place-address"></span>
+                        </div>
+                            <div class="md:w-1/2 flex flex-col justify-between px-2 py-2 h-96">
+                                <div id="edit-map" class="w-full m-1 flex flex-col border rounded-xl h-full"></div>
+                                <!-- <div class="pac-card h-fit" id="pac-card">
+                                    <div id="pac-container">
+                                    <input id="pac-input" type="text" placeholder="Enter a location" />
+                                    </div>
+                                </div> -->
+                                <div id="pac-container" class="w-full h-12">
+                                    <input type="text" name="" id="location-finder" class="w-full h-full">
+                                </div>
                             </div>
+
+
+
+
+
+
                         </div>
                         <div id="edit-event-id" class="text-gray-400 p-4">
                             <span>#event-id:</span>
                             <span id="editedEvent-id-space"></span>
                         </div>
+
+
 
                         <div id="attendees" class="table-wrapper p-4 w-full">
                             <table class="table my-2 w-20 overflow-x-scroll md:w-full">
@@ -391,15 +371,16 @@
                                     <h3 class="text-2xl font-bold">Attendesss</h3>
                                     <button id="add-attendee-button-edit" class="add-attendee-button text-white bg-yellow-600 rounded-md px-2 py-1">Add attendee</button>
 
-                                    <dialog id="add-attendee-dialog-edit" class="add-attendee-dialog w-[80%] p-4 drop-shadow-2xl rounded-xl">
+
+                                    <dialog id="add-attendee-dialog-edit" class="add-attendee-dialog p-4 drop-shadow-2xl rounded-xl">
                                         <div id="new-attendee-name">
                                             <label for="attendee-name-e">Attendee name</label>
                                             <input id="attendee-name-e" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
                                         </div>
 
                                         <div id="new-attendee-email">
-                                            <label for="attendee-id-e">Attendee email</label>
-                                            <input id="attendee-id-e" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
+                                            <label for="attendee-email-e">Attendee email</label>
+                                            <input id="attendee-email-e" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
                                         </div>
 
                                         <div id="new-attendee-buttons" class="flex justify-between">
@@ -407,6 +388,8 @@
                                             <button id="confirm-attendee-button-edit" class="confirm-attendee-button w-1/2 h-[2.5rem] p-1 bg-yellow-600 rounded-xl text-white">Add</button>
                                         </div>
                                     </dialog>
+
+
                                 </div>
                                 <thead>
                                     <tr id="table-header">
@@ -417,9 +400,40 @@
                                         <td class="font-bold end">...</td>
                                     </tr>
                                 </thead>
-                                <tbody id="update-attendees-table" class="update-attendees-table"></tbody>
+                                <tbody id="attendees-table" class="attendees-table">
+                                    <!-- <tr class="person">
+                                        <td>فلان الفلاني</td>
+                                        <td id="attendee-event-id" class="attendee-event-id"><span></span><span>53</span> </td>
+                                        <td>person1@gcaa.ae</td>
+                                        <td>مؤكد</td>
+                                        <td id="manage-attendee" class="end">
+
+                                            <div class="attedees-management bi-chevron-up w-fit py-3 pl-3 py-3">
+                                                    <ul id="attedees-management-display">
+                                                        <button class="notify-button w-full">
+                                                            <li class="font-bold w-full">إعلام</li>
+                                                        </button>
+
+                                                        <hr class="w-5/6 bg-yellow-500 h-[2px]">
+
+                                                        <button class="kick-button w-full">
+                                                            <li class="text-red-600 font-bold w-full bg-red-500">طرد</li>
+                                                        </button>
+                                                    </ul>
+                                            </div>
+
+                                        </td>
+
+                                    </tr>-->
+                                    <!-- k
+                                    these two items should be loaded from the server but in our case it won't work well since we use JS
+                                    -->
+
+                                </tbody>
                             </table>
                         </div>
+
+
 
                         <div class="edit-event-buttons p-4 flex justify-between">
                             <button class="cancel-event-button h-10 mr-2 p-2 rounded-lg border text-white bg-red-600 border-red-600">Cancel Event</button>
@@ -434,8 +448,6 @@
             </dialog>
         </div>
 
-
-
     @* defining variables of type model to use in jason *@
     <script type="text/javascript">
         var eventCount = @Model.EventData.Last().event_id + 1;
@@ -443,22 +455,12 @@
         var editEvent = @Html.Raw(Json.Serialize(Model.EventData))
         const eventId = document.getElementById("new-event-id").lastElementChild;
         eventId.textContent = @Model.EventData.FirstOrDefault().event_id + 1;
-        var attendeeList = @Html.Raw(Json.Serialize(Model.GetAllAttendees()));
     </script>
-   
-
- 
-
-    
-    
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2M642sAwKlN7hWGOECQNK_DeiEN_6ets&libraries=places&callback=initMap"></script>
-    
-    
     <script src="~/js/newEvent.js"></script>
 
 
-    <script src="~/js/map.js"></script>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2M642sAwKlN7hWGOECQNK_DeiEN_6ets&libraries=places&callback=initMap"></script>
+    @* <script src="~/js/map.js"></script> *@
+    @* <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2M642sAwKlN7hWGOECQNK_DeiEN_6ets&libraries=places&callback=initMap"></script> *@
     
     
     <script src="~/js/editEventButton.js"></script>
@@ -467,17 +469,10 @@
     @* JS script to add new event *@
     <script type="text/jscript">
         confirmEventBtn.addEventListener('click', () => {
-<<<<<<< HEAD
-            eventName  = document.querySelector('.new-event-subject input').value;
-            eventTime  = document.querySelector('.new-event-time').value;
-            eventDate  = document.querySelector('.new-event-date').value;
-            eventImage = document.getElementById('new-image-container').src;
-=======
             eventName = document.querySelector('.new-event-subject input').value;
             eventTime    = document.querySelector('.new-event-time').value;
             eventDate    = document.querySelector('.new-event-date').value;
-            eventImage = document.getElementById('image-container').src;
->>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
+            eventImage = document.getElementById('new-image-container').src;
             eventDescribtion = document.querySelector('.new-event-describtion textarea').value;
             newEvent.event_name = eventName;
             newEvent.event_description = eventDescribtion;
@@ -507,11 +502,11 @@
             updatedEvent.event_description = editEventDescribtion.value;
             updatedEvent.event_date = editEventDate.value;
             updatedEvent.event_time = editEventTime.value;
-            updatedEvent.event_image = editEventImage.value;
+            updatedEvent.event_image = editEventImage.src;
             $.ajax({
                 type: "PUT",
                 url: "@Url.Action("UpdateEvent")",
-                data: { eventData: updatedEvent, attendees: addedAttendees },
+                data: { eventData: updatedEvent },
                 success: function (result) { console.log("Event creation success!"); window.location = result.url },
                 error: function (req, status, error) { console.log(status) },
             });
@@ -542,18 +537,11 @@
         });
     </script>
     <script src="~/js/todayDate.js"></script>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    @* <script src="~/js/loadCards.js"></script> *@
->>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
->>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
     <script src="~/js/eventsPages.js"></script>
     <script src="~/js/uploadImage.js"></script>
     <script src="~/js/expandNavbar.js"></script>
     <script src="~/js/handleMutations.js"></script>
-    <script src="~/js/map.js"></script>
+
 
 </body>
 </html>
