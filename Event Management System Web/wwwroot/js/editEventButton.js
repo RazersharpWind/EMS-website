@@ -10,7 +10,6 @@ const editEventImage   = document.querySelector('.edit-event-image').firstElemen
 const editEventDescribtion = document.querySelector('.edit-event-describtion textarea');
 const confirmEditButton = document.getElementById("confirm-edit-button")
 const editedEventId = document.getElementById('editedEvent-id-space')
-const undoButton = document.getElementById('undo-button');
 const editEventAttendees = document.querySelector('#edit-dialog .attendees-table');//tbody
 var cardEventID;
 
@@ -21,14 +20,6 @@ const newAttendeeID = document.getElementById('attendee-id-e');
 const editedAttendeesTable = document.getElementById('update-attendees-table');
 var addedAttendees = [];
 let cardAttendeesEdited = {};
-
-const undoButton = document.getElementById("undo-button");
-
-undoButton.addEventListener("click", () => {
-    editDialog.setAttribute("close", "");
-    setTimeout(() => { editDialog.close() }, 300)
-})
-
 
 const undoButton = document.getElementById("undo-button");
 
@@ -69,7 +60,7 @@ editEventButtons.forEach((editEventButton) => {
                 editEventImage.src = editEvent[index].event_image.toString();
             }
         }
-
+        let attendeeList = [];
         //display attendees inside table
         for (var i = 0; i < attendeeList.length; i++) {
             if (attendeeList[i].event_id === parseInt(editedEventId.textContent)) {

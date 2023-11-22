@@ -1,16 +1,6 @@
 //do the same thing but from another pages
 const newEventButton = document.getElementById("dialog-button")
 
-<<<<<<< HEAD
-newEventButton.addEventListener('click', (e) => {
-    console.log(e.target);
-    window.location.href = `events.html?fromIndex=true`;
-})
-
-if (window.location.href != "events.html") {
-    window.addEventListener("load", (e) => {
-        window.history.replaceState({}, "events.html?fromIndex=true", document.querySelector("title").getAttribute("data-href"))
-=======
     console.log(window.location.href.split("/"), window.location.href.split("/").indexOf("EMS"))
 newEventButton.addEventListener('click', (e) => {
     console.log(e.target);
@@ -24,7 +14,6 @@ newEventButton.addEventListener('click', (e) => {
 if (window.location.href != "EMS/Events") {
     window.addEventListener("load", (e) => {
         window.history.replaceState({}, "EMS/Events?fromIndex=true", document.querySelector("title").getAttribute("data-href"))
->>>>>>> 62bdb6d586226bce0b15c163de7470d3ff064f0f
     })
 }
 
