@@ -1,112 +1,126 @@
+
+let service2;
+let map;
 function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 25.23321, lng: 55.356064, },
-        zoom: 18,
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 25.23321, lng: 55.356064 },
+        zoom: 10,
         mapTypeControl: false,
     });
     const card = document.getElementById("pac-card");
     const input = document.getElementById("location-finder");
     const biasInputElement = document.getElementById("use-location-bias");
+    const results = document.getElementById("results")
     const strictBoundsInputElement = document.getElementById("use-strict-bounds");
     const options = {
         fields: ["formatted_address", "geometry", "name"],
         strictBounds: false,
     };
 
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(card);
+    
 
-    const autocomplete = new google.maps.places.Autocomplete(input, options);
-    console.log(autocomplete);
 
-    // Bind the map's bounds (viewport) property to the autocomplete object,
-    // so that the autocomplete requests use the current map bounds for the
-    // bounds option in the request.
-    autocomplete.bindTo("bounds", map);
 
-    const infowindow = new google.maps.InfoWindow();
-    const infowindowContent = document.getElementById("infowindow-content");
-    infowindow.setContent(infowindowContent);
+    //map.controls[google.maps.ControlPosition.TOP_LEFT].push(card);
 
-    const marker = new google.maps.Marker({
-        map,
-        anchorPoint: new google.maps.Point(0, -29),
-    });
 
-    autocomplete.addListener("place_changed", () => {
-        infowindow.close();
-        marker.setVisible(false);
 
-        const place = autocomplete.getPlace();
-
-        if (!place.geometry || !place.geometry.location) {
-            // User entered the name of a Place that was not suggested and
-            // pressed the Enter key, or the Place Details request failed.
-            window.alert("No details available for input: '" + place.name + "'");
+    const displaySuggestions = function (predictions, status) {
+        if (status != google.maps.places.PlacesServiceStatus.OK || !predictions) {
+            alert(status);
             return;
         }
 
-        // If the place has a geometry, then present it on a map.
-        if (place.geometry.viewport) {
-            map.fitBounds(place.geometry.viewport);
-        } else {
-            map.setCenter(place.geometry.location);
-            map.setZoom(17);
-        }
+        predictions.forEach((prediction) => {
+            const li = document.createElement("li");
+            let icon = `
+             <div class="flex items-center h-fit w-full overflow-hidden">
+                <img class="h-8 w-8" src="https://thumbs.dreamstime.com/b/web-186775053.jpg" />
+                <p class='grow'>${prediction.description}</p>
+             </div>
+                        `
 
-        marker.setPosition(place.geometry.location);
-        marker.setVisible(true);
+            li.innerHTML = icon;
+            //li.appendChild(document.createTextNode(prediction.description));
 
-        infowindowContent.children["place-name"].textContent = place.name;
-        infowindowContent.children["place-address"].textContent = place.formatted_address;
-        // document.getElementById("location-address").textContent = place.name;
-        infowindow.open(map, marker);
-    });
+            li.classList.add("cursor-pointer", "hover:bg-gray-200", "px-2", "py-0.5", "flex")
+            document.getElementById("results").appendChild(li);
 
-    // Sets a listener on a radio button to change the filter type on Places
-    // Autocomplete.
-    //function setupClickListener(id, types) {
-    //   const radioButton = document.getElementById(id);
+            li.addEventListener("click", () => {
+                document.getElementById("location-finder").value = li.innerText;
+                document.getElementById("results").classList.add("hidden", "flex")
 
-    //   radioButton.addEventListener("click", () => {
-    //       autocomplete.setTypes(types);
-    //       input.value = "";
-    //   });
-    //}
 
-    setupClickListener("changetype-all", []);
-    setupClickListener("changetype-address", ["address"]);
-    setupClickListener("changetype-establishment", ["establishment"]);
-    setupClickListener("changetype-geocode", ["geocode"]);
-    setupClickListener("changetype-cities", ["(cities)"]);
-    setupClickListener("changetype-regions", ["(regions)"]);
-    biasInputElement.addEventListener("change", () => {
-        if (biasInputElement.checked) {
-            autocomplete.bindTo("bounds", map);
-        } else {
-            // User wants to turn off location bias, so three things need to happen:
-            // 1. Unbind from map
-            // 2. Reset the bounds to whole world
-            // 3. Uncheck the strict bounds checkbox UI (which also disables strict bounds)
-            autocomplete.unbind("bounds");
-            autocomplete.setBounds({ east: 180, west: -180, north: 90, south: -90 });
-            strictBoundsInputElement.checked = biasInputElement.checked;
-        }
+                const request = {
+                    query: li.textContent,
+                    fields: ["name", "geometry"],
+                };
 
-        input.value = "";
-    });
-    strictBoundsInputElement.addEventListener("change", () => {
-        console.log("here");
-        autocomplete.setOptions({
-            strictBounds: strictBoundsInputElement.checked,
+                service2 = new google.maps.places.PlacesService(map);
+                service2.findPlaceFromQuery(request, (results, status) => {
+                    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+                        for (let i = 0; i < results.length; i++) {
+                            createMarker(results[i]);
+                        }
+
+                        map.setCenter(results[0].geometry.location);
+                    }
+
+                });
+
+
+
+
+
+            })
         });
-        if (strictBoundsInputElement.checked) {
-            biasInputElement.checked = strictBoundsInputElement.checked;
-            autocomplete.bindTo("bounds", map);
-        }
+    };
 
-        input.value = "";
+    const service = new google.maps.places.AutocompleteService();
+
+    window.addEventListener("click", (e) => {
+        if (e.target == document.getElementById("location-finder")) {
+            document.getElementById("results").classList.remove("hidden")
+            service.getQueryPredictions({ input: document.getElementById("location-finder").value }, displaySuggestions);
+        }
+        else {
+            document.getElementById("results").classList.add("hidden")
+        }
+    })
+
+    document.getElementById("location-finder").addEventListener("input", () => {
+        document.getElementById("results").classList.remove("hidden")
+        service.getQueryPredictions({ input: document.getElementById("location-finder").value }, displaySuggestions);
+        document.getElementById("results").innerHTML = "";
+    })
+
+
+
+
+
+
+
+
+
+}
+
+
+function createMarker(place) {
+    if (!place.geometry || !place.geometry.location) return;
+
+    const marker = new google.maps.Marker({
+        map,
+        position: place.geometry.location,
+    });
+
+    google.maps.event.addListener(marker, "click", () => {
+        infowindow.setContent(place.name || "");
+        infowindow.open(map);
     });
 }
 
+
+
 window.initMap = initMap;
+
 
