@@ -1,47 +1,5 @@
-@font-face {
-    font-family: Droid-bold;
-    src: url("../fonts/ArbFONTS-DroidKufi-Bold.ttf");
-}
-
-@font-face {
-    font-family: Droid;
-    src: url("../fonts/ArbFONTS-DroidKufi-Regular.ttf");
-}
-
-@font-face {
-    font-family: Metropolis;
-    src: url("../fonts/Metropolis-SemiBold.otf");
-}
-
-*{transition: all ease-in-out .3s; font-family: Droid, Droid-bold, Metropolis}
-
-/*h1 {font-size: 2em !important;}
-
-h3 {font-size: 1.5em !important;}
-
-h4 {font-size: 1.25em !important;}
-
-h5 {font-size: 1em !important;}
-
-h6 {font-size: .5em !important;}
-    */
-
-
-h2 {
-    font-size: 1.5em !important;
-}
-
-
-/*h1 {font-size: 2em !important;}
-
-h3 {font-size: 1.5em !important;}
-
-h4 {font-size: 1.25em !important;}
-
-h5 {font-size: 1em !important;}
-
-h6 {font-size: .5em !important;}
-    */
+*{transition: all ease-in-out .3s;}
+*{font-family: Metropolis;}
 
 
 h2 {
@@ -95,10 +53,6 @@ h2 {
     z-index: 1;
 }
 
-
-
-
-
 .event-card{transition: display ease-in-out .5s;}
 
 
@@ -109,8 +63,8 @@ h2 {
     background-color: var(--primary-color);
 }
 
-::-webkit-scrollbar-track{
-    background-color: rgb(236, 236, 236);
+::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
 input, textarea{
@@ -129,30 +83,21 @@ input[type="file"]{
     display: none;
 }
 
-
-dialog {
+dialog{
     scale: 0;
     display: block;
-    transition: .3s all ease-in-out;
-    position: absolute;
+    transition: .3s all ease-in-out ;
 }
 
-    dialog[open] {
-        scale: 1;
-        transition: .3s all ease-in-out;
-        z-index: -2 !important;
-    }
-    #add-attendee-dialog{
-        z-index: 2 !important;
-    }
+dialog[open]{
+    scale: 1;
+    transition: .3s all ease-in-out ;
+}
 
-        dialog[close] {
-            scale: 0;
-            transition: .3s all ease-in-out;
-        }
-
-
-
+dialog[close]{
+    scale: 0;
+    transition: .3s all ease-in-out ;
+}
 
 td{
     padding: .25rem 1rem;
@@ -160,19 +105,16 @@ td{
     /* background-color: forestgreen; */
 }
 
-.full-attendees-table td {
+.full-attendees-table td{
     border-bottom: 1px solid rgba(0, 0, 0, 0.479);
     text-align: left;
     width: fit-content;
     padding: .8rem 1rem;
-    overflow: hidden;
 }
 
 .manage-attendee[hidden]{
     display: none;
 }
-
-
 
 
 .attedees-management{
@@ -238,8 +180,6 @@ td{
 }
 
 
-
-
 .user-options{
     display: none;
     scale: 0;
@@ -261,14 +201,14 @@ td{
 } */
 
 
-.collapseable{
+.attebdees-table {
     display: block;
     transition: .3s all ease-in-out;
     max-height: 70px;
     transform: scaleY(10px);
 }
 
-.collapseable[clicked]{
+.attebdees-table[clicked] {
     scale: 1;
     display: block;
     max-height: 1000px;
