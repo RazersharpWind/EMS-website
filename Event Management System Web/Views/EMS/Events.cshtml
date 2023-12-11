@@ -92,7 +92,7 @@
                     </div>
 
 
-                    <div class="new-event p-4 flex flex-col grow justify-between metropolis h-[70%]">
+                    <div class="new-event px-6 py-4 flex flex-col grow justify-between metropolis h-[70%]">
                         <div id="alert"></div>
                         <div class="new-event-info flex flex-col md:flex-row">
                             <div class="new-event-details w-1/2 flex flex-col px-2 py-2 h-96">
@@ -114,12 +114,7 @@
                             </div>
 
 
-
-                            <div id="infowindow-content" class="">
-                            <span id="place-name" class="title"></span><br />
-                            <span id="place-address"></span>
-                        </div>
-                            <div class="md:w-1/2 flex flex-col justify-between mb-2 py-2 h-9/12 h-96">
+                            <div class="md:w-1/2 flex flex-col justify-between mb-2 px-2 py-2 h-9/12 h-96">
                                 <div id="map" class="w-full flex flex-col border rounded-xl h-full mb-1"></div>
                                 <!-- <div class="pac-card h-fit" id="pac-card">
                                     <div id="pac-container">
@@ -137,7 +132,7 @@
 
 
 
-                        <div id="new-event-id" class="text-gray-400 p-4 ">
+                    <div id="new-event-id" class="text-gray-400 px-4 py-4">
                             <span>Event #id: </span>
                             <span></span>
                         </div>
@@ -226,7 +221,7 @@
             </dialog>
 
 
-            <dialog id="view-dialog" class="rounded-xl h-[80vh] w-[60rem] overflow-y-scroll p-0">
+            <dialog id="view-dialog" class="rounded-xl h-[80vh] w-[60rem] overflow-y-auto p-0">
                 <div class="dialog-wrapper flex flex-col h-full">
 
                     <div class="new-event-image bg-gray-100 overflow-hidden relative h-[30%]">
@@ -308,7 +303,7 @@
                     </div>
 
 
-                    <div class="edit-event p-4 flex flex-col grow justify-between metropolis h-[70%]">
+                    <div class="edit-event px-6 py-4 flex flex-col grow justify-between metropolis h-[70%]">
                         <div class="edit-event-info flex flex-col md:flex-row">
                             <div class="edit-event-details h-96 md:w-1/2 flex flex-col px-2 py-2">
                                 <div class="edit-event-subject mb-3">
@@ -333,35 +328,21 @@
                                 </div>
                             </div>
 
-                            @* <div class="edit-event-location h-96 p-2 md:w-1/2 flex flex-col">
-                                <h2>Location</h2>
-                                <div class="location flex grow my-4 border border-yellow-600 rounded-[1rem] p-5">Open in Google maps</div>
-                                <div class="location-address border border-yellow-600 rounded-[1rem] p-4">Location XYZ</div>
-                            </div> *@
 
-                            <div id="infowindow-content" class="">
-                            <span id="place-name" class="title"></span><br />
-                            <span id="place-address"></span>
-                        </div>
-                            <div class="md:w-1/2 flex flex-col justify-between px-2 py-2 h-96">
-                                <div id="edit-map" class="w-full m-1 flex flex-col border rounded-xl h-full"></div>
-                                <!-- <div class="pac-card h-fit" id="pac-card">
-                                    <div id="pac-container">
-                                    <input id="pac-input" type="text" placeholder="Enter a location" />
-                                    </div>
-                                </div> -->
-                                <div id="pac-container" class="w-full h-12">
-                                    <input type="text" name="" id="location-finder" class="w-full h-full">
+
+
+                            <div class="md:w-1/2 flex flex-col justify-between mb-2 py-2 h-9/12 h-96">
+                                <div id="edit-event-map" class="w-full flex flex-col border rounded-xl h-full mb-1"></div>
+
+                                <div id="edit-event-pac-container" class="w-full h-12 relative">
+                                    <input type="text" name="" id="location-finder" class="w-full h-full focus-none outline-none" placeholder="Enter a location" />
+                                    <div id="edit-event-results" class="hidden flex flex-col list-none absolute top-10 left-0 w-full h-20 overflow-y-scroll bg-white shadow-xl rounded-b-md rounded-x-md border-yellow-600 border-x border-b border-black"></div>
                                 </div>
                             </div>
 
 
-
-
-
-
                         </div>
-                        <div id="edit-event-id" class="text-gray-400 p-4">
+                        <div id="edit-event-id" class="text-gray-400 px-4 py-4">
                             <span>#event-id:</span>
                             <span id="editedEvent-id-space"></span>
                         </div>
@@ -475,13 +456,13 @@
             eventName = document.querySelector('.new-event-subject input').value;
             eventTime    = document.querySelector('.new-event-time').value;
             eventDate    = document.querySelector('.new-event-date').value;
-            eventImage = document.getElementById('new-image-container').src;
+            eventImage = document.getElementById('new-image-container');
             eventDescribtion = document.querySelector('.new-event-describtion textarea').value;
             newEvent.event_name = eventName;
             newEvent.event_description = eventDescribtion;
             newEvent.event_date = eventDate;
             newEvent.event_time = eventTime;
-            newEvent.event_image = eventImage
+            newEvent.event_image = eventImage.src;
             newEvent.event_id = eventId.textContent;
             console.log(eventAttendees)
             $.ajax({

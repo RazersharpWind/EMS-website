@@ -25,9 +25,9 @@
                 <span>Selected attendees</span>
             </div>
             <span class="manage-attendees-buttons flex">
-                <button id="select-all" class="hidden text-[.8em] border-2 border-yellow-600 w-fit h-fit px-3 py-1 rounded-md">Unselect all</button>
-                <button class="text-[.8em] border-2 border-yellow-600 w-fit h-fit px-3 py-1 rounded-md focus:outline-none focus:ring focus:ring-yellow-100">Send a reminder</button>
-                <button class="text-[.8em] bg-red-600 text-white border-2 w-fit h-fit px-3 py-1 rounded-md focus:outline-none focus:ring focus:ring-red-100">Kick</button>
+                <button id="unselect-all" class="hidden text-[.8em] border-2 border-yellow-600 w-fit h-fit px-3 py-1 rounded-md">Unselect all</button>
+                <button id="remindSelected" class="text-[.8em] border-2 border-yellow-600 w-fit h-fit px-3 py-1 rounded-md focus:outline-none focus:ring focus:ring-yellow-100">Send a reminder</button>
+                <button id="kickSelected" class="text-[.8em] bg-red-600 text-white border-2 w-fit h-fit px-3 py-1 rounded-md focus:outline-none focus:ring focus:ring-red-100">Kick</button>
             </span>
         </div>
         <div id="events-attendees" class="">
@@ -74,13 +74,13 @@
                                     <td>@attendee.Status</td>
                                     <td class="relative">
                                         <button class="bi-three-dots manage-attendee-button p-2"></button>
-                                        <div class="manage-attendee m-0 h-fit w-24 bottom-11 right-[50%] bg-white border drop-shadow rounded-lg absolute z-50" hidden>
-                                            <ul class="w-full h-full">
-                                                <li class="cursor-pointer hover:bg-gray-100 px-2 h-7 flex items-center text-black mr-2">Remind</li>
+                                        <div class="manage-attendee m-0 h-fit w-24 bottom-11 right-[50%] bg-white border drop-shadow rounded-lg absolute" hidden>
+                                            <ul class="manage-attendee-buttons uu w-full h-full z-50">
+                                                <li class="Remind cursor-pointer hover:bg-gray-100 text-sm px-2 h-7 flex items-center text-black">Remind</li>
                                                 <hr class="my-1 w-16 bg-black">
-                                                <li class="cursor-pointer hover:bg-gray-100 px-2 h-7 flex items-center text-black mr-2">Invite</li>
+                                                <li class="Invite cursor-pointer hover:bg-gray-100 text-sm px-2 h-7 flex items-center text-black">Invite</li>
                                                 <hr class="my-1 w-16 bg-black">
-                                                <li class="cursor-pointer hover:bg-gray-100 px-2 h-7 flex items-center text-black mr-2">Kick</li>
+                                                <li class="kick cursor-pointer hover:bg-gray-100 text-sm px-2 h-7 flex items-center text-black">Kick</li>
                                             </ul>
                                         </div>
                                     </td>

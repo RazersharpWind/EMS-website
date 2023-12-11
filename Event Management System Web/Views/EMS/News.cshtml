@@ -37,27 +37,24 @@
                         <textarea id="textarea" class="new-details-input w-full h-36 bg-white my-2 text-justify drop-shadow-lg" placeholder="Latest news here..."></textarea>
                     </div>
                     <div id="new-image" class="new-image w-full">
-                        <div class="img-and-button flex h-12">
-                            <div class="button">
+                        <div class="img-and-button flex flex-col h-24 my-2">
+                            <div class="button mb-2">
                                 <input id="new-image-upload-button" type="file" />
-                                <label for="new-image-upload-button" class="bg-transparent text-sm h-8 w-30 flex items-center cursor-pointer border border-yellow-600 text-yellow-600 rounded-md px-2 pointer">Attach Image</label>
+                                <label for="new-image-upload-button" class="bg-transparent text-sm h-8 w-fit flex items-center cursor-pointer border border-yellow-600 text-yellow-600 rounded-md px-2 pointer">Attach Image</label>
                             </div>
-                            <div class="new-img-wrapper h-full grow mr-10 rounded-xl overflow-hidden">
+                            <div class="new-img-wrapper h-16 grow rounded-xl overflow-hidden">
                                 <img class="w-full" src="" alt="">
                             </div>
                         </div>
                     </div>
         
 
-
                     <!-- hide it since we are gonna use WYSIWYG text editor -->
-                    <div id="toolbar" class="hidden absolute bottom-[28%] right-8 flex justify-between w-32 mb-1 py-2 rounded-md">
+                    @* <div id="toolbar" class="hidden absolute bottom-[28%] right-8 flex justify-between w-32 mb-1 py-2 rounded-md">
                         <button onclick="applyBoldStyle()" class="bi-type-bold rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 bold-tool "></button>
                         <button onclick="applyItalicStyle()" class="bi-type-italic rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 underline-tool "></button>
                         <button onclick="applyUnderlineStyle()" class="bi-type-underline rounded-full w-8 h-8 flex items-center justify-center drop-shadow-md hover:drop-shadow-lg p-0 bg-white text-yellow-600 italic-tool "></button>
-                    </div>
-                    
-
+                    </div> *@
 
                     
                     
@@ -106,8 +103,108 @@
             </div>
             <div id="studio" class="hidden md:block studio py-5 grow lg:w-2/5 md:w-[30%]">
                 <h2 class="text-2xl font-bold">Studio</h2>
-                <div id="studio-section" class="studio-section my-5 p-3 border border-yellow-600 rounded-xl flex flex-col items-end h-48">
-                    sf
+                <div id="studio-section" class="studio-section my-5 p-3 border border-yellow-600 rounded-xl flex flex-col items-end h-96">
+                    <input id="attachFiles" class="w-full my-3" type="file" onchange="displayFiles()" />
+                    <label for="attachFiles" class="attachFilestext-center text-center mb-3 bg-transparent text-sm h-8 w-full flex items-center cursor-pointer border border-yellow-600 text-yellow-600 rounded-md px-2 pointer">Attach files</label>
+
+                    <hr><hr>
+                    <div id="attachedFiles" class="w-full px-0.5 py-2 flex flex-col items-center">
+                        <div class="file flex mb-2 w-full">
+                            <div class="file-icon w-1/12">
+                                <i class="bi bi-file text-xl"></i>
+                            </div>
+
+                            <div class="file-details-down flex justify-between grow">
+                                <div class="file-details flex flex-col w-8/10">
+                                    <h4 class="file-name w-full font-semibold">File Name #1</h4>
+                                    <div class="flex">
+                                        <span class="file-type text-xs text-gray-300">PDF</span>
+                                        <span class="file-size inline text-xs text-gray-300">- 1 MB</span>
+                                    </div>
+                                </div>
+                                <div class="download w-1/12">
+                                    <button class="w-full h-full">
+                                        <a href="">
+                                            <i class="bi bi-download w-full h-full"></i>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="file flex mb-2 w-full">
+                            <div class="file-icon w-1/12">
+                                <i class="bi bi-file text-xl"></i>
+                            </div>
+
+                            <div class="file-details-down flex justify-between grow">
+                                <div class="file-details flex flex-col w-8/10">
+                                    <h4 class="file-name w-full font-semibold">File Name #1</h4>
+                                    <div class="flex">
+                                        <span class="file-type text-xs text-gray-300">PDF</span>
+                                        <span class="file-size inline text-xs text-gray-300">- 1 MB</span>
+                                    </div>
+                                </div>
+                                <div class="download w-1/12">
+                                    <button class="w-full h-full">
+                                        <a href="">
+                                            <i class="bi bi-download w-full h-full"></i>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="file flex mb-2 w-full">
+                            <div class="file-icon w-1/12">
+                                <i class="bi bi-file text-xl"></i>
+                            </div>
+
+                            <div class="file-details-down flex justify-between grow">
+                                <div class="file-details flex flex-col w-8/10">
+                                    <h4 class="file-name w-full font-semibold">File Name #1</h4>
+                                    <div class="flex">
+                                        <span class="file-type text-xs text-gray-300">PDF</span>
+                                        <span class="file-size inline text-xs text-gray-300">- 1 MB</span>
+                                    </div>
+                                </div>
+                                <div class="download w-1/12">
+                                    <button class="w-full h-full">
+                                        <a href="">
+                                            <i class="bi bi-download w-full h-full"></i>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="file flex mb-2 w-full">
+                            <div class="file-icon w-1/12">
+                                <i class="bi bi-file text-xl"></i>
+                            </div>
+
+                            <div class="file-details-down flex justify-between grow">
+                                <div class="file-details flex flex-col w-8/10">
+                                    <h4 class="file-name w-full font-semibold">File Name #1</h4>
+                                    <div class="flex">
+                                        <span class="file-type text-xs text-gray-300">PDF</span>
+                                        <span class="file-size inline text-xs text-gray-300">- 1 MB</span>
+                                    </div>
+                                </div>
+                                <div class="download w-1/12">
+                                    <button class="w-full h-full">
+                                        <a href="">
+                                            <i class="bi bi-download w-full h-full"></i>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -167,6 +264,7 @@
     <script src="~/js/todayDate.js"></script>
     <script src="~/js/newEventOutScope.js"></script>
     <script src="~/js/newNew.js"></script>
+    <script src="~/js/media.js"></script>
     <!--
 
     <script src="~/js/manageNew.js"></script>
