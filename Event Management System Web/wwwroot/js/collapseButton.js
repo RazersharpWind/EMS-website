@@ -22,7 +22,7 @@ const collapseButtonAction = () => {
             e.target.classList.replace("bi-chevron-up", "bi-chevron-down")
         }
         else {
-            console.log("c");
+            //console.log("c");
             e.target.parentElement.parentElement.removeAttribute("clicked")
             e.target.classList.replace("bi-chevron-up", "bi-chevron-down")
 
@@ -32,7 +32,7 @@ const collapseButtonAction = () => {
 
     // h-20 overflow-hidden
 
-    console.log(collapeables);
+    //console.log(collapeables);
 }
 
 

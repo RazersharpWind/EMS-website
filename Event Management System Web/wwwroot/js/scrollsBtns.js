@@ -9,5 +9,3 @@ leftBtn.addEventListener('click', ()=>{
 rightBtn.addEventListener('click', ()=>{
     scrollable.scrollLeft += 200;
 })
-
-console.log("G");

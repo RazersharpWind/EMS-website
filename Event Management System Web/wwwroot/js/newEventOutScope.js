@@ -1,8 +1,7 @@
-//do the same thing but from another pages
-const newEventButton = document.getElementById("dialog-button")
+const newEventButton2 = document.getElementById("dialog-button")
 
     console.log(window.location.href.split("/"), window.location.href.split("/").indexOf("EMS"))
-newEventButton.addEventListener('click', (e) => {
+newEventButton2.addEventListener('click', (e) => {
     console.log(e.target);
     if (window.location.href.split("/").indexOf("Events") == -1) {
         if (window.location.href.split("/").indexOf("EMS") == -1) { window.location.href = `EMS/Events?fromIndex=true`; }
