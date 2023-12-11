@@ -1,5 +1,4 @@
-*{transition: all ease-in-out .3s;}
-*{font-family: Metropolis;}
+*{transition: all ease-in-out .3s; font-family: Metropolis , 'Droid Arabic Kufi';}
 
 
 h2 {
@@ -75,7 +74,7 @@ input, textarea{
     font-family: "effra" !important;
 }
 
-.transition{
+.transition {
     transition: opacity ease-in-out
 }
 
@@ -266,4 +265,11 @@ td{
 
 .spinner{
     animation: load infinite 1s linear;
+}
+
+
+
+.collapseable{
+    overflow: visible !important;
+    z-index: 40;
 }
