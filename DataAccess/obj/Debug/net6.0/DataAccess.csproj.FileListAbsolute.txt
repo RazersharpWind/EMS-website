@@ -23,3 +23,15 @@ C:\Users\abdul\Downloads\EMS-website-main\DataAccess\obj\Debug\net6.0\refint\Dat
 C:\Users\abdul\Downloads\EMS-website-main\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 C:\Users\abdul\Downloads\EMS-website-main\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\DataAccess\obj\Debug\net6.0\DataAccess.sourcelink.json
+D:\Users\ammar\Desktop\EMS\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+D:\Users\ammar\Desktop\EMS\DataAccess\bin\Debug\net6.0\DataAccess.dll
+D:\Users\ammar\Desktop\EMS\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\DataAccess.dll
+D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
