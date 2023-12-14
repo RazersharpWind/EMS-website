@@ -1,0 +1,529 @@
+﻿@model ViewEvents
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/output.css">
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/styles.css">
+    <title data-href="Events">EMS - Events</title>
+</head>
+<body class="md:flex relative font-droid">
+        <div class="time-and-date my-4">
+            <h1 id="today" class="text-2xl font-bold">الاربعاء, 05 يوليو 2023</h1>
+        </div>
+
+        <div id="events" class="events-sections my-10 relative">
+            <div class="events-header my-2 flex justify-between">
+                <div class="header-text">
+                    <h1 class="text-3xl font-bold">Events</h1>
+                    <p class="leading-10">All events hosted by GCAA:</p>
+                </div>
+                <div id="view-btns" class="hidden lg:flex border h-fit w-22 justify-between">
+                    <button class="v-btn border border-yellow-600 w-8 h-8 p-1 ease-linear outline-0 active"><img src="~/images/icons-02.svg" alt=""></button>
+                    <button class="h-btn border border-yellow-600 w-8 h-8 p-1 ease-linear duration-300 outline-0 bg-yellow-600"><img src="~/images/icons-03.svg" alt=""></button>
+                </div>
+            </div>
+            <div class="events grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 3xl:grid-cols-5 py-4">
+                @foreach (var singleEvent in Model.EventData)
+                {
+                <div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[21rem] w-full relative overflow-hidden" attendees-list=@Model.GetAttendees(singleEvent.event_id) event-id=@singleEvent.event_id>
+                    <div class="card-img overflow-hidden w-full h-[40%] bg-gray-300 relative">
+                        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@singleEvent.event_image alt=@singleEvent.event_image />
+                        </div>
+
+                    <div class="card-date w-14 h-14 bg-yellow-600 flex rounded-xl absolute right-[16%] top-[30%] text-white text-center">
+
+
+                        <div class="text-2xl leading-none flex flex-col justify-center my-auto font-semibold w-full h-full">
+                            <h3 class="text-2xl h-fit p-0 m-0 leading-none">@singleEvent.event_date.Day</h3>
+                            <p class="text-[1rem] h-fit p-0">@singleEvent.event_date.ToString("MMM")</p>
+                        </div>
+
+
+                            @* <h3 class="text-2xl leading-none my-auto">
+                                @singleEvent.event_date.Day
+                                <span class="text-lg leading-none">@singleEvent.event_date.ToString("MMM")</span>
+                            </h3> *@
+
+
+
+
+
+                        </div>
+
+                    <div class="card-info text-yellow-700 h-[60%] px-4 pt-7 pb-4 flex flex-col grow justify-between">
+                            <div class="card-text text-justify overflow-hidden">
+                                <div class="card-header h-fit font-bold text-xl">@singleEvent.event_name</div>
+                            <div class="card-desc h-1/2 text-sm mt-2 h-20">@singleEvent.event_description</div>
+                            </div>
+
+                            <div class="card-buttons flex place-content-between mt-2">
+                                <button id="show-button" class="show-button button outline-0 h-10 rounded-full border border-yellow-700">View</button>
+                                <button id="edit-button" class="edit-button button outline-0 h-10 rounded-full text-white bg-yellow-600 hover:bg-yellow-500 ease-linear duration-200" >Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+
+
+
+
+
+
+            <dialog id="creation-dialog" class="rounded-xl h-[90vh] w-[60rem] overflow-y-auto p-0">
+                <div class="dialog-wrapper flex flex-col h-full">
+
+                    <div class="new-event-image bg-gray-100 overflow-hidden relative h-[30%]">
+                    <img id="new-image-container" class="w-full absolute -inset-y-40" src="" alt="">
+
+                        <div class="img-buttons absolute right-5 bottom-5">
+                            <input type="file" id="image-upload">
+                            <label class="bg-transparent w-fit cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg py-[0.1rem] px-2 pointer" for="image-upload">Change background</label>
+
+                            <input type="file" id="image-link">
+                            <label class="bg-transparent w-fit cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg py-[0.1rem] px-2 pointer" for="image-link">Image link</label>
+                        </div>
+                    </div>
+
+
+                    <div class="new-event px-6 py-4 flex flex-col grow justify-between metropolis h-[70%]">
+                        <div id="alert"></div>
+                        <div class="new-event-info flex flex-col md:flex-row">
+                            <div class="new-event-details md:w-1/2 flex flex-col px-2 py-2 h-96">
+                                <div class="new-event-subject mb-2">
+                                    <h6 class="text-gray-400 h-fit leading-none mb-2">Event subject</h6>
+                                    <input class="w-full h-12 bg-transparent p-1 border border-yellow-600" type="text" name="event-subject" id ="event-subject" placeholder="What the events is about?">
+                                </div>
+                                <div class="new-event-when mb-2">
+                                    <h6 class="text-gray-400 h-fit leading-none mb-2">Event time</h6>
+                                    <div class="inputs grid grid-cols-2 gap-3">
+                                        <input class="new-event-date h-12 bg-transparent m-0 p-0 border border-yellow-600" type="date" name="event-date" id="event-date">
+                                        <input class="new-event-time h-12 bg-transparent m-0 p-0 border border-yellow-600" type="time" name="event-time" id="event-time">
+                                    </div>
+                                </div>
+                                <div class="new-event-describtion mt-2 flex flex-col grow text-gray-400 h-fit leading-none">
+                                    <h6 class="text-gray-400 h-fit leading-none mb-2">Event describtion</h6>
+                                    <textarea type="text" class="grow" placeholder="Talk more about the event" name="new-event-describtion" id="new-event-describtion"></textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="md:w-1/2 flex flex-col justify-between mb-2 px-2 py-2 h-9/12 h-96">
+                                <div id="map" class="w-full flex flex-col border rounded-xl h-full mb-1"></div>
+                                <!-- <div class="pac-card h-fit" id="pac-card">
+                                    <div id="pac-container">
+                                    <input id="pac-input" type="text" placeholder="Enter a location" />
+                                    </div>
+                                </div> -->
+                                <div id="pac-container" class="w-full h-12 relative">
+                                    <input type="text" name="" id="location-finder" class="w-full h-full focus-none outline-none" placeholder="Enter a location"/>
+                                <div id="results" class="hidden flex flex-col list-none absolute top-10 left-0 w-full h-20 overflow-y-scroll bg-white shadow-xl rounded-b-md rounded-x-md border-yellow-600 border-x border-b border-black"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                    <div id="new-event-id" class="text-gray-400 px-4 py-4">
+                            <span>Event #id: </span>
+                            <span></span>
+                        </div>
+                        
+
+
+                        <div id="attendees" class="table-wrapper p-4 w-full">
+                            <table class="table my-2 w-full">
+                                <div class="table-header flex justify-between my-1">
+                                    <h3 class="text-2xl font-bold">Attendees</h3>
+                                    <button id="add-attendee-button" class="add-attendee-button text-white bg-yellow-600 rounded-md px-2 py-1">Add an attendee</button>
+
+
+                                    <dialog id="add-attendee-dialog" class="add-attendee-dialog w-[80%] p-4 drop-shadow-2xl rounded-xl">
+                                        <div id="new-attendee-name">
+                                            <label for="attendee-name">Attendee name</label>
+                                            <input id="attendee-name" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4" required>
+                                        </div>
+
+                                        <div id="new-attendee-email">
+                                            <label for="attendee-email">Attendee email</label>
+                                            <input id="attendee-email" type="email" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4" required>
+                                        </div>
+
+                                        <div id="new-attendee-buttons" class="flex justify-between">
+                                            <button id="cancel-attendee-button" class="cancel-attendee-button w-1/2 h-[2.5rem] p-1 border-yellow-600 rounded-xl">Cancel</button>
+                                            <button id="confirm-attendee-button" class="confirm-attendee-button w-1/2 h-[2.5rem] p-1 bg-yellow-600 rounded-xl text-white">Add</button>
+                                        </div>
+                                    </dialog>
+
+
+                                </div>
+                                <thead>
+                                    <tr id="table-header">
+                                        <td class="font-bold">Present Name</td>
+                                        <td class="font-bold">ID Number</td>
+                                        <td class="font-bold">Email Address</td>
+                                        <td class="font-bold">Assigned Role</td>
+                                        <td class="font-bold end">...</td>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="attendees-table" class="attendees-table">
+                                    <!-- <tr class="person">
+                                        <td>فلان الفلاني</td>
+                                        <td id="attendee-event-id" class="attendee-event-id"><span></span><span>53</span> </td>
+                                        <td>person1@gcaa.ae</td>
+                                        <td>مؤكد</td>
+                                        <td id="manage-attendee" class="end">
+
+                                            <div class="attedees-management bi-chevron-up w-fit py-3 pl-3 py-3">
+                                                    <ul id="attedees-management-display">
+                                                        <button class="notify-button w-full">
+                                                            <li class="font-bold w-full">إعلام</li>
+                                                        </button>
+
+                                                        <hr class="w-5/6 bg-yellow-500 h-[2px]">
+
+                                                        <button class="kick-button w-full">
+                                                            <li class="text-red-600 font-bold w-full bg-red-500">طرد</li>
+                                                        </button>
+                                                    </ul>
+                                            </div>
+
+                                        </td>
+
+                                    </tr>-->
+
+                                    <!-- k
+                                    these two items should be loaded from the server but in our case it won't work well since we use JS
+                                    -->
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+                        <div class="new-event-buttons p-4 flex flex-col w-full md:w-full md:flex-row gap-2 justify-end">
+                            <button id="cancel-button" class="cancel-button w-full md:w-24 h-10 mr-2 p-2 rounded-lg border border-yellow-600">Cancel</button>
+                            <button id="confirm-button" class="confirm-button w-full md:w-24 h-10 mr-2 p-2 rounded-lg border border-yellow-600 hover:border-yellow-700 bg-yellow-600 text-white hover:bg-yellow-700">Create</button>
+                        </div>
+                    </div>
+
+                </div>
+            </dialog>
+
+
+            <dialog id="view-dialog" class="rounded-xl h-[80vh] w-[60rem] overflow-y-auto p-0">
+                <div class="dialog-wrapper flex flex-col h-full">
+
+                    <div class="new-event-image bg-gray-100 overflow-hidden relative w-full h-[30%]">
+                        <img id="image-container" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src="" alt="">
+                    </div>
+
+                    <div class="new-event px-4 py-2 flex flex-col grow justify-between h-[70%]">
+                        <div class="new-event-info flex flex-col md:flex-row">
+                            <div class="new-event-details md:w-1/2 flex flex-col p-4">
+                                <div class="new-event-subject mb-3">
+                                <h6 class="text-gray-400 h-fit leading-none mb-1">Event Subject</h6>
+                                    <!-- <input class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4 -->
+                                    <!-- " type="text" name="event-subject" id ="event-subject" placeholder="What's the event about?"> -->
+                                    <h4 class="text-lg w-full bg-transparent font-bold p-0 rounded-xl flex items-center justify-start h-fit">Drone Risks, Prevention, and Caution</h4>
+                                </div>
+                                <div class="new-event-when mb-3">
+                                <h6 class="text-gray-400 h-fit leading-none mb-1">Event Date and Time</h6>
+                                    <div class="inputs grid grid-cols-2 gap-3">
+                                        <!-- <input class="new-event-date h-12 bg-transparent m-0 p-0 border border-yellow-600 my-4" type="date" name="event-date" id="event-date"> -->
+
+                                        <h4 class="new-event-date text-lg w-full bg-transparent font-bold p-0 mt-1 rounded-xl flex items-center justify-start h-fit">21-07-2023</h4>
+                                        <!-- <input class="new-event-time h-12 bg-transparent m-0 p-0 border border-yellow-600 my-4" type="time" name="event-time" id="event-time"> -->
+                                        <h4 class="new-event-time text-lg font-bold w-full bg-transparent p-0 mt-1  rounded-xl flex items-center justify-start h-fit" type="time" name="event-time" id="event-time">12:30 PM</h4>
+                                    </div>
+                                </div>
+                                <div class="new-event-describtion my-1 flex flex-col grow ">
+                                <h6 class="text-gray-400 h-fit leading-none mb-1">Event Details</h6>
+                                    <!-- <textarea type="text" class="mt-4 grow" placeholder="Provide more details about the event" name="new-event-description" id="new-event-description"></textarea> -->
+                                    <h4 class="grow text-lg text-justify font-bold rounded-xl flex items-center justify-start py-0 overflow-hidden">Drone Risks, Drone Risks, Prevention and Caution. Drone Risks, Prevention and Caution. Drone Risks, Prevention and Caution.</h4>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="new-event-location h-96 p-4 md:w-1/2 md:h-full flex flex-col">
+                            <h6 class="text-gray-400 h-fit leading-none mb-2">Location</h6>
+                                <div class="location flex grow mb-2 border border-yellow-600 rounded-md py-1 px-2">Open in Google maps</div>
+                                <div class="location-address border border-yellow-600 rounded-md py-2 px-2">Location XYZ at ABC Place</div>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                        <div id="view-event-id" class="text-gray-400 md:p-4">
+                            <span>Event Code: #</span>
+                            <span id="event-id-space"></span>
+                        </div>
+
+                        <div class="new-event-buttons py-3 md:p-4 flex flex-col justify-end">
+                            <button id="close-button" class="cancel-button md:w-24 h-10 md:mr-2 p-2 rounded-lg border border-yellow-600 hover:border-yellow-700 bg-yellow-600 text-white hover:bg-yellow-700">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </dialog>
+
+
+            <dialog id="edit-dialog" class="rounded-xl h-[90vh] w-[60rem] overflow-y-auto p-0">
+                <div class="dialog-wrapper flex flex-col h-full">
+
+                    <div class="edit-event-image bg-gray-100 overflow-hidden relative h-[30%]">
+                        <img id="edited-image-container" class="w-full absolute -inset-y-40" src="" alt="">
+
+                    <div class="img-buttons absolute right-5 bottom-5">
+                        <input type="file" id="edited-image-upload">
+                        <label class="bg-transparent w-fit cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg py-[0.1rem] px-2 pointer" for="edited-image-upload">Change background</label>
+
+                        <input type="file" id="edited-image-upload">
+                        <label class="bg-transparent w-fit cursor-pointer border border-yellow-600 text-yellow-600 rounded-lg py-[0.1rem] px-2 pointer" for="image-link" for="edited-image-upload">Image link</label>
+                    </div>
+
+                    </div>
+
+
+                    <div class="edit-event px-6 py-4 flex flex-col grow justify-between metropolis h-[70%]">
+                        <div class="edit-event-info flex flex-col md:flex-row">
+                            <div class="edit-event-details h-fit md:w-1/2 flex flex-col p-2">
+                                <div class="edit-event-subject mb-3">
+                                <h6 class="text-gray-400 h-fit leading-none mb-2">Event Subject</h6>
+                                    <input class="w-full h-12 bg-transparent p-1 border border-yellow-600" type="text" name="event-subject" id ="event-subject" placeholder="What is event about?" value="">
+                                    <!-- <h4 class="text-xl w-full h-12 bg-transparent font-bold p-0 mt-2 rounded-xl flex items-center justify-start h-fit">مخاطر الدرونز, وقاية و حذر</h4> -->
+                                </div>
+                                <div class="edit-event-when mb-3">
+                                <h6 class="text-gray-400 h-fit leading-none mb-2">Event time:</h6>
+                                    <div class="inputs grid grid-cols-2 gap-3">
+                                        <input class="edit-event-date h-12 bg-transparent m-0 p-0 border border-yellow-600 my-4" type="date" name="event-date" id="event-date">
+
+                                        <!-- <h4 class="edit-event-date text-xl w-full h-12 bg-transparent font-bold p-0 mt-2 rounded-xl flex items-center justify-start h-fit">21-07-2023</h4> -->
+                                        <input class="edit-event-time h-12 bg-transparent m-0 p-0 border border-yellow-600 my-4" type="time" name="event-time" id="event-time">
+                                        <!-- <h4 class="edit-event-time text-xl font-bold w-full h-12 bg-transparent p-0 mt-2  rounded-xl flex items-center justify-start h-fit" type="time" name="event-time" id="event-time">12:30 PM</h4> -->
+                                    </div>
+                                </div>
+                                <div class="edit-event-describtion flex flex-col grow">
+                                <h2 class="text-gray-400 h-fit leading-none mb-2">Event details</h2>
+                                    <textarea type="text" class="h-40 md:h-auto grow" placeholder="Talk more about the event" name="edit-event-describtion" id="edit-event-describtion"></textarea>
+                                    <!-- <h4 class="mt-2 grow text-xl text-justify font-bold rounded-xl flex items-center justify-start py-0">مخاطر الدرونز, مخاطر الدرونز, وقاية و حذر. مخاطر الدرونز, وقاية و حذر. مخاطر الدرونز, وقاية و حذر. </h4> -->
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="md:w-1/2 flex flex-col justify-between mb-2 p-2 h-9/12 h-96">
+                                <div id="edit-event-map" class="w-full flex flex-col border rounded-xl h-full mb-1"></div>
+
+                                <div id="edit-event-pac-container" class="w-full h-12 relative">
+                                    <input type="text" name="" id="location-finder" class="w-full h-full focus-none outline-none" placeholder="Enter a location" />
+                                    <div id="edit-event-results" class="hidden flex flex-col list-none absolute top-10 left-0 w-full h-20 overflow-y-scroll bg-white shadow-xl rounded-b-md rounded-x-md border-yellow-600 border-x border-b border-black"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div id="edit-event-id" class="text-gray-400 px-4 py-4">
+                            <span>#event-id:</span>
+                            <span id="editedEvent-id-space"></span>
+                        </div>
+
+
+
+                        <div id="attendees" class="hidden md:block table-wrapper p-4 w-full">
+                            <table class="table my-2 w-20 overflow-x-scroll md:w-full">
+                                <div class="table-header flex justify-between my-1">
+                                    <h3 class="text-2xl font-bold">Attendesss</h3>
+                                    <button id="add-attendee-button-edit" class="add-attendee-button text-white bg-yellow-600 rounded-md px-2 py-1">Add attendee</button>
+
+
+                                    <dialog id="add-attendee-dialog-edit" class="add-attendee-dialog p-4 drop-shadow-2xl rounded-xl">
+                                        <div id="new-attendee-name">
+                                            <label for="attendee-name-e">Attendee name</label>
+                                            <input id="attendee-name-e" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
+                                        </div>
+
+                                        <div id="new-attendee-email">
+                                            <label for="attendee-email-e">Attendee email</label>
+                                            <input id="attendee-email-e" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
+                                        </div>
+
+                                        <div id="new-attendee-buttons" class="flex justify-between">
+                                            <button id="cancel-attendee-button-edit" class="cancel-attendee-button w-1/2 h-[2.5rem] p-1 border-yellow-600 rounded-xl">Cancel</button>
+                                            <button id="confirm-attendee-button-edit" class="confirm-attendee-button w-1/2 h-[2.5rem] p-1 bg-yellow-600 rounded-xl text-white">Add</button>
+                                        </div>
+                                    </dialog>
+
+
+                                </div>
+                                <thead>
+                                    <tr id="table-header">
+                                        <td class="font-bold">Attendee name</td>
+                                        <td class="font-bold">ID number</td>
+                                        <td class="font-bold">E-mail</td>
+                                        <td class="font-bold">Position</td>
+                                        <td class="font-bold end">...</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="attendees-table" class="attendees-table">
+                                    <!-- <tr class="person">
+                                        <td>فلان الفلاني</td>
+                                        <td id="attendee-event-id" class="attendee-event-id"><span></span><span>53</span> </td>
+                                        <td>person1@gcaa.ae</td>
+                                        <td>مؤكد</td>
+                                        <td id="manage-attendee" class="end">
+
+                                            <div class="attedees-management bi-chevron-up w-fit py-3 pl-3 py-3">
+                                                    <ul id="attedees-management-display">
+                                                        <button class="notify-button w-full">
+                                                            <li class="font-bold w-full">إعلام</li>
+                                                        </button>
+
+                                                        <hr class="w-5/6 bg-yellow-500 h-[2px]">
+
+                                                        <button class="kick-button w-full">
+                                                            <li class="text-red-600 font-bold w-full bg-red-500">طرد</li>
+                                                        </button>
+                                                    </ul>
+                                            </div>
+
+                                        </td>
+
+                                    </tr>-->
+                                    <!-- k
+                                    these two items should be loaded from the server but in our case it won't work well since we use JS
+                                    -->
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+                        <div class="edit-event-buttons p-4 flex flex-col md:flex-row justify-between">
+                            <button class="cancel-event-button h-10 md:mr-2 mb-2 md:mb-0 p-2 rounded-lg border text-white bg-red-600 border-red-600">Cancel Event</button>
+                            <div class="flex md:flex-row flex-col">
+                                <button id="undo-button" class="undo-button md:w-24 h-10 mb-2 md:mb-0 md:mr-2 p-2 rounded-lg border border-yellow-600">Undo</button>
+                                <button id="confirm-edit-button" class="confirm-edit-button md:w-fit h-10 mb-2 md:mb-0 md:mr-2 p-2 rounded-lg border border-yellow-600 hover:border-yellow-700 bg-yellow-600 text-white hover:bg-yellow-700">Confirm change</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </dialog>
+        </div>
+
+    @* defining variables of type model to use in jason *@
+    <script type="text/javascript">
+        var eventCount = @Model.EventData.Last().event_id + 1;
+        var newEvent = @Html.Raw(Json.Serialize(Model.Event));
+        var editEvent = @Html.Raw(Json.Serialize(Model.EventData))
+        const eventId = document.getElementById("new-event-id").lastElementChild;
+        eventId.textContent = @Model.EventData.FirstOrDefault().event_id + 1;
+    </script>
+    <script src="~/js/newEvent.js"></script>
+
+
+    <script src="~/js/map.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2M642sAwKlN7hWGOECQNK_DeiEN_6ets&libraries=places&callback=initMap"></script>
+    
+    <script src="~/js/editEventButton.js"></script>
+    <script src="~/js/showEventButton.js"></script>
+    <script src="~/js/attendeesList.js"></script>
+    @* JS script to add new event *@
+    <script type="text/jscript">
+        confirmEventBtn.addEventListener('click', () => {
+            eventName = document.querySelector('.new-event-subject input').value;
+            eventTime    = document.querySelector('.new-event-time').value;
+            eventDate    = document.querySelector('.new-event-date').value;
+            eventImage = document.getElementById('new-image-container');
+            eventDescribtion = document.querySelector('.new-event-describtion textarea').value;
+            newEvent.event_name = eventName;
+            newEvent.event_description = eventDescribtion;
+            newEvent.event_date = eventDate;
+            newEvent.event_time = eventTime;
+            newEvent.event_image = eventImage.src;
+            newEvent.event_id = eventId.textContent;
+            console.log(eventAttendees)
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("AddEvent")",
+                data: { eventData: newEvent, attendees: eventAttendees },
+                success: function (result) { console.log("Event creation success!"); window.location=result.url },
+                error: function (req, status, error) { console.log(status) },
+            });
+            dialog.setAttribute("close", "")
+            setTimeout(() => { dialog.close() }, 300)
+            resetValues(eventName, eventDate, eventTime, eventDescribtion, eventImage);
+        })
+    </script>
+    @* JS script to update event *@
+    <script type="text/jscript">
+        confirmEditButton.addEventListener('click', () => {
+            var updatedEvent = @Html.Raw(Json.Serialize(Model.Event));
+            updatedEvent.event_id = editedEventId.textContent;
+            updatedEvent.event_name = editEventName.value;
+            updatedEvent.event_description = editEventDescribtion.value;
+            updatedEvent.event_date = editEventDate.value;
+            updatedEvent.event_time = editEventTime.value;
+            updatedEvent.event_image = editEventImage.src;
+            $.ajax({
+                type: "PUT",
+                url: "@Url.Action("UpdateEvent")",
+                data: { eventData: updatedEvent },
+                success: function (result) { console.log("Event creation success!"); window.location = result.url },
+                error: function (req, status, error) { console.log(status) },
+            });
+            dialog.setAttribute("close", "")
+            setTimeout(() => { dialog.close() }, 300)
+        })
+    </script>
+    @* JS script to display event details *@
+    <script type="text/jscript">
+        showButtons.forEach((showButton) => {
+            showButton.addEventListener("click", (e) => {
+                viewDialog.showModal();
+                viewDialog.removeAttribute("close")
+                var events = @Html.Raw(Json.Serialize(Model.EventData));
+                viewEventId.textContent = e.target.parentElement.parentElement.parentElement.getAttribute('event-id');
+                for (let index in events) {
+                    if (events[index].event_id.toString() === viewEventId.textContent) {
+                        var date = new Date(String(events[index].event_date));
+                        var time = new Date(String(events[index].event_time));
+                        viewEventImage.src = events[index].event_image.toString();
+                        viewEventHeader.textContent = events[index].event_name.toString();
+                        viewEventDesc.textContent = events[index].event_description.toString();
+                        viewEventDate.textContent = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+                        viewEventTime.textContent = time.toLocaleTimeString();
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="~/js/todayDate.js"></script>
+    <script src="~/js/eventsPages.js"></script>
+    <script src="~/js/uploadImage.js"></script>
+    <script src="~/js/handleMutations.js"></script>
+
+
+</body>
+</html>

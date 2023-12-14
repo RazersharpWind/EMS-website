@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\Event Management System Web.csproj": {}
+    "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\Event Management System Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj": {
+    "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ammar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\obj\\",
+        "projectPath": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
+        "outputPath": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ammar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,43 +68,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.24, 6.0.24]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.24, 6.0.24]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.24, 6.0.24]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\Event Management System Web.csproj": {
+    "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\Event Management System Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\Event Management System Web.csproj",
+        "projectUniqueName": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\Event Management System Web.csproj",
         "projectName": "Event Management System Web",
-        "projectPath": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\Event Management System Web.csproj",
-        "packagesPath": "C:\\Users\\ammar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\Event Management System Web\\obj\\",
+        "projectPath": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\Event Management System Web.csproj",
+        "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
+        "outputPath": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ammar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -114,15 +99,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\ammar\\Desktop\\WEB\\EMS-website\\DataAccess\\DataAccess.csproj"
+              "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -147,24 +131,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.24, 6.0.24]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.24, 6.0.24]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.24, 6.0.24]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.24, 6.0.24]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -173,7 +139,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

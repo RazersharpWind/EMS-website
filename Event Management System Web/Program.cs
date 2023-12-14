@@ -11,6 +11,8 @@ builder.Services.AddSingleton<IAttendeeData, AttendeeData>();
 builder.Services.AddSingleton<IArticleData, ArticleData>();
 
 var app = builder.Build();
+//app.Urls.Add("https://192.168.10.48:7084"); //Ubuntu IP address
+app.Urls.Add("https://localhost:7230"); //localhost IP address
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -29,6 +31,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=EMS}/{action=Index}/{id?}");
+    pattern: "{controller=Admin}/{action=Index}/{id?}");
 
 app.Run();

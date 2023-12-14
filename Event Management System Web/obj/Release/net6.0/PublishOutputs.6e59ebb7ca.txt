@@ -1,0 +1,52 @@
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Event Management System Web.exe
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\package-lock.json
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\package.json
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\wwwroot\js\analyticsIncreament.js
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\wwwroot\js\attendeesList.js
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\wwwroot\js\editEventButton.js
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\wwwroot\js\eventsPages.js
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Event Management System Web.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Event Management System Web.deps.json
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Event Management System Web.runtimeconfig.json
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Event Management System Web.pdb
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Azure.Core.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Azure.Identity.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Dapper.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Primitives.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Identity.Client.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Abstractions.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Logging.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.SqlServer.Server.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\System.Drawing.Common.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\System.Memory.Data.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\System.Runtime.Caching.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\System.Security.Permissions.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\System.Windows.Extensions.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\DataAccess.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\PubTmp\Out\DataAccess.pdb
