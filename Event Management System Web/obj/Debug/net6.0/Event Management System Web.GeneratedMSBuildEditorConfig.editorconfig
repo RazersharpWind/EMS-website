@@ -9,45 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Event_Management_System_Web
 build_property.RootNamespace = Event_Management_System_Web
-build_property.ProjectDir = D:\Users\ammar\Desktop\EMS\Event Management System Web\
+build_property.ProjectDir = D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Users\ammar\Desktop\EMS\Event Management System Web
+build_property.MSBuildProjectDirectory = D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Users/ammar/Desktop/EMS/Event Management System Web/Views/Admin/Attendees.cshtml]
+[D:/Uni stuff/Research Outreach with Dr.Manar/Event Management system/code/Event Management System/Event Management System Web/Views/Admin/Attendees.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXR0ZW5kZWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/ammar/Desktop/EMS/Event Management System Web/Views/Admin/Events.cshtml]
+[D:/Uni stuff/Research Outreach with Dr.Manar/Event Management system/code/Event Management System/Event Management System Web/Views/Admin/Events.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRXZlbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/ammar/Desktop/EMS/Event Management System Web/Views/Admin/Index.cshtml]
+[D:/Uni stuff/Research Outreach with Dr.Manar/Event Management system/code/Event Management System/Event Management System Web/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/ammar/Desktop/EMS/Event Management System Web/Views/Admin/News.cshtml]
+[D:/Uni stuff/Research Outreach with Dr.Manar/Event Management system/code/Event Management System/Event Management System Web/Views/Admin/News.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTmV3cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/ammar/Desktop/EMS/Event Management System Web/Views/Shared/Error.cshtml]
+[D:/Uni stuff/Research Outreach with Dr.Manar/Event Management system/code/Event Management System/Event Management System Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/ammar/Desktop/EMS/Event Management System Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Uni stuff/Research Outreach with Dr.Manar/Event Management system/code/Event Management System/Event Management System Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/ammar/Desktop/EMS/Event Management System Web/Views/_ViewImports.cshtml]
+[D:/Uni stuff/Research Outreach with Dr.Manar/Event Management system/code/Event Management System/Event Management System Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/ammar/Desktop/EMS/Event Management System Web/Views/_ViewStart.cshtml]
+[D:/Uni stuff/Research Outreach with Dr.Manar/Event Management system/code/Event Management System/Event Management System Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/ammar/Desktop/EMS/Event Management System Web/Views/Shared/_Layout.cshtml]
+[D:/Uni stuff/Research Outreach with Dr.Manar/Event Management system/code/Event Management System/Event Management System Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gae5jmokvu
