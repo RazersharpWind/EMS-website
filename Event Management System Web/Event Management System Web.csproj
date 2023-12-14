@@ -81,10 +81,6 @@
 	<UpToDateCheckBuilt Include="tailwind.config.js" Set="Css" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Client\" />
-  </ItemGroup>
-
   <Target Name="Tailwind" BeforeTargets="Build">
     <Exec Command="npm run css:build" />
   </Target>
