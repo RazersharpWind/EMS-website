@@ -35,3 +35,15 @@ D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\DataAccess.dll
 D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\Users\ammar\Desktop\EMS\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\Users\ammar\Source\Repos\EMS-website\EMS\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
