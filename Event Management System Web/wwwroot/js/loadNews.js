@@ -11,26 +11,21 @@ fetch("../../news.json")
                     <div class="new-header my-2">
                         <div class="new-header-text flex justify-between w-full items-center relative">
                             <h2 class="text-2xl font-bold my-1">${n["new-header"]}</h2>
-                            <div class="manage-button bi-three-dots w-fit cursor-pointer"></div>
-                            <div class="new-manage">
-                                <div class="manage-new text-md w-full edit-new">Modify</div>
-                                <hr class=" w-5/6 bg-yellow-500 h-[2px]">
-                                <div class="manage-new text-md w-full remove-new">Remove</div>
-                            </div>
+                            
                         </div>
-                        <div class="new-date">
+                        <div class="new-date text-sm text-gray-400">
                             <span>Posted on </span>
                             <span class="new-date-written">${n["new-data-time"]}</span>
                         </div>
                     </div>
                     <div class="new-details">
-                        <p>${n["new-details"]}</p>
+                        <p class="text-justify">${n["new-details"]}</p>
                     </div>
                 </div>`;
 
 
             const newTemp = document.createElement("div");
-            newTemp.classList.add("new", "my-5", "p-3", "h-fit", "border", "border-yellow-600", "rounded-xl", "flex", "flex-col", "items-end")
+            newTemp.classList.add("new", "mt-2", "mb-5", "p-3", "h-fit", "border", "border-yellow-600", "rounded-xl", "flex", "flex-col", "items-end")
             newTemp.innerHTML = newTemplate;
 
             document.getElementById("news-container").append(newTemp)
@@ -40,16 +35,24 @@ fetch("../../news.json")
     })
 const loadNews = () => {
 
-    
-    
     window.addEventListener("click", (e)=>{
         const manageButtons = document.querySelectorAll(".manage-button");
-            if(e.target.classList.contains("manage-button")){
+        if(e.target.classList.contains("manage-button") && !e.target.nextElementSibling.getAttribute("clicked")){
                 e.target.nextElementSibling.setAttribute("clicked", "")
-            }
-            else{
+        }
+        else{
                 manageButtons.forEach((manageButton)=>{manageButton.nextElementSibling.removeAttribute("clicked");})
-            }
+        }
+
+        if(e.target.classList.contains("remove-new")){
+            e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add("hidden")
+        }
+        else if(e.target.classList.contains("edit-new")){
+
+        }
+
+
+
     })
 }
 

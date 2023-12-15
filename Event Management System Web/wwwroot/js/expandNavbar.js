@@ -1,29 +1,19 @@
-//const expandButton = document.getElementById("expand-navbar");
-//const navigationBar = document.getElementById("nav-bar")
-// const classes = ["fixed", "bg-yellow-600", "text-white","inset-x-0", "inset-y-0", "h-screen", "w-fit", "px-5" ,"py-5", "z-10"]
-
-//const navItems = document.querySelectorAll('.nav-item')
-
-
-
-//document.getElementById("expand-navbar").addEventListener("click", ()=> {
-
-//})
-
-window.addEventListener("click", (e) => {
-    console.log(e.target == document.getElementById("expand-navbar").firstElementChild, e.target, document.getElementById("expand-navbar").firstElementChild)
-    if (e.target != document.getElementById("expand-navbar").firstElementChild) {
-        document.getElementById("nav-bar").classList.remove("inset-x-0")
-        document.getElementById("nav-bar").classList.remove("bg-yellow-600")
+const navBarButton = document.getElementById("expand-navbar").firstElementChild;
+const navBar = document.getElementById("links");
+const mainLinks = document.getElementById("g-links");
+window.addEventListener("click",(e)=>{
+    if(e.target == navBarButton){
+        navBar.classList.replace("-left-80", "left-0")
+        // console.log(e.target);
     }
-    else if (e.target == document.getElementById("expand-navbar").firstElementChild) {
-        document.getElementById("nav-bar").classList.toggle("inset-x-0")
-        document.getElementById("nav-bar").classList.toggle("bg-yellow-600")
-        document.getElementById("nav-bar").classList.toggle("expanded")
+    else if(e.target != navBarButton && navBar.lastElementChild.querySelectorAll("li")){
+        navBar.classList.replace("left-0", "-left-80")
+        console.log(e.target);
+        console.log([...navBar.lastElementChild.querySelectorAll("li")].includes(e.target));
     }
 
-})
 
-
-//  px-4 on nav element
-//  fixed, bg-red-500, inset-x-0, inset-y-0, h-screen, w-fit, px-5, py-5, z-10 for mobile
+    if(e.target == mainLinks || e.target == mainLinks.lastElementChild){
+        e.target.classList.replace("hidden", "block")
+    };
+});
