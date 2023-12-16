@@ -60,7 +60,6 @@ D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event 
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Debug\net6.0\staticwebassets.pack.json
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Debug\net6.0\staticwebassets.build.json
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Debug\net6.0\staticwebassets.development.json
-D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Debug\net6.0\scopedcss\bundle\Event Management System Web.styles.css
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Debug\net6.0\scopedcss\projectbundle\Event Management System Web.bundle.scp.css
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Debug\net6.0\Event Management System Web.csproj.CopyComplete
@@ -291,3 +290,4 @@ C:\Users\ammar\Source\Repos\EMS-website\EMS\Event Management System Web\obj\Debu
 C:\Users\ammar\Source\Repos\EMS-website\EMS\Event Management System Web\obj\Debug\net6.0\Event Management System Web.pdb
 C:\Users\ammar\Source\Repos\EMS-website\EMS\Event Management System Web\obj\Debug\net6.0\Event Management System Web.genruntimeconfig.cache
 C:\Users\ammar\Source\Repos\EMS-website\EMS\Event Management System Web\obj\Debug\net6.0\ref\Event Management System Web.dll
+D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout_Admin.cshtml.rz.scp.css
