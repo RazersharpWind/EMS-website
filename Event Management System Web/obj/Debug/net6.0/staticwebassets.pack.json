@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap-icons.css"
     },
     {
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\clientStyles.css",
+      "PackagePath": "staticwebassets\\css\\clientStyles.css"
+    },
+    {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\input.css",
       "PackagePath": "staticwebassets\\css\\input.css"
     },
@@ -17,24 +21,8 @@
       "PackagePath": "staticwebassets\\css\\output.css"
     },
     {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
-    },
-    {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\style2.css",
-      "PackagePath": "staticwebassets\\css\\style2.css"
-    },
-    {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\style2.css.map.txt",
-      "PackagePath": "staticwebassets\\css\\style2.css.map.txt"
-    },
-    {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\styles.css",
-      "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\favicon.ico",
@@ -133,10 +121,6 @@
       "PackagePath": "staticwebassets\\images\\gcaa white icon-01.png"
     },
     {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\eventsPage.js",
-      "PackagePath": "staticwebassets\\js\\Client\\eventsPage.js"
-    },
-    {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\expandNavbar.js",
       "PackagePath": "staticwebassets\\js\\Client\\expandNavbar.js"
     },
@@ -165,6 +149,10 @@
       "PackagePath": "staticwebassets\\js\\Client\\registrationFor.js"
     },
     {
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\searchEvent.js",
+      "PackagePath": "staticwebassets\\js\\Client\\searchEvent.js"
+    },
+    {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\sortEvents.js",
       "PackagePath": "staticwebassets\\js\\Client\\sortEvents.js"
     },
@@ -177,52 +165,24 @@
       "PackagePath": "staticwebassets\\js\\collapseButton.js"
     },
     {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\eventsPage.js",
-      "PackagePath": "staticwebassets\\js\\eventsPage.js"
-    },
-    {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\handleAttendessMutations.js",
       "PackagePath": "staticwebassets\\js\\handleAttendessMutations.js"
-    },
-    {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\loadEvents.js",
-      "PackagePath": "staticwebassets\\js\\loadEvents.js"
-    },
-    {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\login.js",
-      "PackagePath": "staticwebassets\\js\\login.js"
     },
     {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\media.js",
       "PackagePath": "staticwebassets\\js\\media.js"
     },
     {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\registrationFor.js",
-      "PackagePath": "staticwebassets\\js\\registrationFor.js"
-    },
-    {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
-    },
-    {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\searchEvent.js",
-      "PackagePath": "staticwebassets\\js\\searchEvent.js"
     },
     {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\sortEvents.js",
-      "PackagePath": "staticwebassets\\js\\sortEvents.js"
-    },
-    {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\todayDate.js",
       "PackagePath": "staticwebassets\\js\\todayDate.js"
-    },
-    {
-      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\viewEvent.js",
-      "PackagePath": "staticwebassets\\js\\viewEvent.js"
     },
     {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\LICENSE",

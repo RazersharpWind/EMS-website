@@ -4,7 +4,6 @@ const guestMode = document.querySelector(".guest-button");
 
 loginButton.addEventListener("click", ()=>{
     const windowHeight = window.innerHeight
-    console.log(windowHeight);
     window.scrollTo(0, 0)
     loginDialog.showModal()
     loginDialog.setAttribute("open", "")
@@ -23,7 +22,7 @@ const loadingPage = document.getElementById('loadingPage');
 const spinner = document.getElementById("spinner")
 
 // window.addEventListener('load', ()=>{
-    setTimeout(()=>{
-        loadingPage.style.display = 'none';
-    },1500)
+    //setTimeout(()=>{
+    //    loadingPage.style.display = 'none';
+    //},1500)
 // })
