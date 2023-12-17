@@ -18,7 +18,14 @@
     <div class="container mx-auto flex flex-col items-center overflow-hidden">
         <div id="events-section" class="px-10 py-8 w-full">
             <div class="events-header flex justify-between w-full">
+
                 <h2 class="text-3xl font-bold">Events</h2>
+                <div class="searchEvent flex items-center">
+                    <input type="search" name="" placeholder="Search for an event..." id="searchEventInput" class="w-72 h-10 rounded-xl border-2 px-2 py-1">
+                    <button class="w-10 h-10 rounded-xl border-2 ml-2">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
                 <div class="sort-by flex w-fit py-2 items-center justify-center ">
                     <h3 class="text-md mr-2">Sort by</h3>
                     <select id="selector" name="selector" class="text-md border rounded-full px-2">

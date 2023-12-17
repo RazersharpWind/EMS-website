@@ -1,451 +1,455 @@
 {
   "Files": [
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Event Management System Web.bundle.scp.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Event Management System Web.bundle.scp.css",
       "PackagePath": "staticwebassets\\Event Management System Web.bundle.scp.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\css\\bootstrap-icons.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\bootstrap-icons.css",
       "PackagePath": "staticwebassets\\css\\bootstrap-icons.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\css\\input.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\input.css",
       "PackagePath": "staticwebassets\\css\\input.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\css\\output.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\output.css",
       "PackagePath": "staticwebassets\\css\\output.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\css\\site.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\css\\style.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\css\\style2.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\style2.css",
       "PackagePath": "staticwebassets\\css\\style2.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\css\\style2.css.map.txt",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\style2.css.map.txt",
       "PackagePath": "staticwebassets\\css\\style2.css.map.txt"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\css\\styles.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\styles.css",
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\favicon.ico",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\ArbFONTS-DroidKufi-Bold.ttf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\ArbFONTS-DroidKufi-Bold.ttf",
       "PackagePath": "staticwebassets\\fonts\\ArbFONTS-DroidKufi-Bold.ttf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\ArbFONTS-DroidKufi-Regular.ttf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\ArbFONTS-DroidKufi-Regular.ttf",
       "PackagePath": "staticwebassets\\fonts\\ArbFONTS-DroidKufi-Regular.ttf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Black.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Black.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-Black.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-BlackItalic.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-BlackItalic.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-BlackItalic.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Bold.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Bold.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-Bold.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-BoldItalic.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-BoldItalic.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-BoldItalic.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraBold.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraBold.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-ExtraBold.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraBoldItalic.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraBoldItalic.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-ExtraBoldItalic.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraLight.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraLight.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-ExtraLight.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraLightItalic.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ExtraLightItalic.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-ExtraLightItalic.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Light.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Light.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-Light.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-LightItalic.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-LightItalic.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-LightItalic.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Medium.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Medium.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-Medium.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-MediumItalic.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-MediumItalic.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-MediumItalic.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Regular.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Regular.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-Regular.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-RegularItalic.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-RegularItalic.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-RegularItalic.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-SemiBold.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-SemiBold.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-SemiBold.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-SemiBoldItalic.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-SemiBoldItalic.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-SemiBoldItalic.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Thin.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-Thin.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-Thin.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ThinItalic.otf",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\fonts\\Metropolis-ThinItalic.otf",
       "PackagePath": "staticwebassets\\fonts\\Metropolis-ThinItalic.otf"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\images\\GCAA-logo-1024x319-1.png",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\images\\GCAA-logo-1024x319-1.png",
       "PackagePath": "staticwebassets\\images\\GCAA-logo-1024x319-1.png"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\images\\gcaa logo2.png",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\images\\gcaa logo2.png",
       "PackagePath": "staticwebassets\\images\\gcaa logo2.png"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\images\\gcaa white icon-01.png",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\images\\gcaa white icon-01.png",
       "PackagePath": "staticwebassets\\images\\gcaa white icon-01.png"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\Client\\eventsPage.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\eventsPage.js",
       "PackagePath": "staticwebassets\\js\\Client\\eventsPage.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\Client\\expandNavbar.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\expandNavbar.js",
       "PackagePath": "staticwebassets\\js\\Client\\expandNavbar.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\Client\\handleMutations.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\handleMutations.js",
       "PackagePath": "staticwebassets\\js\\Client\\handleMutations.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\Client\\loadEvents.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\loadEvents.js",
       "PackagePath": "staticwebassets\\js\\Client\\loadEvents.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\Client\\loadNews.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\loadNews.js",
       "PackagePath": "staticwebassets\\js\\Client\\loadNews.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\Client\\login.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\login.js",
       "PackagePath": "staticwebassets\\js\\Client\\login.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\Client\\map.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\map.js",
       "PackagePath": "staticwebassets\\js\\Client\\map.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\Client\\registrationFor.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\registrationFor.js",
       "PackagePath": "staticwebassets\\js\\Client\\registrationFor.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\Client\\sortEvents.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\sortEvents.js",
       "PackagePath": "staticwebassets\\js\\Client\\sortEvents.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\Client\\viewEvent.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\Client\\viewEvent.js",
       "PackagePath": "staticwebassets\\js\\Client\\viewEvent.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\collapseButton.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\collapseButton.js",
       "PackagePath": "staticwebassets\\js\\collapseButton.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\eventsPage.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\eventsPage.js",
       "PackagePath": "staticwebassets\\js\\eventsPage.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\handleAttendessMutations.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\handleAttendessMutations.js",
       "PackagePath": "staticwebassets\\js\\handleAttendessMutations.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\loadEvents.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\loadEvents.js",
       "PackagePath": "staticwebassets\\js\\loadEvents.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\login.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\login.js",
       "PackagePath": "staticwebassets\\js\\login.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\media.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\media.js",
       "PackagePath": "staticwebassets\\js\\media.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\registrationFor.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\registrationFor.js",
       "PackagePath": "staticwebassets\\js\\registrationFor.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\script.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\site.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\searchEvent.js",
+      "PackagePath": "staticwebassets\\js\\searchEvent.js"
+    },
+    {
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\sortEvents.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\sortEvents.js",
       "PackagePath": "staticwebassets\\js\\sortEvents.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\todayDate.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\todayDate.js",
       "PackagePath": "staticwebassets\\js\\todayDate.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\js\\viewEvent.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\js\\viewEvent.js",
       "PackagePath": "staticwebassets\\js\\viewEvent.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Uni stuff\\Research Outreach with Dr.Manar\\Event Management system\\code\\Event Management System\\Event Management System Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
