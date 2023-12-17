@@ -27,7 +27,7 @@
                 <button class="h-btn border border-yellow-600 w-8 h-8 p-1 ease-linear duration-300 outline-0 bg-yellow-600"><img src="~/images/icons-03.svg" alt=""></button>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5 2xl:grid-cols-5 gap-5 py-4">
+        <div class="events grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5 2xl:grid-cols-5 gap-5 py-4">
             @foreach (var singleEvent in Model.EventData)
             {
                 <div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-xl h-[21rem] w-full relative overflow-hidden" attendees-list=@Model.GetAttendees(singleEvent.event_id) event-id=@singleEvent.event_id>
@@ -445,6 +445,7 @@
     <script src="~/js/map.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2M642sAwKlN7hWGOECQNK_DeiEN_6ets&libraries=places&callback=initMap"></script>
 
+    <script src="~/js/eventsPages.js"></script>
     <script src="~/js/editEventButton.js"></script>
     <script src="~/js/showEventButton.js"></script>
     <script src="~/js/attendeesList.js"></script>
@@ -519,7 +520,6 @@
         });
     </script>
     <script src="~/js/todayDate.js"></script>
-    <script src="~/js/eventsPages.js"></script>
     <script src="~/js/uploadImage.js"></script>
     <script src="~/js/handleMutations.js"></script>
 
