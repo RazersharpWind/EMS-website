@@ -30,7 +30,8 @@ const viewDialogLoad = () => {
             viewDialogTime.textContent = viewedEventTime;
             viewDialogImage.src = viewedEventImage.src;
             viewDialogLocation.href = viewedEventLocation;
-            viewDialogLocation.textContent = (viewedEventLocation.split("/")[5].split("+")).join(" ");
+            viewDialogLocation.textContent = "";
+            /*(viewedEventLocation.split("/")[5].split("+")).join(" ");*/
 
 
 

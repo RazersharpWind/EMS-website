@@ -62,7 +62,7 @@ confirmRegistrationButton.addEventListener("click", (e)=>{
     console.log(e.target.parentElement.parentElement.firstElementChild.firstElementChild);
 
     const registrationConfirmationTemp = `
-    <div class="registration-confirmation flex flex-col-reverse md:flex-col w-full h-full px-4 py-16 overflow-y-scroll overflow-x-hidden">
+    <div class="registration-confirmation flex w-full h-full px-10 py-16 overflow-x-hidden">
         <div class="registration-details w-full md:w-1/2 px-4 flex flex-col justify-center self-center text-left">
             <img src="https://cdn-icons-png.flaticon.com/512/6459/6459980.png" alt=done" class="w-16" />
             <h4 class="registered-event-id text-md text-gray-400 mb-4">your id: 
@@ -120,7 +120,7 @@ confirmRegistrationButton.addEventListener("click", (e)=>{
     attendeeEmail
     attendeePhone
 if(attendeeName != "" && attendeeEmail != "" && attendeePhone != ""){
-    //THIS TIMEOUT IS JUST FOR TESTING PURPOSES, THE REGISTRATION PROCESS WILL TAKE SOME TIME BUT LESS THAN 2 SECONDS PROPBALY 
+    //THIS TIMEOUT IS JUST FOR TESTING PURPOSES, THE REGISTRATION PROCESS WILL TAKE SOME TIME BUT LESS THAN 2 SECONDS PROBABLY! 
     confirmRegistration.setAttribute("loading", "")
 
     setTimeout(()=>{

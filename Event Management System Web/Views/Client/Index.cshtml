@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<body class="font-droid">
+<body>
     <div class="container mx-auto flex flex-col items-center overflow-hidden">
         <div id="events-section" class="px-12 py-8 w-full">
             <div class="events-header flex justify-between w-full">
@@ -35,7 +35,7 @@
                     </select>
                 </div>
             </div>
-
+            <p id="Empty"></p>
             <div id="events" class="events grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 3xl:grid-cols-5 gap-y-4 gap-x-8 h-fit my-6 justify-between">
                 @foreach (var singleEvent in Model.EventData)
                 {
@@ -69,7 +69,7 @@
         </div>
     </div>
 
-    <dialog id="registration-dialog" class="registration-dialog w-[90%] md:w-[55%] bg-white h-fit max-h-[70vh] md:h-[28rem] drop-shadow-xl mx-auto  rounded-xl" close>
+    <dialog id="registration-dialog" class="registration-dialog w-[90%] md:w-[55%] bg-white h-fit max-h-[70vh] md:h-[28rem] drop-shadow-xl mx-auto rounded-xl" close>
         <div class="registration-dialog-wrapper w-full flex flex-col items-end justify-around overflow-hidden py-8 px-4 md:px-10">
             <div class="registration-dialog-info flex flex-col md:flex-row gap-8 items-start">
                 <div id="event-summary" class="relative md:w-1/2 h-80 hidden md:flex flex-col rounded-xl drop-shadow-xl overflow-hidden bg-white">
@@ -111,11 +111,11 @@
                     </div>
                     <div id="email" class="w-full p-1">
                         <label for="attendee-email">Email</label>
-                        <input id="attendee-email" type="text" class="" placeholder="Email" required>
+                        <input id="attendee-email" type="email" class="" placeholder="Email" required>
                     </div>
                     <div id="phone" class="w-full p-1">
                         <label for="attendee-phone">Phone number</label>
-                        <input id="attendee-phone" type="text" class="" placeholder="Phone number" required>
+                        <input id="attendee-phone" type="number" class="" placeholder="Phone number" required>
                     </div>
                     <div class="notify-me flex w-full h-12 gap-1 py-2">
                         <div class="flex justify-start notify-via-phone w-1/2">
@@ -131,7 +131,7 @@
             </div>
 
             <div id="registration-dialog-buttons" class="w-full flex align-start justify-end gap-4 pt-4">
-                <button class="cancel-button bg-white border border-b-2 border-yellow-600 text-yellow-600 rounded-lg w-20 h-10">Cancel</button>
+                <button class="cancel-button bg-white border border-yellow-600 text-yellow-600 rounded-lg w-20 h-10">Cancel</button>
                 <input value="Confirm" type="submit" id="confirm-register-button" class="confirm-register-button bg-yellow-600 text-white rounded-lg w-20 h-10">
             </div>
 
@@ -144,10 +144,10 @@
 
     </dialog>
 
-    <dialog id="view-event-dialog" class="view-event-dialog md:w-[55%] bg-white max-h-[70vh] md:h-[28rem] drop-shadow-xl mx-auto py-5 px-5 md:py-10 md:px-10 rounded-xl overflow-y-auto" close>
-        <div class="dialog-wrapper w-full h-full flex flex-col items-end">
+    <dialog id="view-event-dialog" class="view-event-dialog md:w-[55%] bg-white max-h-[80vh] md:h-[48rem] drop-shadow-xl mx-auto py-5 px-5 md:py-10 md:px-10 rounded-xl overflow-y-auto" close>
+        <div class="dialog-wrapper w-full h-full flex flex-col justify-between items-end">
             <div class="registration-dialog-info flex md:flex-row flex-col gap-4 md:gap-8 items-start h-fit w-full">
-                <div class="viewed-event-image-wrapper overflow-hidden w-full md:w-1/2 h-64 rounded drop-shadow-xl">
+                <div class="viewed-event-image-wrapper bg-gray-500 overflow-hidden w-full md:w-1/2 h-64 rounded drop-shadow-xl">
                     <img class="viewed-event-image" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                 </div>
                 <div class="viewed-event-details flex flex-col items-start w-full md:w-1/2 md:h-64">
@@ -214,38 +214,7 @@
     </dialog>
 
 
-    <!-- <div class="registration-confirmation flex flex-col-reverse md:flex-col w-full h-full px-8 py-16 overflow-y-scroll overflow-x-hidden">
-        <div class="registration-details w-full md:w-1/2 px-12 flex flex-col justify-center self-center text-left bg-red-500">
-            <img src="https://cdn-icons-png.flaticon.com/512/6459/6459980.png" alt=done" class="w-16" />
-            <h4 class="registered-event-id text-md text-gray-400 mb-4">your id:
-            ${String(attendeeId) + e.target.parentElement.parentElement.firstElementChild.firstElementChild.getAttribute("event-id")}
-            </h4>
-            <h2 class="text-4xl font-bold mb-1">Hayak Allah !</h2>
-            <p class="text-xl mb-8">We're honor to see you<span class="registered-name">${attendeeName}</span></p>
-            <div class="registered-info">
-                <p>
-                    at
-                    <a class="underline registered-event-location" href="${e.target.parentElement.parentElement.firstElementChild.firstElementChild.children[3].lastElementChild.firstElementChild.href}" target="_blank">المركز الإماراتي للتنمية</a>
-                </p>
-                <div class="registered-event-date-time flex p-0">
-                    <div class="registered-event-time flex w-1/2">
-                        <i class="bi-house mr-2"></i>
-                        <p class="registered-event-time">${e.target.parentElement.parentElement.firstElementChild.firstElementChild.getAttribute("event-time")}</p>
-                    </div>
-                    <div class="registered-event-date flex w-1/2">
-                        <i class="bi-house mr-2"></i>
-                        <p class="registered-event-time">${e.target.parentElement.parentElement.firstElementChild.firstElementChild.getAttribute("event-date")}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="registration-qr-code w-full md:w-1/2 flex flex-col items-center justify-center  bg-red-500">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${String(attendeeId) + e.target.parentElement.parentElement.firstElementChild.firstElementChild.getAttribute("event-id")}" class="w-1/2 mb-8" alt="qr">
-            <p class="text-lg">Show up the QR code to check in</p>
-        </div>
-    </div>
-    <button class="done-button"><i class="bi-x text-xl absolute inset-0 m-auto mb-8 w-fit h-fit"></i></button> -->
 
 </body>
 </html>

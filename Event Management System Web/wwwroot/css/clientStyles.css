@@ -1,5 +1,5 @@
 ﻿* {
-    font-family: "Metropolis";
+    font-family: 'Droid Arabic Kufi', Metropolis;
 }
 
 :root {
@@ -28,7 +28,7 @@ dialog {
         transform: translateY(100px);
     }
 
-input[type=text] {
+input[type=text], input[type=email], input[type=number] {
     background-color: white;
     border-radius: .40rem;
     margin-top: .5rem !important;

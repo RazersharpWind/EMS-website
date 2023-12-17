@@ -16,7 +16,9 @@ searchEventInput.addEventListener("input", () => {
     });
     console.log(o);
     if (o == 0) {
-        let a = "No events matched... Search again"
-        document.getElementById("events").append(a)
+        document.getElementById("Empty").innerText = "No events matched... Search again";
+    }
+    else {
+        document.getElementById("Empty").innerText = "";
     }
 })
