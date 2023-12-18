@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    Layout = "~/Views/Shared/_Layout_Client.cshtml";
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -11,109 +15,6 @@
 
 </head>
 <body class="font-droid">
-    <div id="loadingPage" class="fixed loading-page bg-white opacity-70 w-full h-full top-0 left-0 z-50">
-        <div id="spinner" class="spinner w-20 h-20 rounded-full border-[.7em] border-t-transparent border-yellow-600 absolute inset-0 m-auto">
-        </div>
-    </div>
-    <nav id="attendee-navbar" class="w-full py-6 drop-shadow-md h-fit 0 relative z-50">
-        <div id="logos-bar" class="flex flex-col md:flex-row justify-between w-full px-10 md:px-24 md:h-20 h-fit overflow-hidden">
-            <div id="gcaa-logo" class="flex items-center justify-center">
-                <button id="expand-navbar" class=" block md:hidden px-2 py-2 grow text-right"><i class="bi-justify"></i></button>
-                <img class="h-full" src="./assets/img/GCAA-logo-1024x319-1.png">
-            </div>
-            <div id="uae-logo" class="hidden md:block">
-                <img class="h-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Emblem_of_the_United_Arab_Emirates.svg/1200px-Emblem_of_the_United_Arab_Emirates.svg.png" alt="UAE Logo">
-            </div>
-        </div>
-
-        <div id="user-bar" class="hidden md:flex justify-between border border-gray border-t border-b my-2 h-8">
-            <div id="me" class="w-fit h-8 px-24 flex items-center justify-center">
-                <label for="user-type">I am</label>
-                <select name="" id="user-type" class="bg-transparent outline-none rounded-none">
-                    <option value="Manager">Manager</option>
-                    <option value="Manager2">Manager2</option>
-                </select>
-            </div>
-            <div id="sc-user" class="flex px-24">
-                <a href="../../AraWebsite/Client/index.html" class="w-fit h-8 flex justify-center border-l  border-gray p-1">
-                    <p>عربي</p>
-                </a>
-                <a href="#" id="loginButton" class="w-fit h-8 flex justify-center border-l border-gray p-1 items-center">
-                    <!-- <i class="bi-house mr-2"></i> -->
-                    <p class="text-sm">Login</p>
-                </a>
-                <a href="#" class="w-8 h-8 flex justify-center border-l p-1">
-                    <i class="bi-eye-slash"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
-                    <i class="bi-volume-up-fill"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
-                    <i class="bi-translate"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
-                    <i class="bi-zoom-in"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
-                    <i class="bi-gear-fill"></i>
-                </a>
-                <a href="#" class="w-fit h-8 flex justify-center border-l border-gray p-1">
-                    <p>Careers</p>
-                </a>
-                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
-                    <i class="bi-info"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
-                    <i class="bi-question-circle"></i>
-                </a>
-            </div>
-        </div>
-
-        <ul id="links" class="fixed bg-yellow-600 md:bg-white text-white md:text-black top-0 -left-80 md:left-0 h-[100vh] w-6/12 md:h-fit md:w-auto md:relative transition-all ease-in-out .3s block md:flex md:flex-row px-8 md:px-16 md:py-3 py-12 ">
-            <div class="h-fit md:h-fit w-full flex flex-col md:flex-row justify-between items-start text-xl text-left font-thin">
-            <li class="md:hidden w-20 mb-16"><img src="./assets/img/gcaa white icon-01.png" alt=""></li>
-            <!-- <li><div class="bi-house"></div></li> -->
-            <li class="mb-4 flex justify-between w-full">
-                <div>
-                    About the Authority
-                </div>
-                <i class="bi-chevron-down text-sm"></i>
-            </li>
-            <li class="mb-4 flex justify-between w-full">
-                <div>
-                    Electronic Services
-                    <ul>
-                        <li>Home</li>
-                        <li>Events</li>
-                        <li>About</li>
-                        <li>News</li>
-                    </ul>
-                </div>
-                <i class="bi-chevron-down text-sm"></i>
-            </li>
-            <li class="mb-4 flex justify-between w-full">
-                <div>
-                    Media Center
-                </div>
-                <i class="bi-chevron-down text-sm"></i>
-            </li>
-            <li class="mb-4 flex justify-between w-full">
-                <div>
-                    Digital Participation
-                </div>
-                <i class="bi-chevron-down text-sm"></i>
-            </li>
-            <li class="mb-4 flex justify-between w-full">
-                <div>
-                    Information Library
-                </div>
-                <i class="bi-chevron-down text-sm"></i>
-            </li>
-            </div>
-        </ul>
-    </nav>
-
-
     <div class="container contact-us mx-auto px-12 py-6">
         <h1 class="text-3xl font-bold mb-4">About the Authority</h1>
         <div class="flex gap-x-[4em] ">
