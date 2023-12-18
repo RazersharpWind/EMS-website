@@ -1,4 +1,5 @@
-﻿using Event_Management_System_Web.Models;
+﻿using DataAccess.Data;
+using Event_Management_System_Web.Models;
 using Event_Management_System_Web.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,11 +8,13 @@ public class ClientController : Controller
 {
     private readonly IEventData _eventData;
     private readonly IAttendeeData _attendeeData;
+    private readonly IArticleData _articleData;
 
-    public ClientController(IEventData eventData, IAttendeeData attendeeData)
+    public ClientController(IEventData eventData, IAttendeeData attendeeData, IArticleData articleData)
     {
         _eventData = eventData;
         _attendeeData = attendeeData;
+        _articleData = articleData;
     }
 
     public IActionResult Index()
@@ -23,7 +26,10 @@ public class ClientController : Controller
 
     public IActionResult News()
     {
-        return View();
+        ViewNews news = new ViewNews();
+        news.News = _articleData.GetArticles().Result.ToList();
+        news.News.Reverse();
+        return View(news);
     }
 
     public IActionResult ContactUs()
