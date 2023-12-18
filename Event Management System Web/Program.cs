@@ -30,7 +30,23 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
+    name: "/client",
+    pattern: "{controller=Client}/{action=index}/{id?}");
+
+app.MapControllerRoute(
+    name: "/client/news",
     pattern: "{controller=Client}/{action=news}/{id?}");
+
+app.MapControllerRoute(
+    name: "/admin",
+    pattern: "{controller=Admin}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "/admin/events",
+    pattern: "{controller=Admin}/{action=Events}/{id?}");
+
+app.MapControllerRoute(
+    name: "/admin/news",
+    pattern: "{controller=Admin}/{action=news}/{id?}");
 
 app.Run();
