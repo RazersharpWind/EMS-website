@@ -46,7 +46,7 @@ registerationButtons.forEach((registerationButton)=>{
     })
 })
 
-cancelButton.addEventListener('click', ()=>{
+cancelButton.?addEventListener('click', ()=>{
     registrationDialog.setAttribute("close", "")
     setTimeout(()=>{registrationDialog.close()},300)
 })

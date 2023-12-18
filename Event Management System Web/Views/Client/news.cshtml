@@ -22,17 +22,17 @@
             <div id="news-section" class="w-3/5 py-5">
                 <h2 class="text-2xl font-bold">News</h2>
 
-                <div id="news-container" class="news-container mt-2">
+                <div id="news-container" class="news-container">
                     @foreach (var ArticleData in Model.News)
                     {
                         <div class="new my-5 p-3 h-fit border border-yellow-600 rounded-xl flex flex-col items-end">
                             <div class="new-img-wrapper h-48 w-full overflow-hidden rounded-xl drop-shadow-xl relative">
                                 <img class="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@ArticleData.article_image alt="">
                             </div>
-                            <div class="new-text p-3">
+                            <div class="new-text p-3 w-full">
                                 <div class="new-header my-2">
                                     <div class="new-header-text flex justify-between w-full items-center relative">
-                                        <h2 class="text-2xl font-bold my-1">@ArticleData.article_title</h2>
+                                        <h2 class="text-2xl font-bold mt-1 w-full">@ArticleData.article_title</h2>
                                         @* <div class="manage-button bi-three-dots w-fit cursor-pointer"></div>
                                         <div class="new-manage hidden justify-around items-center w-20 h-16 absolute overflow-hidden z-50 right-0 top-[-54px] rounded-[.3em] text-sm text-left bg-white">
                                             <div class="manage-new px-2 py-0 text-md cursor-pointer w-full edit-new hover:bg-[ rgb(235, 235, 235)]">Modify</div>
@@ -40,7 +40,7 @@
                                             <div class="manage-new px-2 py-0 text-md cursor-pointer w-full remove-new hover:bg-[ rgb(235, 235, 235)]">Remove</div>
                                         </div> *@
                                     </div>
-                                    <div class="new-date">
+                                    <div class="new-date text-gray-300 text-sm">
                                         <span>Posted on</span>
                                         <span class="new-date-written">@ArticleData.article_date</span>
                                     </div>
@@ -58,7 +58,7 @@
 
             <div id="studio" class="studio py-5 w-2/5">
                 <h2 class="text-2xl font-bold">Studio</h2>
-                <div id="studio-section" class="studio-section mt-2 mb-6 border border-yellow-600 rounded-xl flex flex-col items-end overflow-hidden px-3 py-4">
+                <div id="studio-section" class="studio-section my-5 border border-yellow-600 rounded-xl flex flex-col items-end overflow-hidden px-3 py-4">
                     <div class="important-docuements w-full">
                         <div class="video flex items-center justify-between w-full h-14 border-b mb-2 rounded-md px-4">
                             <div class="flex">
