@@ -21,8 +21,16 @@
       "PackagePath": "staticwebassets\\css\\output.css"
     },
     {
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
       "Id": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\favicon.ico",

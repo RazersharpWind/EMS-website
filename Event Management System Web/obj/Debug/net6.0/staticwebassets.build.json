@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/DQzKtNabBGKF8sWoUocSO1VFImyamumjyVsmWrRUHc=",
+  "Hash": "IpK7mL+y+p6tG5sRrZtbvbDYiv8XPaTZdMB9DUVNxyA=",
   "Source": "Event Management System Web",
   "BasePath": "_content/Event Management System Web",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\css\\output.css"
     },
     {
+      "Identity": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\site.css",
+      "SourceId": "Event Management System Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\",
+      "BasePath": "_content/Event Management System Web",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
       "Identity": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\style.css",
       "SourceId": "Event Management System Web",
       "SourceType": "Discovered",
@@ -134,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\css\\styles.css",
+      "SourceId": "Event Management System Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\",
+      "BasePath": "_content/Event Management System Web",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
       "Identity": "D:\\Users\\ammar\\Desktop\\EMS\\Event Management System Web\\wwwroot\\favicon.ico",

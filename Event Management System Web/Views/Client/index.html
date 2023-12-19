@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Authority of Civil Aviatin | Media center</title>
+    <link rel="stylesheet" href="./assets/css/output.css">
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body class="font-droid">
+    <div id="loadingPage" class="fixed z-50 loading-page bg-white opacity-70 w-full h-full top-0 left-0">
+        <div id="spinner" class="spinner w-20 h-20 rounded-full border-[.7em] border-t-transparent border-yellow-600 absolute inset-0 m-auto">
+        </div>
+    </div>
+
+
+    <nav id="attendee-navbar" class="w-full py-6 drop-shadow-md h-fit 0 relative z-50">
+        <div id="logos-bar" class="flex flex-col md:flex-row justify-between w-full px-10 md:px-24 md:h-20 h-fit overflow-hidden">
+            <div id="gcaa-logo" class="flex items-center justify-center">
+                <button id="expand-navbar" class=" block md:hidden px-2 py-2 grow text-right"><i class="bi-justify"></i></button>
+                <img class="h-full" src="./assets/img/GCAA-logo-1024x319-1.png">
+            </div>
+            <div id="uae-logo" class="hidden md:block">
+                <img class="h-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Emblem_of_the_United_Arab_Emirates.svg/1200px-Emblem_of_the_United_Arab_Emirates.svg.png" alt="UAE Logo">
+            </div>
+        </div>
+    
+        <div id="user-bar" class="hidden md:flex justify-between border border-gray border-t border-b my-2 h-8">
+            <div id="me" class="w-fit h-8 px-24 flex items-center justify-center">
+                <label for="user-type">I am</label>
+                <select name="" id="user-type" class="bg-transparent outline-none rounded-none">
+                    <option value="Manager">Manager</option>
+                    <option value="Manager2">Manager2</option>
+                </select>
+            </div>
+            <div id="sc-user" class="flex px-24">
+                <a href="../../AraWebsite/Client/index.html" class="w-fit h-8 flex justify-center border-l  border-gray p-1">
+                    <p>عربي</p>
+                </a>
+                <a href="#" id="loginButton" class="w-fit h-8 flex justify-center border-l border-gray p-1 items-center">
+                    <!-- <i class="bi-house mr-2"></i> -->
+                    <p class="text-sm">Login</p>
+                </a>
+                <a href="#" class="w-8 h-8 flex justify-center border-l p-1">
+                    <i class="bi-eye-slash"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
+                    <i class="bi-volume-up-fill"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
+                    <i class="bi-translate"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
+                    <i class="bi-zoom-in"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
+                    <i class="bi-gear-fill"></i>
+                </a>
+                <a href="#" class="w-fit h-8 flex justify-center border-l border-gray p-1">
+                    <p>Careers</p>
+                </a>
+                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
+                    <i class="bi-info"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex justify-center border-l border-gray p-1">
+                    <i class="bi-question-circle"></i>
+                </a>
+            </div>
+        </div>
+    
+        <ul id="links" class="fixed bg-yellow-600 md:bg-white text-white md:text-black top-0 -left-80 md:left-0 h-[100vh] w-6/12 md:h-fit md:w-auto md:relative transition-all ease-in-out .3s block md:flex md:flex-row px-8 md:px-16 md:py-3 py-12 ">
+            <div class="h-fit md:h-fit w-full flex flex-col md:flex-row justify-between items-start text-xl text-left font-thin">
+                <li class="md:hidden w-20 mb-16"><img src="./assets/img/gcaa white icon-01.png" alt=""></li>
+                <!-- <li><div class="bi-house"></div></li> -->
+                <li class="mb-4 flex justify-between w-full">
+                    <div>About the Authority</div>
+                    <i class="bi-chevron-down text-sm"></i>
+                </li>
+
+                <li id="g-links" class="mb-4 flex justify-between w-full">
+                    <div>
+                        Electronic Services
+                        <ul class="hidden">
+                            <li>Home</li>
+                            <li>Events</li>
+                            <li>About</li>
+                            <li>News</li>
+                        </ul>
+                    </div>
+                    <i class="bi-chevron-down text-sm"></i>
+                </li>
+
+                <li class="mb-4 flex justify-between w-full">
+                    <div>
+                        Media Center
+                    </div>
+                    <i class="bi-chevron-down text-sm"></i>
+                </li>
+                <li class="mb-4 flex justify-between w-full">
+                    <div>
+                        Digital Participation
+                    </div>
+                    <i class="bi-chevron-down text-sm"></i>
+                </li>
+                <li class="mb-4 flex justify-between w-full">
+                    <div>
+                        Information Library
+                    </div>
+                    <i class="bi-chevron-down text-sm"></i>
+                </li>
+            </div>
+        </ul>
+    </nav>
+    
+
+    <div class="container mx-auto flex flex-col items-center overflow-hidden">
+
+        <div id="events-section" class="px-10 py-8 w-full">
+            <div class="events-header flex justify-between w-full">
+                <h2 class="text-3xl font-bold">Events</h2>
+                <div class="sort-by flex w-fit py-2 items-center justify-center ">
+                    <h3 class="text-md mr-2">Sort by</h3>
+                    <select id="selector" name="selector" class="text-md border rounded-full px-2">
+                        <option value="newest">Newest</option>
+                        <option value="category">Category</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="events" class="events grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 3xl:grid-cols-5 gap-y-4 gap-x-8 h-fit my-6 justify-between">
+
+
+                <div class="event-card flex flex-col col-3 bg-white border border-yellow-700 rounded-3xl h-[340px] w-full relative justify-between" attendees-list="" event-id="12345">
+                    <div class="card-img h-36 w-full rounded-t-3xl bg-gray-300 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    </div>
+
+                    <div class="card-date w-14 h-14 bg-yellow-600 flex text-center rounded-lg absolute inset-x-[65%] inset-y-[25%] text-xl font-sans leading-tight text-white">
+                        <h3 class="text-2xl leading-none my-auto">25
+                            <span class="text-lg leading-none">JUL</span>
+                        </h3>
+                    </div>
+
+                    <div class="card-info h-fit text-yellow-700 px-4 pt-7 pb-4 flex flex-col grow justify-between">
+                        <div class="card-text justify-between">
+                            <div class="card-header h-1/2 text-2xl font-bold mb-4">مخاطر الدرونز, رقابة و حذر</div>
+                            <div class="card-desc h-1/2 overflow-y-auto text-xs mt-2">توعية بخصوص مخاطر الدرونر و شروط استخدامها, و المجالات في ذلك</div>
+                        </div>
+
+                        <div class="card-buttons w-full flex place-content-between h-fit my-2">
+                            <button id="show-button" class="button w-1/2 show-button mx-1 outline-0 h-10 rounded-full border border-yellow-700" type="">عرض</button>
+                            <!-- h-10 mx-1 my-2 rounded-full border border-yellow-700 w-1/2 -->
+                            <button id="register-button" class="button w-1/2 register-button mx-1 outline-0 h-10 rounded-full text-white bg-yellow-600 hover:bg-yellow-500 ease-linear duration-200" type="">تسجيل</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <dialog id="registration-dialog" class="registration-dialog w-[90%] md:w-[55%] bg-white h-fit max-h-[70vh] md:h-[28rem] drop-shadow-xl mx-auto  rounded-xl" close>
+
+        <div class="registration-dialog-wrapper w-full flex flex-col items-end justify-around overflow-hidden py-8 px-4 md:px-10">
+
+
+            <div class="registration-dialog-info flex flex-col md:flex-row gap-8 items-start">
+                <div id="event-summary" class="relative md:w-1/2 h-80 hidden md:flex flex-col rounded-xl drop-shadow-xl overflow-hidden bg-white">
+                    <div class="event-summary-image w-full h-1/2 overflow-hidden">
+                        <img class="w-full" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    </div>
+                    <div class="event-summary-subject text-xl font-bold px-5 py-2">
+                        <h2>المنتدى الدولي للطيران</h2>
+                    </div>
+                    <div class="event-summary-brief text-sm px-5 py-2 text-justify">
+                        <p>المنتدى الدولي للطيران. المنتدى الدولي للطيران. المنتدى الدولي للطيران. </p>
+                    </div>
+                    <div class="event-summary-location flex px-5 py-2">
+                        <div class="bi-geo-alt-fill ml-1"></div>
+                        <p class="text-sm">To get the event location
+                            <a class="text-sm" href="https://www.google.com/maps/dir//gcaa+location+dubai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3e5f5d76d0b6795b:0xb872340e32ae544a?sa=X&ved=2ahUKEwio4-jY7LqAAxXkTKQEHXnRBIoQ9Rd6BAhZEAA&ved=2ahUKEwio4-jY7LqAAxXkTKQEHXnRBIoQ9Rd6BAhgEAQ">click here</a>
+                        </p>
+                        
+                    </div>
+                    <div class="event-summary-updates px-5 py-2 flex w-full justify-between">
+                        <div class="event-summary-date">
+                            <p><i class="bi-calendar-date ml-2"></i>31-07-2023</p>
+                        </div>
+                        <div class="event-summary-status">
+                            <p><i class="bi-check-lg ml-2"></i>At time</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="registered-event-subject" class="md:hidden">
+                    <p class="text-gray-300 text-sm">Registring for</p>
+                    <div></div>
+                </div>
+
+                <div id="registration-form" class="w-full md:w-1/2 h-80 bg-white p-0 md:p-2 rounded-xl flex flex-col justify-between">
+                    <div id="name" class="w-full p-1">
+                        <label for="attendee-name">Full name</label>
+                        <input id="attendee-name" type="text" class="" placeholder="Full name" required title="afdsf">
+                    </div>
+                    <div id="email" class="w-full p-1">
+                        <label for="attendee-email">Email</label>
+                        <input id="attendee-email" type="text" class="" placeholder="Email" required>
+                    </div>
+                    <div id="phone" class="w-full p-1">
+                        <label for="attendee-phone">Phone number</label>
+                        <input id="attendee-phone" type="text" class="" placeholder="Phone number" required>
+                    </div>
+                    <div class="notify-me flex w-full h-12 gap-1 py-2">
+                        <div class="flex justify-start notify-via-phone w-1/2">
+                            <input class="m-0" type="checkbox" name="via-phone-number" id="via-phone-number">
+                            <label for="via-phone-number" class="ml-2 text-sm w-fit">Notify via WhatsApp</label>
+                        </div>
+                        <div class="flex justify-start notify-via-email w-1/2">
+                            <input class="m-0" type="checkbox" name="via-email" id="via-email">
+                            <label for="via-phone-number" class="ml-2 text-sm w-fit">Notify via Email</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="registration-dialog-buttons" class="w-full flex align-start justify-end gap-4 pt-4">
+                <button class="cancel-button bg-white border border-b-2 border-yellow-600 text-yellow-600 rounded-lg w-20 h-10">Cancel</button>
+                <input value="Confirm" type="submit" id="confirm-register-button" class="confirm-register-button bg-yellow-600 text-white rounded-lg w-20 h-10">
+            </div>
+
+        </div>
+
+
+
+        <div id="registration-loader" class="registration-loader flex items-center justify-center">
+            <h2 class="mt-24">Registering you....</h2>
+            <div class="loading-circle"></div>
+        </div>
+
+    </dialog>
+
+    <dialog id="view-event-dialog" class="view-event-dialog md:w-[55%] bg-white max-h-[70vh] md:h-[28rem] drop-shadow-xl mx-auto py-5 px-5 md:py-10 md:px-10 rounded-xl overflow-y-auto" close>
+        <div class="dialog-wrapper w-full h-full flex flex-col items-end">
+            <div class="registration-dialog-info flex md:flex-row flex-col gap-4 md:gap-8 items-start h-fit w-full">
+                <div class="viewed-event-image-wrapper overflow-hidden w-full md:w-1/2 h-64 rounded drop-shadow-xl">
+                    <img class="viewed-event-image" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="viewed-event-details flex flex-col items-start w-full md:w-1/2 md:h-64">
+                    <div class="viewed-event-header h-fit">
+                        <div class="viewed-event-title  mb-2">
+                            <p class="text-xs text-gray-400 leading-7">Event subject</p>
+                            <h3 class="text-lg font-semibold">الحدث الفلاني</h3>
+                        </div>
+                    </div>
+                    <div class="viewed-event-when h-fit flex w-full justify-between gap-4 md:mb-2">
+                        <div class="viewed-event-date w-1/2">
+                            <p class="text-xs text-gray-400 leading-7">Event date</p>
+                            <h3 class="text-lg font-semibold">2023-10-21</h3>
+                        </div>
+                        <div class="viewed-event-time w-1/2 ">
+                            <p class="text-xs text-gray-400 leading-7">Event time</p>
+                            <h3 class="text-lg font-semibold">14:30:00 PM</h3>
+                        </div>
+
+                    </div>
+                    <div class="viewed-event-location h-fit">
+                        <p class="text-xs text-gray-400 mb-2">Event location</p>
+                        <a href="#" class="underline text-lg" target="_blank"><h3 class="text-lg font-semibold">أبراج الحبتور. دبي, الإمارات العربية المتحدة</h3></a>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            <div class="viewed-event-brief my-4 w-full">
+                <p class="text-xs text-gray-400 mb-2">Event brief</p>
+                <h3 class="font-semibold text-justify">تفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلاني</h3>
+            </div>
+
+            <div class="viewed-event-buttons flex items-center w-full h-fit">
+                <a href="#" target="_blank" class="viewed-event-reminder flex w-full h-fit">
+                    <i class="bi-calendar mr-3"></i>
+                    <p class="underline">Add to calendar</p>
+                </a>
+                <button id="viewed-event-close-button" class="viewed-event-close-button bg-yellow-600 rounded text-white px-4 py-2">Close</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="loginDialog" class="log-in w-[30%] h-fit bg-white rounded-lg relative" close>
+        <div class="log-in-wrapper w-full h-full p-8 mt-[4.5em]">
+            <form class="w-full h-full flex flex-col items-center justify-between" action="">
+                <div class="email-phone-input w-full h-fit mb-2">
+                    <label for="email-phone">Email/ phone number</label>
+                    <input id="email-phone" type="text" class="w-full h-10 border border-yellow-600 rounded-sm text-xl mt-1">
+                </div>
+                <div class="password-input w-full h-fit mb-2">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" class="w-full h-10 border border-yellow-600  rounded-sm text-xl mt-1">
+                </div>
+                <div class="form-buttons w-full h-fit flex gap-x-10 my-6">
+                    <button class="submit w-1/2 h-10 bg-yellow-600 overflow-hidden relative border border-gray-200 shadow-xl rounded-md">
+                        <img class="absolute top-0 left-0 bottom-0 right-0 m-auto" src="https://www.abjaddesign.com/application/files/8015/8874/1892/Abjad_12_UAE_Pass_01.jpg" alt="f">
+                    </button>
+                    <button class="submit w-1/2 h-10 border border-yellow-600 bg-yellow-600 text-white shadow-xl rounded-md">Log in</button>
+                </div>
+                <p><a href="">Remeber me</a></p>
+                <p class="mt-1 text-gray-300 text-xs">or</p>
+                <p class="guest-button text-gray-300 text-xs cursor-pointer">Continue as a guest</p>
+            </form>
+        </div>
+    </dialog>
+
+
+    <!-- <div class="registration-confirmation flex flex-col-reverse md:flex-col w-full h-full px-8 py-16 overflow-y-scroll overflow-x-hidden">
+        <div class="registration-details w-full md:w-1/2 px-12 flex flex-col justify-center self-center text-left bg-red-500">
+            <img src="https://cdn-icons-png.flaticon.com/512/6459/6459980.png" alt=done" class="w-16" />
+            <h4 class="registered-event-id text-md text-gray-400 mb-4">your id: 
+            ${String(attendeeId) + e.target.parentElement.parentElement.firstElementChild.firstElementChild.getAttribute("event-id")}
+            </h4>
+            <h2 class="text-4xl font-bold mb-1">Hayak Allah !</h2>
+            <p class="text-xl mb-8">We're honor to see you<span class="registered-name">${attendeeName}</span></p>
+            <div class="registered-info">
+                <p>
+                    at
+                    <a class="underline registered-event-location" href="${e.target.parentElement.parentElement.firstElementChild.firstElementChild.children[3].lastElementChild.firstElementChild.href}" target="_blank">المركز الإماراتي للتنمية</a>
+                </p>
+                <div class="registered-event-date-time flex p-0">
+                    <div class="registered-event-time flex w-1/2">
+                        <i class="bi-house mr-2"></i>
+                        <p class="registered-event-time">${e.target.parentElement.parentElement.firstElementChild.firstElementChild.getAttribute("event-time")}</p>
+                    </div>
+                    <div class="registered-event-date flex w-1/2">
+                        <i class="bi-house mr-2"></i>
+                        <p class="registered-event-time">${e.target.parentElement.parentElement.firstElementChild.firstElementChild.getAttribute("event-date")}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="registration-qr-code w-full md:w-1/2 flex flex-col items-center justify-center  bg-red-500">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${String(attendeeId) + e.target.parentElement.parentElement.firstElementChild.firstElementChild.getAttribute("event-id")}" class="w-1/2 mb-8" alt="qr">
+            <p class="text-lg">Show up the QR code to check in</p>
+        </div>
+    </div>
+    <button class="done-button"><i class="bi-x text-xl absolute inset-0 m-auto mb-8 w-fit h-fit"></i></button> -->
+    
+
+
+
+    <script src="./assets/js/viewEvent.js"></script>
+    <script src="./assets/js/loadEvents.js"></script>
+    <script src="./assets/js/registrationFor.js"></script>
+    <script src="./assets/js/sortEvents.js"></script>
+    <script src="./assets/js/handleMutations.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/expandNavbar.js"></script>
+</body>
+</html>

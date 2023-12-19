@@ -291,3 +291,4 @@ C:\Users\ammar\Source\Repos\EMS-website\EMS\Event Management System Web\obj\Debu
 C:\Users\ammar\Source\Repos\EMS-website\EMS\Event Management System Web\obj\Debug\net6.0\ref\Event Management System Web.dll
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout_Admin.cshtml.rz.scp.css
 D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout_Admin.cshtml.rz.scp.css
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
