@@ -15,7 +15,7 @@ const views =
         { '.card-date': ['w-14 h-14 bg-yellow-600 flex text-center rounded-lg absolute inset-x-[65%] inset-y-[26%] text-xl font-sans leading-tight text-white', 'w-16 h-16 bg-yellow-600 flex text-center rounded-lg absolute inset-x-[22%] inset-y-[28%] text-xl font-sans leading-tight text-white'] },
         { '.card-info': ['text-yellow-700 h-[60%] px-4 pt-7 pb-4 flex flex-col grow justify-between', 'flex grow justify-between items-center text-yellow-700 py-4 px-12 w-[75%]'] },
 
-        { '.card-text': ['text-justify', 'h-16 w-[36rem] flex flex-col justify-between my-auto'] },
+        { '.card-text': ['text-justify', 'h-24 w-[36rem] flex flex-col justify-between my-auto'] },
         { '.card-buttons': ['flex place-content-between mt-2', 'flex flex-col w-32 h-24 place-content-between'] },
         { '.card-header': ['text-2xl', 'text-3xl'] },
         { '.button': ['h-10 mx-1 my-2 rounded-full border border-yellow-700 w-1/2', 'h-10 rounded-full border border-yellow-700 w-full mx-1'] },
