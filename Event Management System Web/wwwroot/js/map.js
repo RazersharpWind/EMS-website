@@ -94,15 +94,6 @@ function initMap() {
         service.getQueryPredictions({ input: document.getElementById("location-finder").value }, displaySuggestions);
         document.getElementById("results").innerHTML = "";
     })
-
-
-
-
-
-
-
-
-
 }
 
 

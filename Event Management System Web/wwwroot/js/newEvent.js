@@ -14,7 +14,7 @@ const confirmUpdateButton = document.getElementById("confirm-edit-button");
 //to create a shorter list by turning the list into an object
 let cardAttendees = {};
 
-let eventName, eventTime, eventDate, eventDescribtion, eventImage;
+let eventName, eventTime, eventDate, eventDescribtion, eventImage, eventLocation;
 
 let getData = (eventName, eventDate, eventTime, eventDescribtion, eventImage) => {
     const monthes = ["JAN", 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
@@ -79,7 +79,7 @@ const resetValues = (eventName, eventDate, eventTime, eventDescribtion, eventIma
     eventDate = document.querySelector('.new-event-date').value = "";
     eventDescribtion = document.querySelector('.new-event-describtion textarea').value = "";
     eventImage = document.getElementById('image-container').src = "";
-    document.getElementById('pac-input').value = "";
+    document.getElementById('location-finder').value = "";
     $("#attendees-table").empty();
     eventAttendees = [];
     cardAttendees = {};

@@ -1,6 +1,6 @@
 let publishNewButton = document.getElementById('publish-new-button');
-let newHeaderInputs =document.querySelector(".new-header-input");
-let newDetailInputs =document.querySelector(".new-details-input");
+let newHeaderInputs = document.querySelector(".new-header-input");
+let newDetailInputs = document.getElementById('textarea');
 let newsContainer = document.getElementById('news-container');
 let newImageLink = document.querySelector(".new-img-wrapper").firstElementChild;
 

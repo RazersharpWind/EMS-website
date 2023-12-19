@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Event Management System/FileContentIndex/f6e3fe5a-99fb-4955-a16a-a0578f1fa51c.vsidx
+/.vs/Event Management System/DesignTimeBuild/.dtbcache.v2
+/.vs/Event Management System/v17/.futdcache.v2
+/.vs/Event Management System/v17/.suo
+/.vs/ProjectEvaluation/event management system.projects.v7.bin
+/DataAccess/bin/Debug/net6.0/DataAccess.dll
+/DataAccess/bin/Debug/net6.0/DataAccess.pdb

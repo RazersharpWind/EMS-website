@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="~/css/output.css">
     <link rel="stylesheet" href="~/css/style.css">
-    <link rel="stylesheet" href="~/css/styles.css">
     <title data-href="Events">EMS - Events</title>
 </head>
 <body class="md:flex relative font-droid">
@@ -70,12 +69,6 @@
             }
         </div>
 
-
-
-
-
-
-
         <dialog id="creation-dialog" class="rounded-xl h-[90vh] w-[60rem] overflow-y-auto p-0">
             <div class="dialog-wrapper flex flex-col h-full">
 
@@ -107,7 +100,7 @@
                                     <input class="new-event-time h-12 bg-transparent m-0 p-0 border border-yellow-600" type="time" name="event-time" id="event-time">
                                 </div>
                             </div>
-                            <div class="new-event-describtion mt-2 flex flex-col grow text-gray-400 leading-none">
+                            <div class="new-event-describtion mt-2 flex flex-col grow leading-none">
                                 <h6 class="text-gray-400 h-fit leading-none mb-2">Event describtion</h6>
                                 <textarea type="text" class="grow" placeholder="Talk more about the event" name="new-event-describtion" id="new-event-describtion"></textarea>
                             </div>
@@ -149,12 +142,12 @@
                                 <dialog id="add-attendee-dialog" class="add-attendee-dialog w-[80%] p-4 drop-shadow-2xl rounded-xl">
                                     <div id="new-attendee-name">
                                         <label for="attendee-name">Attendee name</label>
-                                        <input id="attendee-name" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4" required>
+                                        <input id="attendee-name" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
                                     </div>
 
                                     <div id="new-attendee-email">
                                         <label for="attendee-email">Attendee email</label>
-                                        <input id="attendee-email" type="email" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4" required>
+                                        <input id="attendee-email" type="email" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
                                     </div>
 
                                     <div id="new-attendee-buttons" class="flex justify-between">
@@ -243,7 +236,7 @@
 
                                     <h4 class="new-event-date text-lg w-full bg-transparent font-bold p-0 mt-1 rounded-xl flex items-center justify-start h-fit">21-07-2023</h4>
                                     <!-- <input class="new-event-time h-12 bg-transparent m-0 p-0 border border-yellow-600 my-4" type="time" name="event-time" id="event-time"> -->
-                                    <h4 class="new-event-time text-lg font-bold w-full bg-transparent p-0 mt-1  rounded-xl flex items-center justify-start h-fit" type="time" name="event-time" id="event-time">12:30 PM</h4>
+                                    <h4 class="view-event-time text-lg font-bold w-full bg-transparent p-0 mt-1  rounded-xl flex items-center justify-start h-fit" type="time" name="event-time" id="event-time">12:30 PM</h4>
                                 </div>
                             </div>
                             <div class="new-event-describtion my-1 flex flex-col grow ">
@@ -253,21 +246,11 @@
                             </div>
                         </div>
 
-
-
-
-
-
                         <div class="new-event-location h-96 p-4 md:w-1/2 md:h-full flex flex-col">
                             <h6 class="text-gray-400 h-fit leading-none mb-2">Location</h6>
                             <div class="location flex grow mb-2 border border-yellow-600 rounded-md py-1 px-2">Open in Google maps</div>
-                            <div class="location-address border border-yellow-600 rounded-md py-2 px-2">Location XYZ at ABC Place</div>
+                            <div id="view-location" class="location-address border border-yellow-600 rounded-md py-2 px-2">Location XYZ at ABC Place</div>
                         </div>
-
-
-
-
-
 
                     </div>
                     <div id="view-event-id" class="text-gray-400 md:p-4">
@@ -279,9 +262,7 @@
                         <button id="close-button" class="cancel-button md:w-24 h-10 md:mr-2 p-2 rounded-lg border border-yellow-600 hover:border-yellow-700 bg-yellow-600 text-white hover:bg-yellow-700">Close</button>
                     </div>
                 </div>
-
             </div>
-
         </dialog>
 
 
@@ -334,7 +315,7 @@
                             <div id="edit-event-map" class="w-full flex flex-col border rounded-xl h-full mb-1"></div>
 
                             <div id="edit-event-pac-container" class="w-full h-12 relative">
-                                <input type="text" name="" id="location-finder" class="w-full h-full focus-none outline-none" placeholder="Enter the new location..." />
+                                <input type="text" name="" id="edit-location-finder" class="w-full h-full focus-none outline-none" placeholder="Enter the new location..." />
                                 <div id="edit-event-results" class="hidden flex flex-col list-none absolute top-10 left-0 w-full h-20 overflow-y-scroll bg-white shadow-xl rounded-b-md rounded-x-md border-yellow-600 border-x border-b border-black"></div>
                             </div>
                         </div>
@@ -361,9 +342,9 @@
                                         <input id="attendee-name-e" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
                                     </div>
 
-                                    <div id="new-attendee-email">
-                                        <label for="attendee-email-e">Attendee email</label>
-                                        <input id="attendee-email-e" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
+                                    <div id="new-attendee-id">
+                                        <label for="attendee-id-e">Attendee ID</label>
+                                        <input id="attendee-id-e" type="text" class="w-full h-12 bg-transparent p-1 border border-yellow-600 my-4">
                                     </div>
 
                                     <div id="new-attendee-buttons" class="flex justify-between">
@@ -383,36 +364,7 @@
                                     <td class="font-bold end">...</td>
                                 </tr>
                             </thead>
-                            <tbody id="attendees-table" class="attendees-table">
-                                <!-- <tr class="person">
-                                    <td>فلان الفلاني</td>
-                                    <td id="attendee-event-id" class="attendee-event-id"><span></span><span>53</span> </td>
-                                    <td>person1@gcaa.ae</td>
-                                    <td>مؤكد</td>
-                                    <td id="manage-attendee" class="end">
-
-                                        <div class="attedees-management bi-chevron-up w-fit py-3 pl-3 py-3">
-                                                <ul id="attedees-management-display">
-                                                    <button class="notify-button w-full">
-                                                        <li class="font-bold w-full">إعلام</li>
-                                                    </button>
-
-                                                    <hr class="w-5/6 bg-yellow-500 h-[2px]">
-
-                                                    <button class="kick-button w-full">
-                                                        <li class="text-red-600 font-bold w-full bg-red-500">طرد</li>
-                                                    </button>
-                                                </ul>
-                                        </div>
-
-                                    </td>
-
-                                </tr>-->
-                                <!-- k
-                                these two items should be loaded from the server but in our case it won't work well since we use JS
-                                -->
-
-                            </tbody>
+                            <tbody id="update-attendees-table" class="update-attendees-table"></tbody>
                         </table>
                     </div>
 
@@ -431,20 +383,18 @@
         </dialog>
     </div>
 
-    @* defining variables of type model to use in jason *@
+    @* defining variables of type model to use in JSON *@
     <script type="text/javascript">
         var eventCount = @Model.EventData.Last().event_id + 1;
         var newEvent = @Html.Raw(Json.Serialize(Model.Event));
         var editEvent = @Html.Raw(Json.Serialize(Model.EventData))
-                const eventId = document.getElementById("new-event-id").lastElementChild;
+        const eventId = document.getElementById("new-event-id").lastElementChild;
         eventId.textContent = @Model.EventData.FirstOrDefault().event_id + 1;
+        var attendeeList = @Html.Raw(Json.Serialize(Model.GetAllAttendees()));
     </script>
     <script src="~/js/newEvent.js"></script>
-
-
     <script src="~/js/map.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2M642sAwKlN7hWGOECQNK_DeiEN_6ets&libraries=places&callback=initMap"></script>
-
     <script src="~/js/eventsPages.js"></script>
     <script src="~/js/editEventButton.js"></script>
     <script src="~/js/showEventButton.js"></script>
@@ -457,18 +407,21 @@
             eventDate = document.querySelector('.new-event-date').value;
             eventImage = document.getElementById('new-image-container');
             eventDescribtion = document.querySelector('.new-event-describtion textarea').value;
+            eventLocation = document.getElementById('location-finder').value;
             newEvent.event_name = eventName;
             newEvent.event_description = eventDescribtion;
             newEvent.event_date = eventDate;
             newEvent.event_time = eventTime;
             newEvent.event_image = eventImage.src;
             newEvent.event_id = eventId.textContent;
-            console.log(eventAttendees)
+            newEvent.event_location = eventLocation;
+            console.log(newEvent.event_location)
+            console.log(newEvent)
             $.ajax({
                 type: "POST",
                 url: "@Url.Action("AddEvent")",
                 data: { eventData: newEvent, attendees: eventAttendees },
-                success: function (result) { console.log("Event creation success!"); /* window.location=result.url */ },
+                success: function (result) { console.log("Event creation success!"); window.location=result.url },
                 error: function (req, status, error) { console.log(status) },
             });
             dialog.setAttribute("close", "")
@@ -486,10 +439,12 @@
             updatedEvent.event_date = editEventDate.value;
             updatedEvent.event_time = editEventTime.value;
             updatedEvent.event_image = editEventImage.src;
+            updatedEvent.event_location = editEventLocation.value;
+            console.log(updatedEvent);
             $.ajax({
                 type: "PUT",
                 url: "@Url.Action("UpdateEvent")",
-                data: { eventData: updatedEvent },
+                data: { eventData: updatedEvent, attendees: addedAttendees },
                 success: function (result) { console.log("Event creation success!"); window.location = result.url },
                 error: function (req, status, error) { console.log(status) },
             });
@@ -514,6 +469,7 @@
                         viewEventDesc.textContent = events[index].event_description.toString();
                         viewEventDate.textContent = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
                         viewEventTime.textContent = time.toLocaleTimeString();
+                        viewEventLocation.textContent = events[index].event_location.toString();
                     }
                 }
             });
@@ -521,8 +477,6 @@
     </script>
     <script src="~/js/todayDate.js"></script>
     <script src="~/js/uploadImage.js"></script>
-    <script src="~/js/handleMutations.js"></script>
-
 
 </body>
 </html>

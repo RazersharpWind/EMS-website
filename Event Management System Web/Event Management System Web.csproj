@@ -54,11 +54,9 @@
     <None Include="wwwroot\js\editEventButton.js" />
     <None Include="wwwroot\js\eventsPages.js" />
     <None Include="wwwroot\js\expandNavbar.js" />
-    <None Include="wwwroot\js\handleMutations.js" />
     <None Include="wwwroot\js\lastThreeEvents.js" />
     <None Include="wwwroot\js\loadAttendees.js" />
     <None Include="wwwroot\js\loadCards.js" />
-    <None Include="wwwroot\js\loadNews.js" />
     <None Include="wwwroot\js\manageAttendeesTable.js" />
     <None Include="wwwroot\js\manageNew.js" />
     <None Include="wwwroot\js\map.js" />

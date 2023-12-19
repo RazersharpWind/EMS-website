@@ -48,7 +48,7 @@ namespace Event_Management_System_Web.Controllers
                     }
                 }
             }
-            return Json(new { url="/EMS/Events"});
+            return Json(new { url="/Admin/Events"});
         }
         [HttpPut]
         public IActionResult UpdateEvent(Event eventData, List<attendeeData> attendees)
@@ -64,13 +64,14 @@ namespace Event_Management_System_Web.Controllers
                     }
                 }
             }
-            return Json(new { url = "/EMS/Events" });
+            return Json(new { url = "/Admin/Events" });
         }
 
         public IActionResult Attendees()
         {
             ViewEvents events = new ViewEvents(_attendeeData);
             events.EventData = _eventData.GetEvents().Result.ToList();
+            events.EventData.Reverse();
             return View(events);
         }
 
@@ -85,7 +86,7 @@ namespace Event_Management_System_Web.Controllers
         public IActionResult AddArticle(News newArticle)
         {
             _articleData.CreateArticle(newArticle);
-            return Json(new { url = "/EMS/News" });
+            return Json(new { url = "/Admin/News" });
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

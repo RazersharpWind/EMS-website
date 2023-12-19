@@ -6,7 +6,8 @@ const cancelAttendeeButtonEdit = document.getElementById('cancel-attendee-button
 const editEventName    = document.querySelector('.edit-event-subject input');
 const editEventTime    = document.querySelector('.edit-event-time');
 const editEventDate    = document.querySelector('.edit-event-date');
-const editEventImage   = document.querySelector('.edit-event-image').firstElementChild;
+const editEventImage = document.querySelector('.edit-event-image').firstElementChild;
+const editEventLocation = document.getElementById('edit-location-finder');
 const editEventDescribtion = document.querySelector('.edit-event-describtion textarea');
 const confirmEditButton = document.getElementById("confirm-edit-button")
 const editedEventId = document.getElementById('editedEvent-id-space')
@@ -44,6 +45,7 @@ editEventButtons.forEach((editEventButton) => {
         editedEventId.textContent = e.target.parentElement.parentElement.parentElement.getAttribute('event-id');
         for (let index in editEvent) {
             if (editEvent[index].event_id.toString() === editedEventId.textContent) {
+                console.log(editEvent[index]);
                 cardEventID = editEvent[index].event_id;
                 var year = editEvent[index].event_date.toString().split("T")[0].split("-")[0];
                 var month = editEvent[index].event_date.toString().split("T")[0].split("-")[1];
@@ -58,9 +60,10 @@ editEventButtons.forEach((editEventButton) => {
                 editEventDate.value = year + "-" + month + "-" + day;
                 editEventTime.value = time.getHours() + ":" + ((time.getMinutes() < 10 ? "0" : "") + time.getMinutes());
                 editEventImage.src = editEvent[index].event_image.toString();
+                editEventLocation.value = editEvent[index].event_location;
             }
         }
-        let attendeeList = [];
+        //let attendeeList = [];
         //display attendees inside table
         for (var i = 0; i < attendeeList.length; i++) {
             if (attendeeList[i].event_id === parseInt(editedEventId.textContent)) {
@@ -109,6 +112,7 @@ cancelAttendeeButtonEdit.addEventListener("click", () => {
 confirmEditAttendeeButton.addEventListener("click", (e) => {
     //noAttendee.textContent = "";
     var attendee_id, attendee_email;
+    console.log(newAttendeeName.value)
     for (var i = 0; i < attendeeList.length; i++) {
         if (attendeeList[i].attendee_id === parseInt(newAttendeeID.value) && attendeeList[i].full_name === newAttendeeName.value) {
             attendee_id = attendeeList[i].attendee_id;
