@@ -39,7 +39,11 @@
             <div id="events" class="events grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 3xl:grid-cols-5 gap-y-4 gap-x-8 h-fit my-6 justify-between">
                 @foreach (var singleEvent in Model.EventData)
                 {
-                    <div class="event-card flex flex-col col-3 h-[22rem] bg-white border border-yellow-700 rounded-xl w-full relative overflow-hidden" attendees-list="" event-id="12345">
+                    <div class="event-card flex flex-col col-3 h-[22rem] bg-white border border-yellow-700 rounded-xl w-full relative overflow-hidden" attendees-list=@Model.GetAttendees(singleEvent.event_id) event-id="@singleEvent.event_id">
+                        <div id="event-id-div" class="hidden">
+                            <span id="event-id" class="hidden">@singleEvent.event_id</span>
+                        </div>
+
                         <div class="card-img overflow-hidden w-full h-[40%] relative bg-gray-500 bg-gray-300">
                             <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src=@singleEvent.event_image alt="">
                         </div>
@@ -148,35 +152,35 @@
         <div class="dialog-wrapper w-full h-full flex flex-col justify-between items-end">
             <div class="registration-dialog-info flex md:flex-row flex-col gap-4 md:gap-8 items-start h-fit w-full">
                 <div class="viewed-event-image-wrapper bg-gray-500 overflow-hidden w-full md:w-1/2 h-64 rounded drop-shadow-xl">
-                    <img class="viewed-event-image" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img id="view-event-img" class="viewed-event-image" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                 </div>
                 <div class="viewed-event-details flex flex-col items-start w-full md:w-1/2 md:h-64">
                     <div class="viewed-event-header h-fit">
                         <div class="viewed-event-title  mb-2">
                             <p class="text-xs text-gray-400 leading-7">Event subject</p>
-                            <h3 class="text-lg font-semibold">الحدث الفلاني</h3>
+                            <h3 id="view-event-title" class="text-lg font-semibold">الحدث الفلاني</h3>
                         </div>
                     </div>
                     <div class="viewed-event-when h-fit flex w-full justify-between gap-4 md:mb-2">
                         <div class="viewed-event-date w-1/2">
                             <p class="text-xs text-gray-400 leading-7">Event date</p>
-                            <h3 class="text-lg font-semibold">2023-10-21</h3>
+                            <h3 id="view-event-date" class="text-lg font-semibold">2023-10-21</h3>
                         </div>
                         <div class="viewed-event-time w-1/2 ">
                             <p class="text-xs text-gray-400 leading-7">Event time</p>
-                            <h3 class="text-lg font-semibold">14:30:00 PM</h3>
+                            <h3 id="view-event-time" class="text-lg font-semibold">14:30:00 PM</h3>
                         </div>
                     </div>
                     <div class="viewed-event-location h-fit">
                         <p class="text-xs text-gray-400 mb-2">Event location</p>
-                        <a href="#" class="underline text-lg" target="_blank"><h3 class="text-lg font-semibold">أبراج الحبتور. دبي, الإمارات العربية المتحدة</h3></a>
+                        <a id="view-event-location" href="#" class="underline text-lg" target="_blank"><h3 class="text-lg font-semibold">أبراج الحبتور. دبي, الإمارات العربية المتحدة</h3></a>
                     </div>
                 </div>
             </div>
 
             <div class="viewed-event-brief my-4 w-full">
                 <p class="text-xs text-gray-400 mb-2">Event brief</p>
-                <h3 class="font-semibold text-justify">تفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلاني</h3>
+                <h3 id="view-event-desc" class="font-semibold text-justify">تفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلانيتفاصيل عن الحدث الفلاني</h3>
             </div>
 
             <div class="viewed-event-buttons flex items-center w-full h-fit">
@@ -219,6 +223,29 @@
     <script src="~/js/Client/viewEvent.js"></script>
     <script src="~/js/Client/sortEvents.js"></script>
     <script src="~/js/Client/handleMutations.js"></script>
+    <script type="text/jscript">
+        document.querySelectorAll('.show-button').forEach((showButton) => {
+            showButton.addEventListener("click", (e) => {
+                viewDialog.showModal()
+                viewDialog.removeAttribute("close")
+                var events = @Html.Raw(Json.Serialize(Model.EventData));
+                var eventID = e.target.parentElement.parentElement.parentElement.getAttribute('event-id');
+                console.log('event id is ' + eventID.textContent)
+                for (var index in events) {
+                    if (events[index].event_id.toString() === eventID) {
+                        var date = new Date(String(events[index].event_date));
+                        var time = new Date(String(events[index].event_time));
+                        document.getElementById('view-event-img').src = events[index].event_image.toString();
+                        document.getElementById('view-event-title').textContent = events[index].event_name.toString();
+                        document.getElementById('view-event-desc').textContent = events[index].event_description.toString();
+                        document.getElementById('view-event-date').textContent = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+                        document.getElementById('view-event-time').textContent = time.toLocaleTimeString();
+                        document.getElementById('view-event-location').textContent = events[index].event_location.toString();
+                    }
+                }
+            })
+        })
+    </script>
 
 </body>
 </html>

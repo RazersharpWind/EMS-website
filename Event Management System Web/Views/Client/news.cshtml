@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                                 <div class="new-details">
-                                    <p>@ArticleData.article_details</p>
+                                    <p id="article-details"></p>
                                 </div>
                             </div>
                         </div>
@@ -195,9 +195,13 @@
         </div>
     </dialog>
 
-    <script src="./assets/js/loadNews.js"></script>
-    <script src="./assets/js/login.js"></script>
-
-
+    <script src="~/js/loadNews.js"></script>
+    <script src="~/js/login.js"></script>
+    <script type="text/javascript">
+        var articles = @Html.Raw(Json.Serialize(Model.News));
+        for (var index in articles) {
+            document.getElementById('article-details').outerHTML = articles[index].article_details;
+        }
+    </script>
 </body>
 </html>

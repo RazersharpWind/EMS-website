@@ -330,7 +330,7 @@
                                 </div>
                             </div>
                             <div class="new-details">
-                                <p>@article.article_details</p>
+                                <p id="article-details"></p>
                             </div>
                         </div>
                     </div>
@@ -343,6 +343,10 @@
 
     <script type="text/javascript">
         var singleArticle = @Html.Raw(Json.Serialize(Model.NewArticle));
+        var articles = @Html.Raw(Json.Serialize(Model.News));
+        for (var index in articles) { 
+            document.getElementById('article-details').outerHTML = articles[index].article_details;
+        }
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -350,9 +354,9 @@
             tinymce.init({
                 selector: 'textarea',
                 plugins: [
-                    'a11ychecker', 'advcode', 'advlist', 'anchor', 'autolink', 'codesample', 'fullscreen', 'help',
-                    'image', 'editimage', 'tinydrive', 'lists', 'link', 'media', 'powerpaste', 'preview',
-                    'searchreplace', 'table', 'template', 'tinymcespellchecker', 'visualblocks', 'wordcount'
+                    'advlist', 'anchor', 'autolink', 'codesample', 'fullscreen', 'help',
+                    'image', 'tinydrive', 'lists', 'link', 'media', 'preview',
+                    'searchreplace', 'table', 'template', 'visualblocks', 'wordcount'
                 ],
                 toolbar: 'undo redo | bold italic underline strikethrough blocks | forecolor backcolor link |  fontfamily image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
                 tinycomments_mode: 'embedded',
@@ -382,11 +386,12 @@
     <script src="~/js/uploadNewImage.js"></script>
     <script type="text/jscript">
         publishNewButton.addEventListener('click', () => {
-            console.log(newDetailInputs);
+            var articleDesc = tinymce.get('textarea').getContent();
+            console.log(articleDesc)
             var date = new Date();
             var combined = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + (date.getHours() >= 12 ? "PM" : "AM")
             singleArticle.article_title = newHeaderInputs.value;
-            singleArticle.article_details = newDetailInputs.value;
+            singleArticle.article_details = articleDesc;
             singleArticle.article_image = newImageLink.src;
             singleArticle.article_date = combined;
             console.log(singleArticle)
@@ -394,7 +399,7 @@
                 type: "POST",
                 url: "@Url.Action("AddArticle")",
                 data: { newArticle: singleArticle },
-                success: function (result) { console.log("Event creation success!"); /* window.location = result.url */ },
+                success: function (result) { console.log("Event creation success!"); window.location = result.url },
                 error: function (req, status, error) { console.log(status) },
             });
             newHeaderInputs.value = "";
