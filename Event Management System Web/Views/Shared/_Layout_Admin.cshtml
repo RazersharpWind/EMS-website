@@ -55,11 +55,6 @@
                 <i class="bi-newspaper"></i>
                 <a class=" w-24 ml-1" asp-area="" asp-controller="Admin" asp-action="News">News</a>
             </li>
-
-
-
-
-
         </ul>
     </nav>
     <!-- overflow required here to not the elements to extends out of the real size container -->
@@ -69,7 +64,7 @@
                 <div class="user-image border border-black rounded-full w-7 h-7">
                     <img src="" alt="">
                 </div>
-                <p class="text-sm">Mr. Person</p>
+                <p class="text-sm">@User.Identity?.Name</p>
                 <div class="user-options-wrapper bi-chevron-down cursor-pointer relative">
                     <ul class="user-options rounded-lg bg-white drop-shadow-lg w-28 h-20 px-2 absolute -inset-x-24">
                         <li class="text-xs rounded-md w-full h-1/2 flex items-center text-center px-1">Setting</li>

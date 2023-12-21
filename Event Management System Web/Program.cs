@@ -1,6 +1,10 @@
 using DataAccess.DBAccess;
+using Microsoft.AspNetCore.Authentication.Negotiate;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
+   .AddNegotiate();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -12,7 +16,7 @@ builder.Services.AddSingleton<IArticleData, ArticleData>();
 
 var app = builder.Build();
 //app.Urls.Add("https://192.168.10.48:7084"); //Ubuntu IP address
-app.Urls.Add("https://localhost:7230"); //localhost IP address
+//app.Urls.Add("https://localhost:7230"); //localhost IP address
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
