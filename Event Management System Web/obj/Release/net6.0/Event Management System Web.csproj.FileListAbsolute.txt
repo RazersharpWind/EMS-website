@@ -71,3 +71,84 @@ D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event 
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\Event Management System Web.pdb
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\Event Management System Web.genruntimeconfig.cache
 D:\Uni stuff\Research Outreach with Dr.Manar\Event Management system\code\Event Management System\Event Management System Web\obj\Release\net6.0\ref\Event Management System Web.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\appsettings.Development.json
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\appsettings.json
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\package-lock.json
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\package.json
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Event Management System Web.staticwebassets.runtime.json
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Event Management System Web.exe
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Event Management System Web.deps.json
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Event Management System Web.runtimeconfig.json
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Event Management System Web.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Event Management System Web.pdb
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Azure.Core.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Azure.Identity.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Dapper.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.Negotiate.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.Extensions.Features.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.Identity.Client.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.SqlServer.Server.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\System.Drawing.Common.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\System.IO.Pipelines.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\System.Memory.Data.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\System.Runtime.Caching.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\System.Security.Permissions.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\System.Windows.Extensions.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\DataAccess.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\bin\Release\net6.0\DataAccess.pdb
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.csproj.AssemblyReference.cache
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.AssemblyInfoInputs.cache
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.AssemblyInfo.cs
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.csproj.CoreCompileInputs.cache
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.MvcApplicationPartsAssemblyInfo.cache
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.RazorAssemblyInfo.cache
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.RazorAssemblyInfo.cs
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\staticwebassets\msbuild.Event Management System Web.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\staticwebassets\msbuild.build.Event Management System Web.props
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.Event Management System Web.props
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.Event Management System Web.props
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\staticwebassets.pack.json
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\staticwebassets.build.json
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\staticwebassets.development.json
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\scopedcss\Views\Shared\_Layout_Admin.cshtml.rz.scp.css
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\scopedcss\bundle\Event Management System Web.styles.css
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\scopedcss\projectbundle\Event Management System Web.bundle.scp.css
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.csproj.CopyComplete
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\refint\Event Management System Web.dll
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.pdb
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\Event Management System Web.genruntimeconfig.cache
+D:\Users\ammar\Desktop\EMS\Event Management System Web\obj\Release\net6.0\ref\Event Management System Web.dll

@@ -7,61 +7,61 @@ const registeredEventImage = document.querySelector('.event-summary-image').firs
 const registeredEventSummary = document.getElementById("event-summary");
 
 
-function regProcess(){
+function regProcess() {
 
 
 
 
-const confirmRegistrationButton = document.querySelector(".confirm-register-button")
+    const confirmRegistrationButton = document.querySelector(".confirm-register-button")
 
 
-const registerationButtons = document.querySelectorAll(".register-button");
-const cancelButton = document.querySelector(".cancel-button");
+    const registerationButtons = document.querySelectorAll(".register-button");
+    const cancelButton = document.querySelector(".cancel-button");
 
-registerationButtons.forEach((registerationButton)=>{
-    registerationButton.addEventListener("click", (e)=>{
-        const clickedEventCard = e.target.parentElement.parentElement.parentElement
-        registrationDialog.showModal()
-        registrationDialog.removeAttribute("close")
+    registerationButtons.forEach((registerationButton) => {
+        registerationButton.addEventListener("click", (e) => {
+            const clickedEventCard = e.target.parentElement.parentElement.parentElement
+            registrationDialog.showModal()
+            registrationDialog.removeAttribute("close")
 
-        const clickedHeader = clickedEventCard.lastElementChild.firstElementChild.firstElementChild;
-        const clickedDesc = clickedEventCard.lastElementChild.firstElementChild.lastElementChild;
-        const clickedDate = clickedEventCard.children[1].firstElementChild;
-        const clickedImage = clickedEventCard.firstElementChild.firstElementChild;
-        const clickedTime = clickedEventCard.getAttribute("event-time");
-        const clickedId = clickedEventCard.getAttribute("event-id");
+            const clickedHeader = clickedEventCard.lastElementChild.firstElementChild.firstElementChild;
+            const clickedDesc = clickedEventCard.lastElementChild.firstElementChild.lastElementChild;
+            const clickedDate = clickedEventCard.children[1].firstElementChild;
+            const clickedImage = clickedEventCard.firstElementChild.firstElementChild;
+            const clickedTime = clickedEventCard.getAttribute("event-time");
+            const clickedId = clickedEventCard.getAttribute("event-id");
 
-        document.getElementById("registered-event-subject").lastElementChild.textContent = `${clickedHeader.textContent}`
-
-
-        registeredEventSubject.textContent = clickedHeader.textContent;
-        registeredEventBrief.textContent = clickedDesc.textContent;
-        registeredEventDate.textContent = clickedDate.textContent;
-        registeredEventImage.src = clickedImage.src;
-        registeredEventSummary.setAttribute("event-id", clickedId);
-        registeredEventSummary.setAttribute("event-Time", clickedTime);;
-        registeredEventSummary.setAttribute("event-date", clickedDate.innerText);;
+            document.getElementById("registered-event-subject").lastElementChild.textContent = `${clickedHeader.textContent}`
 
 
+            registeredEventSubject.textContent = clickedHeader.textContent;
+            registeredEventBrief.textContent = clickedDesc.textContent;
+            registeredEventDate.textContent = clickedDate.textContent;
+            registeredEventImage.src = clickedImage.src;
+            registeredEventSummary.setAttribute("event-id", clickedId);
+            registeredEventSummary.setAttribute("event-Time", clickedTime);;
+            registeredEventSummary.setAttribute("event-date", clickedDate.innerText);;
+
+
+        })
     })
-})
 
-cancelButton.?addEventListener('click', ()=>{
-    registrationDialog.setAttribute("close", "")
-    setTimeout(()=>{registrationDialog.close()},300)
-})
-
+    cancelButton.addEventListener('click', () => {
+        registrationDialog.setAttribute("close", "")
+        setTimeout(() => { registrationDialog.close() }, 300)
+    })
 
 
-confirmRegistrationButton.addEventListener("click", (e)=>{
-    const attendeeId = Math.floor(10+Math.random()*89);
-    const attendeeName = document.getElementById("attendee-name").value;
-    const attendeeEmail = document.getElementById("attendee-email").value;
-    const attendeePhone = document.getElementById("attendee-phone").value;
-    const confirmRegistration = document.getElementById("registration-loader");
-    console.log(e.target.parentElement.parentElement.firstElementChild.firstElementChild);
 
-    const registrationConfirmationTemp = `
+confirmRegistrationButton.addEventListener("click", (e) => {
+        const attendeeId = Math.floor(10 + Math.random() * 89);
+        const attendeeName = document.getElementById("attendee-name").value;
+        const attendeeEmail = document.getElementById("attendee-email").value;
+        const attendeePhone = document.getElementById("attendee-phone").value;
+        const confirmRegistration = document.getElementById("registration-loader");
+        console.log(e.target.parentElement.parentElement.firstElementChild.firstElementChild);
+
+        const registrationConfirmationTemp = `
     <div class="registration-confirmation flex w-full h-full px-10 py-16 overflow-x-hidden">
         <div class="registration-details w-full md:w-1/2 px-4 flex flex-col justify-center self-center text-left">
             <img src="https://cdn-icons-png.flaticon.com/512/6459/6459980.png" alt=done" class="w-16" />
@@ -96,54 +96,54 @@ confirmRegistrationButton.addEventListener("click", (e)=>{
     <button class="done-button"><i class="bi-x text-xl absolute inset-0 m-auto mb-8 w-fit h-fit"></i></button>`
 
 
-    //when someone register i will take his name email and number and genereate a new id for him/her, after that the data will be in an object thatwill be unshifted to the JSON file
-    // for(let i =0; i <attendeesLi.length; i++){
-    //     if(attendeesLi[i]["event-name"] == registeredEventSubject.textContent){
-    //         console.log("same");
-    //         attendeesLi[i]["event-attendees"][attendeeName] = {
-    //             "attendee-id": attendeeId,
-    //             "attendee-email": attendeeEmail,
-    //             "attendee-staus": `مؤكد`
-    //         }
-    //     }
-    // }
-    // attendeesLi[0]["event-attendees"] = {attendeeName: {
-    //     "attendee-id": attendeeId,
-    //     "attendee-email": attendeeEmail,
-    //     "attendee-staus": `مؤكد`
-    // }};
+        //when someone register i will take his name email and number and genereate a new id for him/her, after that the data will be in an object thatwill be unshifted to the JSON file
+        // for(let i =0; i <attendeesLi.length; i++){
+        //     if(attendeesLi[i]["event-name"] == registeredEventSubject.textContent){
+        //         console.log("same");
+        //         attendeesLi[i]["event-attendees"][attendeeName] = {
+        //             "attendee-id": attendeeId,
+        //             "attendee-email": attendeeEmail,
+        //             "attendee-staus": `مؤكد`
+        //         }
+        //     }
+        // }
+        // attendeesLi[0]["event-attendees"] = {attendeeName: {
+        //     "attendee-id": attendeeId,
+        //     "attendee-email": attendeeEmail,
+        //     "attendee-staus": `مؤكد`
+        // }};
 
-    // console.log(attendeesLi);
+        // console.log(attendeesLi);
 
 
-    attendeeName
-    attendeeEmail
-    attendeePhone
-if(attendeeName != "" && attendeeEmail != "" && attendeePhone != ""){
-    //THIS TIMEOUT IS JUST FOR TESTING PURPOSES, THE REGISTRATION PROCESS WILL TAKE SOME TIME BUT LESS THAN 2 SECONDS PROBABLY! 
-    confirmRegistration.setAttribute("loading", "")
+        attendeeName
+        attendeeEmail
+        attendeePhone
+        if (attendeeName != "" && attendeeEmail != "" && attendeePhone != "") {
+            //THIS TIMEOUT IS JUST FOR TESTING PURPOSES, THE REGISTRATION PROCESS WILL TAKE SOME TIME BUT LESS THAN 2 SECONDS PROBABLY! 
+            confirmRegistration.setAttribute("loading", "")
 
-    setTimeout(()=>{
-        // confirmRegistration.classList.add()
+            setTimeout(() => {
+                // confirmRegistration.classList.add()
 
-        //to print the confirmation dialog
-        confirmRegistration.innerHTML = registrationConfirmationTemp;
-        const doneButton = document.querySelector(".done-button")
-        doneButton.addEventListener("click", ()=>{
-            registrationDialog.setAttribute("close", "")
-            setTimeout(()=>{
-                registrationDialog.close();
-                confirmRegistration.innerHTML = "";
-                confirmRegistration.className = ''
-            },300)
-            
-        })
+                //to print the confirmation dialog
+                confirmRegistration.innerHTML = registrationConfirmationTemp;
+                const doneButton = document.querySelector(".done-button")
+                doneButton.addEventListener("click", () => {
+                    registrationDialog.setAttribute("close", "")
+                    setTimeout(() => {
+                        registrationDialog.close();
+                        confirmRegistration.innerHTML = "";
+                        confirmRegistration.className = ''
+                    }, 300)
 
-    },2000)
+                })
 
-}
+            }, 2000)
 
-})
+        }
+
+    })
 
 
 }

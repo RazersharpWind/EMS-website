@@ -62,9 +62,9 @@
                             </div>
 
                             <div class="card-buttons mt-2 flex place-content-between">
-                                <button id="show-button" class="button w-1/2 show-button mx-1 outline-0 h-10 rounded-full border border-yellow-700" type="">عرض</button>
+                                <button id="show-button" class="button w-1/2 show-button mx-1 outline-0 h-10 rounded-full border border-yellow-700">View</button>
                                 <!-- h-10 mx-1 my-2 rounded-full border border-yellow-700 w-1/2 -->
-                                <button id="register-button" class="button w-1/2 register-button mx-1 outline-0 h-10 rounded-full text-white bg-yellow-600 hover:bg-yellow-500 ease-linear duration-200" type="">تسجيل</button>
+                                <button id="register-button" class="button w-1/2 register-button mx-1 outline-0 h-10 rounded-full text-white bg-yellow-600 hover:bg-yellow-500 ease-linear duration-200">Register</button>
                             </div>
                         </div>
                     </div>
@@ -151,8 +151,8 @@
     <dialog id="view-event-dialog" class="view-event-dialog md:w-[55%] bg-white max-h-[80vh] md:h-[48rem] drop-shadow-xl mx-auto py-5 px-5 md:py-10 md:px-10 rounded-xl overflow-y-auto" close>
         <div class="dialog-wrapper w-full h-full flex flex-col justify-between items-end">
             <div class="registration-dialog-info flex md:flex-row flex-col gap-4 md:gap-8 items-start h-fit w-full">
-                <div class="viewed-event-image-wrapper bg-gray-500 overflow-hidden w-full md:w-1/2 h-64 rounded drop-shadow-xl">
-                    <img id="view-event-img" class="viewed-event-image" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="viewed-event-image-wrapper overflow-hidden w-full h-[40%] bg-gray-300 relative md:w-1/2 md:h-64 rounded drop-shadow-xl">
+                    <img id="view-event-img" class="viewed-event-image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover m-auto min-w-full min-h-full w-auto h-auto" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                 </div>
                 <div class="viewed-event-details flex flex-col items-start w-full md:w-1/2 md:h-64">
                     <div class="viewed-event-header h-fit">
@@ -221,7 +221,6 @@
     <script src="~/js/Client/registrationFor.js"></script>
     <script src="~/js/Client/searchEvent.js"></script>
     <script src="~/js/Client/viewEvent.js"></script>
-    <script src="~/js/Client/sortEvents.js"></script>
     <script src="~/js/Client/handleMutations.js"></script>
     <script type="text/jscript">
         document.querySelectorAll('.show-button').forEach((showButton) => {
