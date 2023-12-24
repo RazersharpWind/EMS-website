@@ -12,156 +12,150 @@
     <title>EMS - Events</title>
 </head>
 <body class="md:flex relative font-droid">
-    <div>
-        <div class="time-and-date my-4">
-            <h1 id="today" class="text-2xl font-bold">الاربعاء, 05 يوليو 2023</h1>
-        </div>
+    <div class="time-and-date my-4">
+        <h1 id="today" class="text-2xl font-bold">الاربعاء, 05 يوليو 2023</h1>
+    </div>
 
-        <h2 class="header text-3xl font-bold my-8">Attendees</h2>
+    <h2 class="header text-3xl font-bold my-8">Attendees</h2>
 
-        <div id="checked-number" class="checked-number w-full text-left flex flex-col md:flex-row justify-between text-xl">
-            <div>
-                <span>0</span>
-                <span>Selected attendees</span>
-            </div>
-            <span class="manage-attendees-buttons flex">
-                <button id="unselect-all" class="hidden text-[.8em] border-2 border-yellow-600 w-fit h-fit px-3 py-1 rounded-md">Unselect all</button>
-                <button id="remindSelected" class="text-[.8em] border-2 border-yellow-600 w-fit h-fit px-3 py-1 rounded-md focus:outline-none focus:ring focus:ring-yellow-100">Send a reminder</button>
-                <button id="kickSelected" class="text-[.8em] bg-red-600 text-white border-2 w-fit h-fit px-3 py-1 rounded-md focus:outline-none focus:ring focus:ring-red-100">Kick</button>
-            </span>
+    <div id="checked-number" class="checked-number w-full text-left flex flex-col md:flex-row justify-between text-xl">
+        <div>
+            <span>0</span>
+            <span>Selected attendees</span>
         </div>
-        <div id="events-attendees" class="">
-            @foreach (var singleEvent in Model.EventData)
-            {
-                <div class="attebdees-table mb-3 h-fit overflow-hidden">
-                    <div class="event-attendees-table-header flex justify-between border-black border-b pr-4 py-4">
-                        <div class="flex justify-between items-center w-full px-2">
-                            <div class="flex justify-between items-center w-full pr-4">
-                                <p class="text-md mr-1 md:text-xl md:mr-3">@singleEvent.event_name</p>
-                                <div class="md:text-lg text-sm">@Model.GetAttendeeCount(singleEvent.event_id)</div>
-                            </div>
-                            <div class=`${eventClasses}`>passed</div>
+        <span class="manage-attendees-buttons flex">
+            <button id="unselect-all" class="hidden text-[.8em] border-2 border-yellow-600 w-fit h-fit px-3 py-1 rounded-md">Unselect all</button>
+            <button id="remindSelected" class="text-[.8em] border-2 border-yellow-600 w-fit h-fit px-3 py-1 rounded-md focus:outline-none focus:ring focus:ring-yellow-100">Send a reminder</button>
+            <button id="kickSelected" class="text-[.8em] bg-red-600 text-white border-2 w-fit h-fit px-3 py-1 rounded-md focus:outline-none focus:ring focus:ring-red-100">Kick</button>
+        </span>
+    </div>
+    <div id="events-attendees" class="">
+        @foreach (var singleEvent in Model.EventData)
+        {
+            <div id="attendeesTable" class="attebdees-table mb-3 h-fit overflow-hidden">
+                <div class="event-attendees-table-header flex justify-between border-black border-b pr-4 py-4">
+                    <div class="flex justify-between items-center w-full px-2">
+                        <div class="flex justify-between items-center w-full pr-4">
+                            <p class="text-md mr-1 md:text-xl md:mr-3">@singleEvent.event_name</p>
+                            <div class="md:text-lg text-sm">@Model.GetAttendeeCount(singleEvent.event_id)</div>
                         </div>
-                        <button class="bi-chevron-down collapse-button"></button>
-
+                        <div class=`${eventClasses}`>passed</div>
                     </div>
-                    <table class="full-attendees-table w-full text-xs md:text-md collapseable">
-                        <thead>
-                            <tr class="px-2">
-                                <td>...</td>
-                                <td class="font-bold underline">#ID</td>
-                                <td class="font-bold underline">Full Name</td>
-                                <td class="font-bold underline">Job Title</td>
-                                <td class="font-bold underline">Organization</td>
-                                <td class="font-bold underline">Industry Affiliation</td>
-                                <td class="font-bold underline">Status</td>
-                                <td class="font-bold underline">Manage</td>
-                            </tr>
-                        </thead>
-                        <tbody class="attendees-table">
-                            @* <!-- Attendees' cards will be dynamically populated here --> *@
-                            @foreach (var attendee in Model.GetAttendees(singleEvent.event_id))
-                            {
-                                <tr class="text-lg">
-                                    <td>
-                                        <input type="checkbox" class="select-box w-3 h-3 md:w-6 md:h-6 p-0 m-0 flex items-center justify-center ml-2" name="" id="">
-                                    </td>
-                                    <td>@attendee.Attendee_id</td>
-                                    <td>@attendee.Full_name</td>
-                                    <td>@attendee.Job_title</td>
-                                    <td>@attendee.Organization</td>
-                                    <td>@attendee.Industry_affiliation</td>
-                                    <td>@attendee.Status</td>
-                                    <td class="relative">
-                                        <button class="bi-three-dots manage-attendee-button p-2"></button>
-                                        <div class="manage-attendee m-0 h-fit w-24 bottom-11 right-[50%] bg-white border drop-shadow rounded-lg absolute" hidden>
-                                            <ul class="manage-attendee-buttons uu w-full h-full z-50">
-                                                <li class="Remind cursor-pointer hover:bg-gray-100 text-sm px-2 h-7 flex items-center text-black">Remind</li>
-                                                <hr class="my-1 w-16 bg-black">
-                                                <li class="Invite cursor-pointer hover:bg-gray-100 text-sm px-2 h-7 flex items-center text-black">Invite</li>
-                                                <hr class="my-1 w-16 bg-black">
-                                                <li class="kick cursor-pointer hover:bg-gray-100 text-sm px-2 h-7 flex items-center text-black">Kick</li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-
+                    <button class="bi-chevron-down collapse-button"></button>
                 </div>
-            }
-            @* <!-- <div class="event-attendees-table my-6 collapseable border-black border-b">
-            <div class="event-attendees-table-header flex justify-between pr-4 py-6">
-            <h2 class="text-2xl">Event XYZ</h2>
-            <button class="bi-chevron-down collapse-button"></button>
+                <table class="full-attendees-table w-full text-xs md:text-md collapseable">
+                    <thead>
+                        <tr class="px-2">
+                            <td>...</td>
+                            <td class="font-bold underline">#ID</td>
+                            <td class="font-bold underline">Full Name</td>
+                            <td class="font-bold underline">Job Title</td>
+                            <td class="font-bold underline">Organization</td>
+                            <td class="font-bold underline">Industry Affiliation</td>
+                            <td class="font-bold underline">Status</td>
+                            <td class="font-bold underline">Manage</td>
+                        </tr>
+                    </thead>
+                    <tbody class="attendees-table">
+                        @* <!-- Attendees' cards will be dynamically populated here --> *@
+                        @foreach (var attendee in Model.GetAttendees(singleEvent.event_id))
+                        {
+                            <tr class="text-lg" event-id=@singleEvent.event_id>
+                                <td>
+                                    <input type="checkbox" class="select-box w-3 h-3 md:w-6 md:h-6 p-0 m-0 flex items-center justify-center ml-2" name="" id="">
+                                </td>
+                                <td>@attendee.Attendee_id</td>
+                                <td>@attendee.Full_name</td>
+                                <td>@attendee.Job_title</td>
+                                <td>@attendee.Organization</td>
+                                <td>@attendee.Industry_affiliation</td>
+                                <td>@attendee.Status</td>
+                                <td class="relative">
+                                    <button class="bi-three-dots manage-attendee-button p-2"></button>
+                                    <div class="manage-attendee m-0 h-fit w-24 bottom-11 right-[50%] bg-white border drop-shadow rounded-lg absolute" hidden>
+                                        <ul class="manage-attendee-buttons uu w-full h-full z-50">
+                                            <li class="Remind cursor-pointer hover:bg-gray-100 text-sm px-2 h-7 flex items-center text-black">Remind</li>
+                                            <hr class="my-1 w-16 bg-black">
+                                            <li class="Invite cursor-pointer hover:bg-gray-100 text-sm px-2 h-7 flex items-center text-black">Invite</li>
+                                            <hr class="my-1 w-16 bg-black">
+                                            <li id="kick-button" class="kick-button cursor-pointer hover:bg-gray-100 text-sm px-2 h-7 flex items-center text-black">Kick</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
             </div>
-            <table class="full-attendees-table w-full">
-            <thead>
-            <tr>
-            <td></td>
-            <td>#ID</td>
-            <td>Name</td>
-            <td>Position</td>
-            <td>Email</td>
-            <td>Phone Number</td>
-            <td>Attendance Status</td>
-            <td>Management</td>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-            <td>
-            <input type="checkbox" class="select-box w-6 h-6 p-0 m-0 flex items-center justify-center" name="" id="">
-            </td>
-            <td>123456</td>
-            <td>Hassan Mohammed Al-Kamali</td>
-            <td>Organizer</td>
-            <td>hasan213@gmail.com</td>
-            <td>0566588198</td>
-            <td>Arrived 5 minutes ago</td>
-            <td class="relative">
-            <button class="bi-three-dots manage-attendee-button py-2 pl-4"></button>
-            <div class="manage-attendee m-0 p-2 h-fit w-24 top-10 left-10 z-10 bg-white border drop-shadow rounded-lg absolute" hidden>
-            <ul class="w-full h-full">
-            <li class="py-1 text-black">Reminder</li>
-            <hr class="my-1 w-16 bg-black">
-            <li class="py-1 text-black">Allow</li>
-            <hr class="my-1 w-16 bg-black">
-            <li class="py-1 text-black">Kick</li>
-            </ul>
-            </div>
-            </td>
-            </tr>
-            </tbody>
-            </table>
-            </div> --> *@
-        </div>
-
-
-
-
-        @* <!-- <ul class="event-attendees">
-        <li class="event-attendee">
-        <div class="event-attendee-detail">
-        <div class="attendee-name"></div>
-        <div class="attendee-email"></div>
-        <div class="attendee-number"></div>
-        <div class="attendee-status"></div>
-        <div class="attendee-action"></div>
-        <div class="attendee-mangae"></div>
-        </div>
-        </li>
-
-        </ul> --> *@
-
-
+        }
     </div>
     <script src="~/js/manageAttendeesTable.js"></script>
     <script src="~/js/todayDate.js"></script>
     <script src="~/js/collapseButton.js"></script>
     <script src="~/js/handleAttendessMutations.js"></script>
+    <script type="text/jscript">
+        var allAttendees = @Html.Raw(Json.Serialize(Model.GetAllAttendees()));
+        const selectBoxes = document.querySelectorAll(".select-box");
+        var eventAttendees = new Array();
+        console.log(allAttendees);
+        //kick one attendee
+        kickAttendeeButtons.forEach((kickButton) => {
+            kickButton.addEventListener('click', (e) => {
+                var eventID = e.target.parentElement.parentElement.parentElement.parentElement.getAttribute('event-id');
+                var attendeeName = e.target.parentElement.parentElement.parentElement.parentElement.children[2];
+                var attendeeID = e.target.parentElement.parentElement.parentElement.parentElement.children[1];
+                console.log('attendee name is ' + attendeeName.textContent + ' and his ID is ' + attendeeID.textContent);
+                for (var i = 0; i < allAttendees.length; i++) {
+                    if (allAttendees[i].event_id == eventID && 
+                        allAttendees[i].full_name == attendeeName.textContent && 
+                        allAttendees[i].attendee_id == parseInt(attendeeID.textContent)) {
+                        var attendeeData = {};
+                        attendeeData.Name = allAttendees[i].full_name;
+                        attendeeData.Id = allAttendees[i].attendee_id;
+                        $.ajax({
+                            type: "Post",
+                            url: "@Url.Action("KickAttendee")",
+                            data: { attendee: attendeeData },
+                            success: function (result) { console.log("Attendee kicked!"); window.location = result.url },
+                            error: function (req, status, error) { console.log(status) },
+                        });
+                    }
+                }
+            });
+        })
 
+        //kick multiple attendees
+        selectBoxes.forEach((selectBox) => {
+            selectBox.addEventListener('click', (e) => {
+                var eventID = e.target.parentElement.parentElement.getAttribute('event-id');
+                var attendeeName = e.target.parentElement.parentElement.children[2];
+                var attendeeID = e.target.parentElement.parentElement.children[1];
+
+                if (selectBox.checked) {
+                    for (var i = 0; i < allAttendees.length; i++) {
+                        if (allAttendees[i].full_name == attendeeName.textContent &&
+                            allAttendees[i].attendee_id == parseInt(attendeeID.textContent)) {
+                            var attendeeData = {};
+                            attendeeData.Name = allAttendees[i].full_name;
+                            attendeeData.Id = allAttendees[i].attendee_id;
+                            eventAttendees.push(attendeeData);
+                        }
+                    }
+                }
+                console.log(eventAttendees);
+            })
+        });
+        kickButton.addEventListener('click', () => {
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("KickAttendees")",
+                data: { attendees: eventAttendees },
+                success: function (result) { console.log("Attendees kicked!"); window.location = result.url },
+                error: function (req, status, error) { console.log(status) },
+            });
+            eventAttendees.length = 0;
+        })
+    </script>
 
 </body>
 </html>

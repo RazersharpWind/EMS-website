@@ -25,4 +25,6 @@ public class AttendeeData : IAttendeeData
     public Task UpdateAttendee(Attendee attendee, int eventId) =>
         _db.SaveData(storedProcedure: "dbo.UpdateAttendee",
                      new { attendee_name = attendee.Full_name, attendee_id = attendee.Attendee_id, event_id = eventId });
+    public Task ResetAttendee(int attendeeId) =>
+        _db.SaveData(storedProcedure: "dbo.ResetAttendee", new { attendee_id = attendeeId });
 }

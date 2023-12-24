@@ -8,4 +8,5 @@ public interface IEventData
     Task<IEnumerable<Event>> GetEvents();
     Task<IEnumerable<Event>> GetLastSixEvents();
     Task UpdateEvent(Event user);
+    Task DeleteEvent(int event_id);
 }

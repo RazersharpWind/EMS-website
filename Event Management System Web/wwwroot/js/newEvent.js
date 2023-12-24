@@ -67,7 +67,6 @@ createEventButton.addEventListener('click', ()=>{
     dialog.showModal()
     dialog.removeAttribute("close")
     dialog.setAttribute("open" ,"")
-    //eventId.textContent = Math.floor(1000+Math.random()*8999);
     document.querySelectorAll(".attendee-event-id").forEach((attendee)=>{
         attendee.firstElementChild.innerText = eventId.textContent
     })
@@ -85,7 +84,6 @@ const resetValues = (eventName, eventDate, eventTime, eventDescribtion, eventIma
     cardAttendees = {};
 }
 
-//<<<<<<< HEAD
 //confirmEventBtn.addEventListener('click', ()=> {
 //    eventName    = document.querySelector('.new-event-subject input').value;
 //    eventTime    = document.querySelector('.new-event-time').value;
@@ -134,12 +132,10 @@ cancelButton.addEventListener('click', () => {
 //=====
 cancelButton.addEventListener('click', ()=>{
     dialog.setAttribute("close" ,"");
-//>>>>>>> a1ed148d72d69df305a45de0fa3e6e90f713aea4
     // dialog.removeAttribute("open")
     eventId.textContent = "";
     setTimeout(() => { dialog.close() }, 300)
     //the dialog.close() method close the dialog immediately therefore we won't be able to apply the transiton unless we wait for the same duration as the transition
-//<<<<<<< HEAD
     window.location.href = `Events`;
 })
 
@@ -169,6 +165,6 @@ function performFunction() {
     // Function logic goes here
     dialog.showModal()
     //eventId.textContent = Math.floor(1000+Math.random()*8999);
-    document.getElementById("attendee-event-id").firstElementChild.innerText = eventId.textContent
+    //document.getElementById("attendee-event-id").firstElementChild.innerText = eventId.textContent
     dialog.removeAttribute("close")
 }

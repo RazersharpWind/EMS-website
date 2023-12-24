@@ -9,14 +9,14 @@ const collapseButtonAction = () => {
     window.addEventListener("click", (e) => {
         if (e.target.classList.contains("collapse-button") && e.target.parentElement.parentElement.getAttribute("clicked") != "") {
             // e.target.parentElement.parentElement.classList.replace("h-20","h-fit");
-            console.log("a");
+            //console.log("a");
             e.target.parentElement.parentElement.setAttribute("clicked", "");
             e.target.classList.replace("bi-chevron-down","bi-chevron-up")
             
-            console.log(e.target.parentElement.parentElement);
+            //console.log(e.target.parentElement.parentElement);
         }
         else if (e.target.classList.contains("collapse-button") && e.target.parentElement.parentElement.getAttribute("clicked") == "") {
-            console.log("b");
+            //console.log("b");
             // e.target.parentElement.parentElement.classList.replace("h-fit","h-20");
             e.target.parentElement.parentElement.removeAttribute("clicked")
             e.target.classList.replace("bi-chevron-up", "bi-chevron-down")

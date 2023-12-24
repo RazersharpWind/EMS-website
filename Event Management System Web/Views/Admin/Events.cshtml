@@ -363,7 +363,7 @@
 
 
                     <div class="edit-event-buttons p-4 flex flex-col md:flex-row justify-between">
-                        <button class="cancel-event-button h-10 md:mr-2 mb-2 md:mb-0 p-2 rounded-lg border text-white bg-red-600 border-red-600">Cancel Event</button>
+                        <button id="cancel-event-button" class="cancel-event-button h-10 md:mr-2 mb-2 md:mb-0 p-2 rounded-lg border text-white bg-red-600 border-red-600">Cancel Event</button>
                         <div class="flex md:flex-row flex-col">
                             <button id="undo-button" class="undo-button md:w-24 h-10 mb-2 md:mb-0 md:mr-2 p-2 rounded-lg border border-yellow-600">Undo</button>
                             <button id="confirm-edit-button" class="confirm-edit-button md:w-fit h-10 mb-2 md:mb-0 md:mr-2 p-2 rounded-lg border border-yellow-600 hover:border-yellow-700 bg-yellow-600 text-white hover:bg-yellow-700">Confirm change</button>
@@ -383,6 +383,7 @@
         const eventId = document.getElementById("new-event-id").lastElementChild;
         eventId.textContent = @Model.EventData.FirstOrDefault().event_id + 1;
         var attendeeList = @Html.Raw(Json.Serialize(Model.GetAllAttendees()));
+        console.log(attendeeList);
     </script>
     <script src="~/js/newEvent.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2M642sAwKlN7hWGOECQNK_DeiEN_6ets&libraries=places&callback=initMap"></script>
@@ -438,6 +439,31 @@
                 url: "@Url.Action("UpdateEvent")",
                 data: { eventData: updatedEvent, attendees: addedAttendees },
                 success: function (result) { console.log("Event creation success!"); window.location = result.url },
+                error: function (req, status, error) { console.log(status) },
+            });
+            dialog.setAttribute("close", "")
+            setTimeout(() => { dialog.close() }, 300)
+        })
+
+        //cancel event
+        document.getElementById('cancel-event-button').addEventListener('click', () => {
+            var eventID = parseInt(editedEventId.textContent);
+            console.log(eventID);
+            var attendees = [];
+            for (var i = 0; i < attendeeList.length; i++) {
+                var attendeeInfo = {};
+                if (attendeeList[i].event_id === eventID) {
+                    attendeeInfo.Name = attendeeList[i].full_name;
+                    attendeeInfo.Id = attendeeList[i].attendee_id;
+                    attendees.push(attendeeInfo);
+                }
+            }
+            console.log(attendees);
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("DeleteEvent")",
+                data: { event_id: eventID, attendees: attendees },
+                success: function (result) { console.log("Event was deleted!"); window.location = result.url },
                 error: function (req, status, error) { console.log(status) },
             });
             dialog.setAttribute("close", "")

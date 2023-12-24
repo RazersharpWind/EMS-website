@@ -7,6 +7,14 @@
     <RootNamespace>Event_Management_System_Web</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
   <ItemGroup>
     <Content Remove="wwwroot\images\icons-01.svg" />
     <Content Remove="wwwroot\images\icons-02.svg" />

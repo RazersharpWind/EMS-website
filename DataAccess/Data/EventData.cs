@@ -40,4 +40,7 @@ public class EventData : IEventData
 
     public Task UpdateEvent(Event user) =>
         _db.SaveData(storedProcedure: "dbo.UpdateEvent", user);
+
+    public Task DeleteEvent(int event_id) =>
+        _db.SaveData(storedProcedure: "dbo.DeleteEvent", new { event_id = event_id });
 }

@@ -31,10 +31,7 @@ confirmAttendeeButton.addEventListener("click", (e) => {
     noAttendee.textContent = "";
     var attendee_id, attendee_email;
     for (var i = 0; i < attendeeList.length; i++) {
-        console.log(attendeeList[i].full_name)
-        console.log(attendeeList[i].attendee_id)
-        console.log(attendeeList[i].attendee_email)
-        if (attendeeList[i].attendee_id === parseInt(attendeeID.value) && attendeeList[i].full_name === attendeeName.value) {
+        if ((attendeeList[i].attendee_id === parseInt(attendeeID.value) || attendeeList[i].attendee_id == -1) && attendeeList[i].full_name === attendeeName.value) {
             attendee_id = attendeeList[i].attendee_id;
             attendee_email = attendeeList[i].attendee_email;
         }

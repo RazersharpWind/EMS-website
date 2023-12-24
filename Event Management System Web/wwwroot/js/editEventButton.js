@@ -86,8 +86,8 @@ editEventButtons.forEach((editEventButton) => {
                 eventAttendee.innerHTML = attedeeTemplate;
 
                 const attendeesTables = document.querySelectorAll(".update-attendees-table");
-                attendeesTables.forEach((attedeesTable) => {
-                    attedeesTable.append(eventAttendee)
+                attendeesTables.forEach((attendeesTable) => {
+                    attendeesTable.append(eventAttendee)
                 })
             }
         }

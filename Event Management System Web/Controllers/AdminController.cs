@@ -67,12 +67,57 @@ namespace Event_Management_System_Web.Controllers
             return Json(new { url = "/Admin/Events" });
         }
 
+        [HttpPost]
+        public IActionResult DeleteEvent(int event_id, List<attendeeData> attendees)
+        {
+            for (int i = 0; i < attendees.Count; i++)
+            {
+                foreach (var attendee in _attendeeData.GetAttendees().Result)
+                {
+                    if (attendee.Full_name == attendees[i].Name && attendee.Attendee_id == attendees[i].Id)
+                    {
+                        _attendeeData.ResetAttendee(attendees[i].Id);
+                    }
+                }
+            }
+            _eventData.DeleteEvent(event_id);
+            return Json(new { url = "/Admin/Events" });
+        }
+
         public IActionResult Attendees()
         {
             ViewEvents events = new ViewEvents(_attendeeData);
             events.EventData = _eventData.GetEvents().Result.ToList();
             events.EventData.Reverse();
             return View(events);
+        }
+        [HttpPost]
+        public IActionResult KickAttendee(attendeeData attendee)
+        {
+            foreach (var singleAttendee in _attendeeData.GetAttendees().Result)
+            {
+                if (singleAttendee.Full_name == attendee.Name && singleAttendee.Attendee_id == attendee.Id)
+                {
+                    _attendeeData.ResetAttendee(attendee.Id);
+                }
+            }
+            return Json(new { url = "/Admin/Attendees" });
+        }
+
+        [HttpPost]
+        public IActionResult KickAttendees(List<attendeeData> attendees)
+        {
+            for (int i = 0; i < attendees.Count; i++)
+            {
+                foreach (var attendee in _attendeeData.GetAttendees().Result)
+                {
+                    if (attendee.Full_name == attendees[i].Name && attendee.Attendee_id == attendees[i].Id)
+                    {
+                        _attendeeData.ResetAttendee(attendees[i].Id);
+                    }
+                }
+            }
+            return Json(new { url = "/Admin/Attendees" });
         }
 
         public IActionResult News()
