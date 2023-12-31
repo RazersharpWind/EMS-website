@@ -73,9 +73,9 @@
         </div>
     </div>
 
-    <dialog id="registration-dialog" class="registration-dialog w-[90%] md:w-[55%] bg-white h-fit max-h-[70vh] md:h-[28rem] drop-shadow-xl mx-auto rounded-xl" close>
-        <div class="registration-dialog-wrapper w-full flex flex-col items-end justify-around overflow-hidden py-8 px-4 md:px-10">
-            <div class="registration-dialog-info flex flex-col md:flex-row gap-8 items-start">
+    <dialog id="registration-dialog" class="registration-dialog w-[90%] md:w-[58%] bg-white h-[38rem] max-h-[80vh] md:h-[46rem] drop-shadow-xl mx-auto rounded-xl" close>
+        <div class="registration-dialog-wrapper h-full w-full flex flex-col justify-around overflow-hidden py-8 px-4 md:px-10">
+            <div class="registration-dialog-info flex flex-col md:flex-row gap-8">
                 <div id="event-summary" class="relative md:w-1/2 h-80 hidden md:flex flex-col rounded-xl drop-shadow-xl overflow-hidden bg-white">
                     <div class="event-summary-image w-full h-1/2 overflow-hidden">
                         <img class="w-full" src="https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
@@ -121,7 +121,7 @@
                         <label for="attendee-phone">Phone number</label>
                         <input id="attendee-phone" type="number" class="" placeholder="Phone number" required>
                     </div>
-                    <div class="notify-me flex w-full h-12 gap-1 py-2">
+                    @* <div class="notify-me flex w-full h-12 gap-1 py-2">
                         <div class="flex justify-start notify-via-phone w-1/2">
                             <input class="m-0" type="checkbox" name="via-phone-number" id="via-phone-number">
                             <label for="via-phone-number" class="ml-2 text-sm w-fit">Notify via WhatsApp</label>
@@ -129,6 +129,24 @@
                         <div class="flex justify-start notify-via-email w-1/2">
                             <input class="m-0" type="checkbox" name="via-email" id="via-email">
                             <label for="via-phone-number" class="ml-2 text-sm w-fit">Notify via Email</label>
+                        </div>
+                    </div> *@
+                    <div class="flex w-full h-12 gap-1 py-2">
+                        <div class="flex flex-col justify-start w-1/2">
+                            <label for="industry">Industry: </label>
+                            <select id="industry" class="py-2">
+                                <option>Manager</option>
+                                <option>Organizer</option>
+                                <option>Volunteer</option>
+                                <option>Student</option>
+                                <option>VIP</option>
+                                <option>Other...</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col justify-start w-1/2">
+                            <label for="organization">Organization: </label>
+                            <input class="my-2 border border-yellow-600" type="text" placeholder="Organization name...." id="organization" />
+
                         </div>
                     </div>
                 </div>
